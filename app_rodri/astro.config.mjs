@@ -38,7 +38,7 @@ export default defineConfig({
   env: {
     schema: {
       DATABASE_URL: envField.string({ context: 'server', access: 'secret' }),
-      APP_PASSWORD: envField.string({ context: 'server', access: 'secret', min: 8 }),
+      APP_PASSWORD: envField.string({ context: 'server', access: 'secret', min: 4 }),
       SESSION_SECRET: envField.string({ context: 'server', access: 'secret', min: 32 }),
       TRUST_PROXY: envField.boolean({ context: 'server', access: 'public', default: false }),
       SECURE_COOKIES: envField.boolean({ context: 'server', access: 'public', default: false }),
