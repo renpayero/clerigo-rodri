@@ -33,7 +33,7 @@ export function ActionBar({ snap }: { snap: StateSnapshot }) {
     { id: 'hero', label: 'Hero Point', cost: '−1 / −2', k: 'hero-points', tip: 'Actuar fuera de turno, +8/+4, acción extra, repetir tirada, recuperar conjuro, Cheat Death (2).', check: () => (Object.values(r).length ? { ok: true } : { ok: true }) },
     { id: 'divine', label: 'Divine Interference', cost: '−ranura', k: 'divine-interference', tip: 'Inmediata: sacrificás un conjuro preparado para que un enemigo repita un ataque contra un aliado con −nivel del conjuro. 1/criatura/día.', check: () => canAfford(r, 'divine_interference') },
     { id: 'domainRecharge', label: 'Recarga Mythic Domain', cost: '−1 PM', k: 'mythic-domain', tip: 'Estándar, 1/día: Rebuke Death 11, Touch of Glory 11 y aura 15 asaltos al máximo.', check: () => canAfford(r, 'mythic_domain_recharge') },
-    { id: 'recuperation', label: 'Recuperation', cost: '−1 PM · 1 h', k: 'recuperation', tip: '1 hora de descanso: pg a la mitad (mínimo), conjuros y channels como tras 8 h. NO recarga poder mítico.', check: () => (inCombat ? { ok: false, reason: 'No en combate' } : canAfford(r, 'recuperation')) },
+    { id: 'recuperation', label: 'Recuperation', cost: '−1 PM · 1 h', k: 'recuperation', tip: '1 hora de descanso: pg a la mitad (mínimo), conjuros y channels como tras 8 h. NO recarga poder mítico.', check: () => (inCombat ? { ok: false, reason: 'Recuperation exige 1 hora de descanso: terminá el combate primero.' } : canAfford(r, 'recuperation')) },
   ];
 
   async function direct(id: Btn['id']) {
