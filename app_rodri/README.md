@@ -32,17 +32,17 @@ Todo en Docker (app + db): `docker compose up --build` (la app queda en `0.0.0.0
 
 ## Despliegue en el VPS (Hostinger, proxy reverso en Docker)
 
-Estado 17/09/2026: desplegado en `/opt/rodri` del VPS (`ssh vpsren`), contenedores `rodri-app` + `rodri-db-1`, unidos a la red `nginx_default` de Nginx Proxy Manager. Falta el DNS y el Proxy Host (pasos 4-5).
+Estado 17/09/2026: desplegado en `/root/projects/clerigo-rodri/app_rodri` del VPS (`ssh vpsren`, clon de este repo), contenedores `rodri-app` + `rodri-db-1`, unidos a la red `nginx_default` de Nginx Proxy Manager.
 
 
-1. Copiar la carpeta (sin `node_modules`, `dist`, `.env`) a `/opt/rodri` y crear `.env` con valores reales: `POSTGRES_PASSWORD`, `APP_PASSWORD` (frase larga), `SESSION_SECRET` (`openssl rand -hex 32`), `TRUST_PROXY=true`, `SECURE_COOKIES=true`.
+1. `git clone https://github.com/renpayero/clerigo-rodri.git` en `/root/projects` y, en `app_rodri/`, crear `.env` con valores reales: `POSTGRES_PASSWORD`, `APP_PASSWORD` (frase larga), `SESSION_SECRET` (`openssl rand -hex 32`), `TRUST_PROXY=true`, `SECURE_COOKIES=true`.
 2. Red compartida con el proxy: en este VPS es `PROXY_NETWORK=nginx_default` (la de Nginx Proxy Manager); en otro, `docker network create proxy`.
 3. Levantar: `docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build`. El contenedor se llama `rodri-app`, no expone puertos y migra + siembra al arrancar.
 4. DNS: registro A `rodri.dakodev.com → 72.60.156.201`. En Nginx Proxy Manager (puerto 81): Proxy Host `rodri.dakodev.com` → scheme `http`, forward host `rodri-app`, puerto `4321`, Block Common Exploits; pestaña SSL: Request a new certificate (Let's Encrypt), Force SSL, HTTP/2. Si las actions POST devuelven 403 detrás del proxy, el proxy no está pasando `X-Forwarded-Host`; plan B: fijar `site: 'https://rodri.dakodev.com'` en `astro.config.mjs`.
 5. Probar: `curl -I https://rodri.dakodev.com` → `302 /login`; `BASE_URL=https://rodri.dakodev.com APP_PASSWORD=... npm run smoke` desde cualquier máquina.
 6. Instalar en el celular: Chrome → menú → "Agregar a pantalla de inicio" (manifest `standalone`; en LAN por HTTP no aparece el prompt automático).
 
-Actualizar: `git pull` (o copiar) y repetir el paso 3. Logs: `docker compose logs -f app`.
+Actualizar: `cd /root/projects/clerigo-rodri && git pull && cd app_rodri && docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build`. Logs: `docker compose logs -f app`.
 
 ## Copias de seguridad
 

@@ -1,3 +1,6 @@
+# Nombre fijo del proyecto: contenedores, red y volumen se llaman rodri_* sin importar la carpeta.
+name: rodri
+
 services:
   db:
     image: postgres:18
