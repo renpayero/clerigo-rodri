@@ -7,6 +7,7 @@ export type HouseRule = { id: string; label: string; detail: string; aon?: AonRe
 export const houseRules: HouseRule[] = [
   { id: 'point-buy', label: 'Compra por puntos 20', detail: 'Str 10 / Dex 10 / Con 14 / Int 10 / Wis 17 / Cha 12 = 0+0+5+0+13+2.', aon: aon('rulesId', '90', 'Core Rulebook pg. 15') },
   { id: 'magic-no-masterwork', label: 'Lo mágico no paga el masterwork', detail: 'DM: un arma, armadura o escudo mágico es masterwork de por sí y no se cobra ese componente (+1 Scimitar 2.015, +1 Darkwood Heavy Wooden Shield 1.107, +1 Mithral Breastplate 5.050). Equipo 101.728 po; sobran 772.', aon: aon('rulesId', '401', 'Core Rulebook pg. 468') },
+  { id: 'no-ally-con', label: 'Sin Con ni Hard to Kill de los aliados', detail: 'La mesa lo considera metajuego (17/09/2026): la app trackea los pg de los aliados pero no su Constitución ni su umbral de muerte; si Breath of Life o Relentless Healing reviven, lo decide el DM.' },
   { id: 'tier', label: 'Tier mítico 3 de arranque', detail: 'Hierophant. 3 path abilities, 2 dotes míticas, un +2 de característica (tier 2).' },
   { id: 'hero-points', label: 'Hero Points activos', detail: 'Arranca con 1; sin premios por historia/retrato; máx. 3; Cheat Death 2.', aon: aon('rulesId', '445', "Advanced Player's Guide pg. 322") },
   { id: 'background-skills', label: 'Background Skills', detail: '2 rangos de trasfondo por nivel (Linguistics, Knowledge history/nobility, Profession, Lore).', aon: aon('rulesId', '1732', 'Pathfinder Unchained pg. 46') },

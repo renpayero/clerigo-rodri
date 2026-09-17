@@ -15,7 +15,6 @@ const OPTIONS = {
   mythicDomainRechargeMode: { label: 'Recarga de Mythic Domain', hint: 'El DM dijo que recarga todo como si hubieses dormido: "reset" al máximo.', values: [['reset', 'Al máximo (DM)'], ['add', 'Suma sobre lo que queda']] },
   relentlessVsDeathEffects: { label: 'Relentless Healing revive muertes por efecto de muerte', hint: 'Conservador: no. Para esas está Mythic Breath of Life.', bool: true },
   amazingInitiativeAllows: { label: 'Qué permite la estándar extra de Amazing Initiative', hint: 'La regla excluye conjuros. Channel sí; varita y Rebuke Death son discutibles.', values: [['channel', 'Solo channel'], ['channel_wand', 'Channel y varita'], ['channel_wand_rebuke', 'Channel, varita y Rebuke Death']] },
-  bolThresholdMythic: { label: 'Umbral de Breath of Life en aliados míticos', hint: 'Hard to Kill: mueren a −2 × Con. ¿BoL/Relentless usan ese umbral o el normal (−Con)?', values: [['con', '−Con (conservador)'], ['twice_con', '−2 × Con (Hard to Kill)']] },
   headbandNew24h: { label: 'Diadema puesta hace menos de 24 h', hint: 'Sin las 24 h, el +4 no da conjuros extra: se deshabilita la última ranura de 3.º y 4.º (Wis 23 efectiva).', bool: true },
   discordPrefix: { label: 'Prefijo del comando de dados en Discord', hint: 'El bot solo acepta /roll dice:NdM. Reroll y ×1,5 se hacen a mano.', text: true },
 } as const;
@@ -124,18 +123,18 @@ function ThemePicker() {
   );
 }
 
-const EMPTY_ALLY = { name: '', role: '', maxHp: '', con: '', isMythic: true, hpCurrent: '', adjacent: false, frontLine: true, sortOrder: 0, notes: '' };
+const EMPTY_ALLY = { name: '', role: '', maxHp: '', hpCurrent: '', adjacent: false, frontLine: true, sortOrder: 0, notes: '' };
 
 function AlliesEditor({ snap }: { snap: StateSnapshot }) {
   const busy = useStore($busy);
   const [edit, setEdit] = useState<(typeof EMPTY_ALLY & { id?: number }) | null>(null);
   const allies = snap.allies.filter((a) => a.active).sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id);
-  const open = (a?: AllyRow) => setEdit(a ? { id: a.id, name: a.name, role: a.role ?? '', maxHp: a.maxHp?.toString() ?? '', con: a.con?.toString() ?? '', isMythic: a.isMythic, hpCurrent: a.hpCurrent?.toString() ?? '', adjacent: a.adjacent, frontLine: a.frontLine, sortOrder: a.sortOrder, notes: a.notes ?? '' } : { ...EMPTY_ALLY, sortOrder: allies.length });
+  const open = (a?: AllyRow) => setEdit(a ? { id: a.id, name: a.name, role: a.role ?? '', maxHp: a.maxHp?.toString() ?? '', hpCurrent: a.hpCurrent?.toString() ?? '', adjacent: a.adjacent, frontLine: a.frontLine, sortOrder: a.sortOrder, notes: a.notes ?? '' } : { ...EMPTY_ALLY, sortOrder: allies.length });
   const num = (v: string) => (v.trim() === '' ? null : Number(v));
   async function save(e: Event) {
     e.preventDefault();
     if (!edit) return;
-    const r = await runAction(actions.allies.upsert, { id: edit.id, name: edit.name.trim(), role: edit.role.trim() || null, maxHp: num(edit.maxHp), con: num(edit.con), isMythic: edit.isMythic, hpCurrent: num(edit.hpCurrent) ?? num(edit.maxHp), adjacent: edit.adjacent, frontLine: edit.frontLine, sortOrder: edit.sortOrder, notes: edit.notes.trim() || null });
+    const r = await runAction(actions.allies.upsert, { id: edit.id, name: edit.name.trim(), role: edit.role.trim() || null, maxHp: num(edit.maxHp), hpCurrent: num(edit.hpCurrent) ?? num(edit.maxHp), adjacent: edit.adjacent, frontLine: edit.frontLine, sortOrder: edit.sortOrder, notes: edit.notes.trim() || null });
     if (r) setEdit(null);
   }
   const set = (k: keyof typeof EMPTY_ALLY, v: unknown) => setEdit((x) => (x ? { ...x, [k]: v } : x));
@@ -145,14 +144,14 @@ function AlliesEditor({ snap }: { snap: StateSnapshot }) {
         <h2 class="section-title">Aliados</h2>
         <button type="button" class="btn btn--sm" disabled={busy} onClick={() => open()}>+ Agregar</button>
       </div>
-      <p class="help">Pg máximos y Con no están en la ficha: cargalos cuando los sepas. Con ellos la app detecta "bajo 40 %" y el umbral de Breath of Life (−Con).</p>
+      <p class="help">Pg máximos: con ellos la app detecta "bajo 40 %". La mesa no trackea la Constitución ni el Hard to Kill de los aliados (metajuego): si un Heal alcanza para revivir se decide en la mesa.</p>
       <div class="table-wrap">
         <table class="table">
-          <thead><tr><th>Nombre</th><th>Rol</th><th class="num">Pg máx</th><th class="num">Con</th><th>Mítico</th><th /></tr></thead>
+          <thead><tr><th>Nombre</th><th>Rol</th><th class="num">Pg máx</th><th /></tr></thead>
           <tbody>
             {allies.map((a) => (
               <tr key={a.id}>
-                <td><b>{a.name}</b></td><td>{a.role ?? '—'}</td><td class="num">{a.maxHp ?? '—'}</td><td class="num">{a.con ?? '—'}</td><td>{a.isMythic ? 'sí' : 'no'}</td>
+                <td><b>{a.name}</b></td><td>{a.role ?? '—'}</td><td class="num">{a.maxHp ?? '—'}</td>
                 <td class="num"><button type="button" class="btn btn--sm btn--ghost" disabled={busy} onClick={() => open(a)}>Editar</button></td>
               </tr>
             ))}
@@ -164,13 +163,8 @@ function AlliesEditor({ snap }: { snap: StateSnapshot }) {
           <form class="stack" onSubmit={save}>
             <label class="field"><span>Nombre</span><input class="input" required maxLength={40} value={edit.name} onInput={(e) => set('name', (e.target as HTMLInputElement).value)} /></label>
             <label class="field"><span>Rol (tanque, DPS, apoyo…)</span><input class="input" maxLength={20} value={edit.role} onInput={(e) => set('role', (e.target as HTMLInputElement).value)} /></label>
-            <div class="grid-2">
-              <label class="field"><span>Pg máximos</span><input class="input" type="number" inputMode="numeric" min={1} value={edit.maxHp} onInput={(e) => set('maxHp', (e.target as HTMLInputElement).value)} /></label>
-              <label class="field"><span>Constitución (puntuación)</span><input class="input" type="number" inputMode="numeric" min={1} max={60} value={edit.con} placeholder="ej. 18" onInput={(e) => set('con', (e.target as HTMLInputElement).value)} /></label>
-            </div>
-            <p class="help">Constitución es la puntuación (18), no el modificador (+4). El aliado muere a −Con (−2 × Con si es mítico): con eso la app sabe si Breath of Life o Relentless Healing lo reviven.</p>
+            <label class="field"><span>Pg máximos</span><input class="input" type="number" inputMode="numeric" min={1} value={edit.maxHp} onInput={(e) => set('maxHp', (e.target as HTMLInputElement).value)} /></label>
             <label class="field"><span>Pg actuales (vacío = máximos)</span><input class="input" type="number" inputMode="numeric" value={edit.hpCurrent} onInput={(e) => set('hpCurrent', (e.target as HTMLInputElement).value)} /></label>
-            <label class="check"><input type="checkbox" checked={edit.isMythic} onChange={(e) => set('isMythic', (e.target as HTMLInputElement).checked)} /><span>Es mítico (Hard to Kill: muere a −2 × Con)</span></label>
             <label class="check"><input type="checkbox" checked={edit.frontLine} onChange={(e) => set('frontLine', (e.target as HTMLInputElement).checked)} /><span>Primera línea (recibe más daño)</span></label>
             <label class="field"><span>Orden</span><input class="input" type="number" inputMode="numeric" min={0} max={99} value={edit.sortOrder} onInput={(e) => set('sortOrder', Number((e.target as HTMLInputElement).value))} /></label>
             <label class="field"><span>Notas</span><input class="input" maxLength={300} value={edit.notes} onInput={(e) => set('notes', (e.target as HTMLInputElement).value)} /></label>

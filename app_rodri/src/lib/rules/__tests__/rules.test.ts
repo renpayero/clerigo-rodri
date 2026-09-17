@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { spellsPerDay, bonusSpells, slotLayout } from '../spellsPerDay';
 import { maxHp, deathThreshold, armorClass, saves, initiative, concentration, defensiveCastChance, spellDc, channelDc, channelUses, cmd, carrying } from '../derived';
-import { healMath, healAmount, channelAverage, avgDieRerollOnes, breathOfLife, rebukeDeath, roundPatterns, abundantOverflow, relentlessRevives } from '../healing';
+import { healMath, healAmount, channelAverage, avgDieRerollOnes, breathOfLife, rebukeDeath, roundPatterns, abundantOverflow } from '../healing';
 import { durationAt, communalSplit, rangeAt } from '../durations';
 import { spellById } from '@/data/spells/catalog';
 
@@ -89,10 +89,8 @@ describe('curación', () => {
     expect(p[0]!.single).toBeCloseTo(142.33, 1);
     expect(p[2]!.single).toBeCloseTo(284.67, 1);
   });
-  it('Abundant Healing y Relentless Healing', () => {
+  it('Abundant Healing', () => {
     expect(abundantOverflow(110, { hp: 60, max: 100 }, [{ id: 1, hp: 50, max: 100 }, { id: 2, hp: 90, max: 100 }])).toEqual({ applied: [{ id: 1, amount: 50 }, { id: 2, amount: 10 }], wasted: 10 });
-    expect(relentlessRevives(110, -45, 14, true, 'twice_con')).toBe(true);
-    expect(relentlessRevives(20, -45, 14, false)).toBe(false);
   });
 });
 

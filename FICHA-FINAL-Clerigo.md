@@ -246,6 +246,7 @@ Resurrection (7.º, nivel 13; contra efectos de muerte y cuerpos destruidos; PNJ
 - ✅ **EitR**: no afecta a ninguna dote de Rodri; no hace falta consultar.
 
 - ✅ **Mythic Domain**: la recarga devuelve todo como si hubiera dormido 8 h (ambos dominios; aura 15 + 15 asaltos/día).
+- ✅ **Sin Con ni Hard to Kill de los aliados** (17/09/2026): la mesa considera metajuego llevar la Constitución y el umbral de muerte de los compañeros. La app trackea solo sus pg; si Breath of Life / Relentless Healing reviven, lo decide el DM en la mesa.
 - ✅ **Masterwork en objetos mágicos** (17/09/2026): lo mágico es masterwork de por sí y no paga ese componente: +1 Scimitar 2.015, +1 Darkwood Heavy Wooden Shield 1.107, +1 Mithral Breastplate 5.050 (el mithral incluía el masterwork: −150). Equipo 101.728, sobran 772 po.
 
 **Pendiente:** nada. (Menor, sin urgencia: Relentless Healing contra efectos de muerte.)

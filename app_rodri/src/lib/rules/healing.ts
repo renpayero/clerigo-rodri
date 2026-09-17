@@ -97,12 +97,6 @@ export function abundantOverflow(heal: number, target: { hp: number; max: number
   return { applied, wasted: Math.max(0, excess) };
 }
 
-/** Relentless Healing: revive si la cura deja al muerto por encima del umbral. */
-export function relentlessRevives(healTotal: number, hpAfterDeath: number, con: number, mythicTarget: boolean, mode: 'con' | 'twice_con' = 'con'): boolean {
-  const threshold = mythicTarget && mode === 'twice_con' ? -2 * con : -con;
-  return hpAfterDeath + healTotal > threshold;
-}
-
 export function round1(x: number): number {
   return Math.round(x * 100) / 100;
 }

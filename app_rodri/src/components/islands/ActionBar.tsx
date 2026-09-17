@@ -149,7 +149,7 @@ function RelentlessSheet({ open, snap, onClose }: { open: boolean; snap: StateSn
               <input class="input" type="number" inputMode="numeric" value={heal} onInput={(e) => setHeal((e.target as HTMLInputElement).value)} />
             </label>
             {chosen && chosen.hpCurrent !== null && (
-              <p class="help">Queda en {chosen.hpCurrent + (Number(heal) || 0)} pg: {chosen.hpCurrent + (Number(heal) || 0) > 0 ? 'revive estabilizado' : 'NO alcanza (sigue muerto)'}.</p>
+              <p class="help">Queda en {chosen.hpCurrent + (Number(heal) || 0)} pg: {chosen.hpCurrent + (Number(heal) || 0) > 0 ? 'revive seguro (pg positivos)' : 'revive solo si supera su umbral de muerte (−Con); lo decide el DM'}.</p>
             )}
             <button type="button" class="btn btn--primary" disabled={busy || !chosen || !(Number(heal) > 0)} onClick={async () => { const r = await runAction(actions.mythic.relentlessHealing, { allyId: chosen!.id, healAmount: Number(heal) }); if (r) onClose(); }}>Revivir (−1 PM)</button>
           </>
