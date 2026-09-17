@@ -1,0 +1,40 @@
+---
+import { abilities, pointBuyTotal, character } from '@/data';
+import Term from '@/components/Term';
+const fmt = (n: number) => (n >= 0 ? `+${n}` : `${n}`);
+---
+
+<section class="card">
+  <div class="row row--between">
+    <h2>Atributos</h2>
+    <span class="badge">Compra por puntos {pointBuyTotal}</span>
+  </div>
+  <div class="scroll-x">
+    <table class="abilities">
+      <thead>
+        <tr><th>Atributo</th><th>Final</th><th>Mod.</th><th>Comprado</th><th>Aasimar</th><th>Nv 4</th><th>Nv 8</th><th>Tier 2</th><th>Objeto</th></tr>
+      </thead>
+      <tbody>
+        {abilities.map((a) => (
+          <tr>
+            <th scope="row">{a.name} <span class="muted">({a.key})</span></th>
+            <td class="mono strong">{a.final}</td>
+            <td class="mono">{fmt(a.mod)}</td>
+            <td class="mono">{a.bought} <span class="muted">({a.cost} pt)</span></td>
+            <td class="mono">{a.racial ? fmt(a.racial) : '—'}</td>
+            <td class="mono">{a.level4 ? fmt(a.level4) : '—'}</td>
+            <td class="mono">{a.level8 ? fmt(a.level8) : '—'}</td>
+            <td class="mono">{a.tier2 ? fmt(a.tier2) : '—'}</td>
+            <td>{a.item ? <Term k={a.key === 'Wis' ? 'headband-phylactery' : a.key === 'Con' ? 'belt-con-4' : 'bracers-dex-2'} label={`${fmt(a.item.value)} ${a.item.name}`} /> : '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="help">Wis 17 + 2 racial + 1 (nivel 4) + 1 (nivel 8) + 2 (tier 2) + 4 (diadema) = 27. Cha 14 → 2 exclusiones de <Term k="selective-channeling" /> y 7 channels. Sin la diadema puesta 24 h, los bonos de objeto son temporales (sin conjuros extra). {character.sheetVersion}.</p>
+</section>
+
+<style>
+  .abilities th[scope='row'] { font-size: var(--fs-3); text-transform: none; letter-spacing: 0; color: var(--fg); }
+  .strong { font-weight: 600; font-size: var(--fs-4); }
+</style>

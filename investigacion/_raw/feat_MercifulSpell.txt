@@ -1,0 +1,12 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Merciful Spell (Metamagic)
+ **Source** Advanced Player's Guide pg. 165
+Your damaging spells subdue rather than kill.
+ **Benefit** : You can alter spells that inflict damage to inflict nonlethal damage instead. Spells that inflict damage of a particular type (such as fire) inflict nonlethal damage of that same type. A merciful spell does not use up a higher-level spell slot than the spell’s actual level.
+ | 
+ 

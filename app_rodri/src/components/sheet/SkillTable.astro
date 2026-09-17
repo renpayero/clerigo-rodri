@@ -1,0 +1,48 @@
+---
+import { skills, skillPoints, character } from '@/data';
+import Term from '@/components/Term';
+const fmt = (n: number) => (n >= 0 ? `+${n}` : `${n}`);
+const withRanks = skills.filter((s) => s.ranks > 0);
+const others = skills.filter((s) => s.ranks === 0);
+---
+
+<section class="card">
+  <div class="row row--between">
+    <h2>Habilidades</h2>
+    <span class="badge">{skillPoints.adventure} aventura + {skillPoints.background} trasfondo</span>
+  </div>
+  <div class="scroll-x">
+    <table>
+      <thead><tr><th>Habilidad</th><th>Total</th><th>Car.</th><th>Rangos</th><th>Clase</th><th>Nota</th></tr></thead>
+      <tbody>
+        {withRanks.map((s) => (
+          <tr>
+            <td><Term name={s.name} tip={s.note ?? ''} aon={s.aon}>{s.name}</Term>{s.background && <span class="badge" style="margin-left:6px">BG</span>}</td>
+            <td class="mono strong">{fmt(s.total)}</td>
+            <td class="muted">{s.ability}</td>
+            <td class="mono">{s.ranks}</td>
+            <td>{s.classSkill ? '✓' : '—'}</td>
+            <td class="muted">{s.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <details style="margin-top: var(--s3)">
+    <summary class="muted">Sin rangos ({others.length})</summary>
+    <div class="scroll-x">
+      <table>
+        <tbody>
+          {others.map((s) => (
+            <tr><td>{s.name}</td><td class="mono">{fmt(s.total)}</td><td class="muted">{s.ability}{s.acp ? ` · ACP ${s.acp}` : ''}{s.note ? ` · ${s.note}` : ''}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </details>
+  <p class="help">{skillPoints.perLevel}. Idiomas: {character.languages.join(', ')}.</p>
+</section>
+
+<style>
+  .strong { font-weight: 600; }
+</style>

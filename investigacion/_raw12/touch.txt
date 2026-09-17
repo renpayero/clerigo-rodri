@@ -1,0 +1,266 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## Rules Index | GM Screen
+## PRPG Core Rulebook ►
+ **Basics** **How to Play** 
+ **Common Terms** 
+ **Character Creation** 
+ **Ability Scores** 
+ **Character Advancement** 
+ **Alignment** 
+ **Definitions of Terms** 
+ **Combat** **How Combat Works** 
+ **Combat Statistics** 
+ **Actions in Combat** 
+ **Injury and Death** 
+ **Movement, Position, and Distance** 
+ **Big and Little Creatures in Combat** 
+ **Combat Modifiers** 
+ **Special Attacks** 
+ **Special Initiative Actions** 
+ **Conditions** 
+ **Special Abilities** 
+ **Environment** **Dungeons** 
+ **Traps** 
+ **Wilderness** 
+ **Urban Adventures** 
+ **Weather** 
+ **The Planes** 
+ **Environmental Rules** 
+ **Exploration** **Movement** 
+ **Vision and Light** 
+ **Breaking and Entering** 
+ **Gamemastering** **Basics from the Core Rulebook** 
+ **Creating NPCs** 
+ **Items** **Equipment** 
+ **Magic Items** 
+ **Magic** **Magic Basics** 
+ **Casting Spells** 
+ **Spell Descriptions** 
+ **Arcane Spells** 
+ **Divine Spells** 
+ **Special Abilities** 
+ **Skills** **Acquiring Skills** 
+ **Skill Descriptions** 
+## Pathfinder RPG Bestiary ►
+ **Bestiary** **Introduction** 
+ **Monster Creation** 
+ **Monster Advancement** 
+ **Monsters as PCs** 
+## Pathfinder #28: The Infernal Syndrome ►
+ **Possession** **Possession Feats** 
+ **Possession Actions** 
+ **Exorcism** 
+## GameMastery Guide ►
+ **GameMastery Guide** **Getting Started** 
+ **Running a Game** 
+ **Player Characters** 
+ **Nonplayer Characters** 
+ **Rewards** 
+ **Creating a World** 
+ **Adventures** 
+ **Advanced Topics** 
+ **NPC Gallery** 
+ **High or Low Magic?** **Reducing Magic with Rules Adjustments** 
+ **Reducing Magic with World Description** 
+ **Magic Shops** 
+ **Types of Magic Shops** 
+ **Trouble Items** 
+ **Story Items** 
+## Advanced Player's Guide ►
+ **Basics** **Racial Traits** 
+ **Racial Favored Class Bonus** 
+ **Archetypes** 
+ **Traits** 
+ **Combat Maneuvers** **Dirty Trick** 
+ **Drag** 
+ **Reposition** 
+ **Steal** 
+ **Optional Rule Systems** **Hero Points** 
+## Ultimate Magic ►
+ **Mastering Magic** **Spellblights** 
+ **Spell Duels** 
+ **Binding Outsiders** 
+ **Building and Modifying Constructs** 
+ **Designing Spells** 
+ **Gaining Spellblights** **Optional Ways to Acquire Spellblights** 
+ **Removing Spellblights** 
+ **Description of Spellblights** 
+ **Words of Power** **Optional** 
+ **Becoming a Wordcaster** 
+ **Target Words** 
+ **Effect Word Descriptions** 
+ **Meta Words** 
+ **Words of Power in the Worlds** 
+ **Introducing Words of Power** 
+ **Class Word Lists** 
+## Ultimate Combat ►
+ **Optional Rule Systems** **Armor as Damage Reduction** 
+ **Called Shots** 
+ **Piecemeal Armor** 
+ **Wounds and Vigor** 
+ **Mastering Combat** **Firearms** 
+ **Duels** 
+ **Performance Combat** 
+ **Siege Engines** 
+ **Vehicles** **Vehicle Basics** 
+ **Full Vehicle Rules** 
+ **Vehicle Statistics** 
+ **Land Vehicles** 
+ **Water Vehicles** 
+ **Air Vehicles** 
+## Advanced Race Guide ►
+ **Race Builder** **Race Examples** 
+ **Creating a New Race** 
+ **Appendix 1: Age** 
+ **Appendix 2: Height and Weight** 
+## Ultimate Campaign ►
+ **Character Background** **How to Create a Background** 
+ **Using this Section** 
+ **Early Life** 
+ **Adolescence** 
+ **Adulthood** 
+ **Two Quirks and a Flaw: Quick and Dirty Character Establishement** 
+ **Downtime** **Downtime Overview** 
+ **Downtime Activities** 
+ **Managers** 
+ **Rooms and Teams** 
+ **Buildings and Organizations** 
+ **Downtime Events** 
+ **Construction Examples** **Reading a Unit Statblock** 
+ **Restrictions on Earnings** 
+ **Construction and Recruitment Delays** 
+ **Moving an Organization** 
+ **Rooms** 
+ **Teams** 
+ **Campaign Systems** **Alignments** 
+ **Bargaining** 
+ **Companions** 
+ **Exploration** 
+ **Honor** 
+ **Investment** 
+ **Lineage** 
+ **Magic Item Creation** 
+ **Relationships** 
+ **Reputation and Fame** 
+ **Retirement** 
+ **Retraining** 
+ **Taxation** 
+ **Young Characters** 
+ **Kingdoms and War** **Kingdom Building** 
+ **Optional Kingdom Rules** 
+ **Mass Combat** 
+## Mythic Adventures ►
+ **Mythic Rules** **What is Mythic?** 
+ **Mythic Heroes** 
+ **Mythic Feats** 
+ **Mythic Spells** 
+ **Running a Mythic Game** 
+ **Mythic Magic Items** 
+ **Mythic Monsters** 
+ **Eternal Gaze** **Falling Stars** 
+ **For Love of Sport** 
+ **Legacy of Earth** 
+ **The Nascent Sphere** 
+ **Perilous Peaks** 
+ **Unexpected Travels** 
+## Heroes of the Wild ►
+ **Gamemastering** **Wilderness Rooms** 
+ **Wilderness Room Augmentations** 
+ **Wilderness Teams** 
+ **Wilderness Managers** 
+ **Wilderness Buildings** 
+## Pathfinder Unchained ►
+ **Pathfinder Unchained** **Fractional Base Bonuses** 
+ **Staggered Advancement** 
+ **Background Skills** 
+ **Consolidated Skills** 
+ **Grouped Skills** 
+ **Alternate Crafting and Profession Rules** 
+ **Skill Unlocks** 
+ **Variant Multiclassing** 
+ **Alignment (Unchained)** 
+ **Removing Alignment** 
+ **Revised Action Economy** 
+ **Removing Iterative Attacks** 
+ **Stamina and Combat Tricks** 
+ **Wound Thresholds** 
+ **Diseases and Poisons** 
+ **Simplified Spellcasting** 
+ **Spell Alterations** 
+ **Esoteric Material Components** 
+ **Automatic Bonus Progression** 
+ **Innate Item Bonuses** 
+ **Scaling Items** 
+ **Dynamic Magic Item Creation** 
+ **Simple Monster Creation** 
+ **Miscellaneous Abilities** 
+## Occult Adventures ►
+ **Occult Rules** **Occult Rituals** 
+ **Occult Skill Unlocks** 
+ **Auras** 
+ **Chakras** 
+ **Psychic Duels** 
+ **Possession** 
+ **Running an Occult Game** 
+ **Psychic Magic** **Components** 
+ **Undercasting Spells** 
+## Ultimate Intrigue ►
+ **Mastering Intrigue** **Intrigue Systems** 
+ **Influence** 
+ **Heists** 
+ **Leadership** 
+ **Nemeses** 
+ **Pursuit** 
+ **Research** 
+ **Spells of Intrigue** 
+ **Social Conflicts** 
+ **Verbal Duels** 
+ **Skills in Conflict** **Bluff** 
+ **Diplomacy** 
+ **Disguise** 
+ **Intimidate** 
+ **Perception and Stealth** 
+ **Sense Motive** 
+ **Replacing Opposed Rolls** 
+## Inner Sea Intrigue ►
+ **Gamemastering** **Intrigue Room Augmentations** 
+## Horror Adventures ►
+ **Horror Rules** **Horror Characters** 
+ **Reading a Madness Stat Block** **Curing Madness** 
+ **Horrific Madnesses** 
+ **How to Scare Heroes** **How to Scare Players** 
+## Adventurer's Guide ►
+ **Affiliations** **Affiliations for Adventuring Parties** 
+ **Afiliations for NPCs** 
+ **Rivals** 
+ **Abandoning Affiliations** 
+## Book of the Damned ►
+ **Items** **Infernal Contracts** 
+## Ultimate Wilderness ►
+ **Environment** **Wilderness Traps** 
+ **Mastering the Wild** **Discovery and Exploration** 
+ **The First World** 
+ **Foraging and Salvaging** 
+ **Harvesting Poisons** 
+ **Hazards and Disasters** 
+ **Herbalism** 
+ **Spells of the Wild** 
+ **Trophies and Treasures** 
+ **Weather in the Wilderness** 
+ **Companions and Familiars** 
+## Pathfinder #128: Songbird, Scion, Saboteur ►
+ **Items** **Relics** 
+## Planar Adventures ►
+ **Planar Adventures** **Planar Terrains** 
+ **Planar Races** 
+ **Traits of a Plane** 
+ **Role of the Divine** 
+ **Building a Planar Campaign** 
+## Heroes of Golarion ►
+ **Mythic Occult Classes** 
+## Pathfinder #144: Midwives to Death ►
+ **Gamemastering** **Botanical Haunts** 
+ 

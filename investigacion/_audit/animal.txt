@@ -1,0 +1,35 @@
+id="main">
+ Alchemist | Antipaladin | Arcanist | Barbarian | Barbarian (Unchained) | Bard | Bloodrager | Brawler | Cavalier | Cleric | Druid | Fighter | Gunslinger | Hunter | Inquisitor | Investigator | Kineticist | Magus | Medium | Mesmerist | Monk | Monk (Unchained) | Ninja | Occultist | Oracle | Paladin | Psychic | Ranger | Rogue | Rogue (Unchained) | Samurai | Shaman | Shifter | Skald | Slayer | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Swashbuckler | Vigilante | Warpriest | Witch | WizardCompanion | Drake | Eidolon | Eidolon (Unchained) | Familiar | PhantomAdept | Aristocrat | Commoner | Expert | Warrior
+ Cleric Class Details | Domains | Variant Channeling | Archetypes
+ Animal
+Source PRPG Core Rulebook pg. 41
+Deities: Aksha, Aldinach, Alocer, Ananshea, Angazhan, Anogetz, Baphomet, Barbariccia, Bastet, Bundha, Caera, Camazotz, Cernunnos, Daclau-Sar, Daikitsu, Diceid, Dradjit, Drokalion, Ealdeez, Easivra, Erastil, Ghlaunder, Gozreh, Graffiacane, Green Faith, Horus, Hudima, Il'surrish, Jaidi, Jezelda, Jyotah, Kalma, Ketephys, Kitumu, Kunkarna, Lao Shu Po, Losarkur, Mazmezz, Morrobahn, Mother Vulture, Murnath, Mursha, Neith, Otikaya, Ovonovo, Prihasta, Rasvocel, Ravana, Rowdrosh, Shub-Niggurath, Sicva, Sun Wukong, Surpa, Tanagaar, Tjasse, Tresmalvos, Urazra, Uskyeria, Vibhishah, Xsistaid, Ylimancha, Zabha, Zarongel, Zelishkar, Zevgavizeb
+Granted Powers: You can speak with and befriend animals with ease. In addition, you treat Knowledge (nature) as a class skill.
+Speak with Animals (Sp): You can speak with animals, as per the spell, for a number of rounds per day equal to 3 + your cleric level.
+Animal Companion (Ex): At 4th level, you gain the service of an animal companion. Your effective druid level for this animal companion is equal to your cleric level – 3. (Druids who take this ability through their nature bond class feature use their druid level – 3 to determine the abilities of their animal companions).
+Domain Spells: 1st—calm animals, 2nd—hold animal, 3rd—dominate animal, 4th—summon nature's ally IV (animals only), 5th—beast shape III (animals only), 6th—antilife shell, 7th—animal shapes, 8th—summon nature's ally VIII (animals only), 9th—shapechange.
+ Feather Subdomain
+Source Advanced Player's Guide pg. 1
+Associated Domain(s): Animal
+Associated Deities: Aldinach, Cernunnos, Daclau-Sar, Easivra, Erastil, Horus, Ketephys, Losarkur, Morrobahn, Neith, Rasvocel, Shub-Niggurath, Tanagaar, Tjasse, Uskyeria, Ylimancha
+Replacement Power: Add Fly to your list of class skills. In addition, whenever you cast a spell that grants you a fly speed, your maneuverability increases by one step (up to perfect).
+The following granted power replaces the speak with animals power of the Animal domain.
+ Eyes of the Hawk (Ex): You gain a racial bonus on Perception checks equal to 1/2 your cleric level (minimum +1). In addition, if you can act during a surprise round, you receive a +2 racial bonus on your Initiative check.
+Replacement Domain Spells: 2nd—feather fall, 3rd—fly, 6th—fly (mass).
+ Fur Subdomain
+Source Advanced Player's Guide pg. 1
+Associated Domain(s): Animal
+Associated Deities: Aksha, Aldinach, Alocer, Angazhan, Anogetz, Baphomet, Barbariccia, Bastet, Bundha, Caera, Camazotz, Cernunnos, Daclau-Sar, Daikitsu, Dradjit, Ealdeez, Erastil, Ghlaunder, Graffiacane, Hudima, Jaidi, Jezelda, Jyotah, Ketephys, Kitumu, Kunkarna, Lao Shu Po, Losarkur, Morrobahn, Murnath, Mursha, Neith, Otikaya, Prihasta, Ravana, Rowdrosh, Shub-Niggurath, Surpa, Tresmalvos, Urazra, Uskyeria, Vibhishah, Zabha, Zarongel
+Replacement Power: The following granted power replaces the speak with animals power of the Animal domain.
+ Predator’s Grace (Su): You can, as a swift action, grant yourself a +10-foot bonus to your base speed for 1 round. This bonus increases by 5 feet for every 5 cleric levels you possess. In addition, you gain low-light vision for 1 round. If you already possess low-light vision, the range of your sight becomes three times that of a human in dim light for 1 round. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Replacement Domain Spells: 1st—magic fang, 3rd—beast shape I (animals only).
+ Insect Subdomain
+Source Divine Anthology pg. 23
+This subdomain requires the Acolyte of Apocrypha trait to access.
+Associated Domain(s): Animal
+Associated Deities: Achaekek, Aldinach, Deskari, Ghlaunder, Kitumu, Mazmezz
+Replacement Power: The domain spells provided by the Insect domain affect vermin rather than animals, treating them as if they were not immune to spells with the mindaffecting descriptor. Any such spell that allows a Will save can instead be negated by the target vermin with a successful Fortitude save at the same DC. 
+ The following granted power replaces the speak with animals power of the Animal domain. 
+ Exoskeleton (Su): As a swift action, you can grow an exoskeleton that grants you a +1 enhancement bonus to your natural armor and 1d4 temporary hit points + 1 for every 2 cleric levels you have. The natural armor bonus increases by 1 for every 5 cleric levels you have. The exoskeleton retracts after 1 round, ending its benefits. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Replacement Domain Spells: 4th—giant vermin, 5th—vermin shape IIUM, 8th—summon nature’s ally VIII (1d3 goliath stag beetles; Pathfinder RPG Bestiary 2 44).
+ Site Owner: Blake DavisEmail Spam Checker: MX Guarddog

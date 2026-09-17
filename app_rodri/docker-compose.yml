@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:18
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-rodri}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Definí POSTGRES_PASSWORD en .env}
+      POSTGRES_DB: ${POSTGRES_DB:-rodri}
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rodri} -d ${POSTGRES_DB:-rodri}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  app:
+    build: .
+    env_file: .env
+    environment:
+      # Dentro de Compose la base siempre es el servicio "db" (ignora el DATABASE_URL de .env, que sirve para correr fuera de Docker).
+      DATABASE_URL: postgres://${POSTGRES_USER:-rodri}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-rodri}
+      HOST: 0.0.0.0
+      PORT: 4321
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  pgdata:

@@ -1,0 +1,287 @@
+Ablative Barrier
+Animal Aspect
+Animate Dead
+Animate Objects
+Animate Plants
+Anticipate Peril
+Antimagic Field
+Arboreal Hammer
+Arcane Cannon
+Aroden's Spellbane
+Ascension
+Baleful Polymorph
+Bane
+Barkskin
+Battle Trance
+Battlemind Link
+Beast Shape I
+Beast Shape II
+Beast Shape III
+Beast Shape IV
+Black Mark
+Black Tentacles
+Blade Barrier
+Blasphemy
+Bless
+Blessing of Fervor
+Blinding Ray
+Blindness/Deafness
+Blink
+Blistering Invective
+Blood Crow Strike
+Boiling Blood
+Borrowed Time
+Break
+Break Enchantment
+Breath of Life
+Burning Gaze
+Burning Hands
+Burrow
+Call Animal
+Call Lightning
+Cape of Wasps
+Chain Lightning
+Changestaff
+Chaos Hammer
+Chill Metal
+Chord of Shards
+Circle of Death
+Cloudkill
+Color Spray
+Command
+Companion Mind Link
+Cone of Cold
+Confusion
+Conjure Black Pudding
+Consecrate
+Contagion
+Contingency
+Control Weather
+Covetous Aura
+Crusader's Edge
+Cup of Dust
+Cure Critical Wounds
+Cure Light Wounds
+Cure Moderate Wounds
+Cure Serious Wounds
+Damnation Stride
+Darkness
+Daybreak Arrow
+Daylight
+Death Knell
+Deathless
+Deep Slumber
+Defile Armor
+Desecrate
+Detect Scrying
+Devolution
+Dictum
+Dimension Door
+Dimensional Lock
+Dirge of the Victorious Knights
+Discordant Blast
+Disfiguring Touch
+Disintegrate
+Dispel Magic
+Divine Favor
+Divine Pursuit
+Dominate Person
+Draconic Reservoir
+Dragon's Breath
+Dream
+Dust of Twilight
+Ear-Piercing Scream
+Earthquake
+Elemental Body I
+Elemental Body II
+Elemental Body III
+Elemental Body IV
+Elemental Bombardment
+Endure Elements
+Enemy Hammer
+Enervation
+Enlarge Person
+Entangle
+Entropic Shield
+Expeditious Retreat
+Faerie Fire
+False Life
+Feast of Ashes
+Feather Fall
+Finger of Death
+Fire Seeds
+Fire Shield
+Fire Snake
+Fire Storm
+Fireball
+Firestream
+Flame Blade
+Flame Strike
+Flames of the Faithful
+Flesh to Stone
+Fleshcurdle
+Floating Disk
+Fly
+Fog Cloud
+Force Punch
+Foresight
+Form of the Dragon I
+Form of the Dragon II
+Form of the Dragon III
+Gaseous Form
+Geniekind
+Giant Vermin
+Globe of Invulnerability
+Glyph of Warding
+Goodberry
+Gorum's Armor
+Grease
+Guards and Wards
+Gust of Wind
+Harm
+Harrowing
+Haste
+Heal
+Healing Thief
+Heat Metal
+Heroism
+Hex Ward
+Hideous Laughter
+Hold Portal
+Holy Smite
+Holy Word
+Hydraulic Push
+Hydraulic Torrent
+Ice Storm
+Ill Omen
+Imbue with Flight
+Inflict Critical Wounds
+Inflict Light Wounds
+Inflict Moderate Wounds
+Inflict Serious Wounds
+Invisibility
+Irresistible Dance
+Jitterbugs
+Knock
+Know the Enemy
+Levitate
+Lightning Arc
+Lightning Bolt
+Limited Wish
+Mage Armor
+Mage's Disjunction
+Magic Fang
+Magic Fang, Greater
+Magic Missile
+Magic Vestment
+Magic Weapon, Greater
+Make Whole
+Maze
+Memory Lapse
+Meteor Swarm
+Mighty Fist of the Earth
+Mirror Image
+Mislead
+Modify Memory
+Monstrous Physique I
+Monstrous Physique II
+Monstrous Physique III
+Monstrous Physique IV
+Move Earth
+Murderous Command
+Named Bullet
+Nightmare
+Oath of Peace
+Obscuring Mist
+Orb of the Void
+Order's Wrath
+Pernicious Poison
+Phantasmal Killer
+Phantom Steed
+Pillar of Life
+Plane Shift
+Polar Ray
+Power Word Blind
+Power Word Kill
+Power Word Stun
+Pox Pustules
+Prayer
+Prismatic Sphere
+Prismatic Spray
+Protection from Arrows
+Protection from Chaos
+Protection from Evil
+Protection from Good
+Protection from Law
+Ray of Enfeeblement
+Reduce Person
+Regenerate
+Repel Wood
+Resist Energy
+Resonating Word
+Reverse Gravity
+Ricochet Shot
+Sacred Bond
+Sanctify Armor
+Sanctuary
+Sands of Time
+Saving Finale
+Scorching Ash Form
+Scorching Ray
+Scouring Winds
+Searing Light
+Sending
+Shadow Anchor
+Shadow Weapon
+Shatter
+Shield of Faith
+Shield of the Dawnflower
+Shield Other
+Shocking Grasp
+Shout
+Silence
+Silent Image
+Sleep
+Slow
+Solid Fog
+Soulreaver
+Spawn Calling
+Spider Climb
+Spike Stones
+Spiritual Weapon
+Stinking Cloud
+Stone Shape
+Stoneskin
+Storm of Vengeance
+Strangling Hair
+Suggestion
+Summon Swarm
+Sun Metal
+Sunbeam
+Surmount Affliction
+Telekinesis
+Theft Ward
+Time Stop
+Touch Injection
+Transformation
+True Form
+True Strike
+Tsunami
+Unholy Blight
+Unshakable Chill
+Vampiric Touch
+Vermin Shape I
+Vermin Shape II
+Vomit Twin
+Walk through Space
+Wall of Fire
+Wall of Force
+Wall of Ice
+Wall of Iron
+Wall of Stone
+Wall of Thorns
+Waters of Lamashtu
+Web
+Whirlwind
+Wish
+Word of Chaos

@@ -1,0 +1,110 @@
+---
+import App from '@/layouts/App.astro';
+import { Consumables, GoldEditor } from '@/components/islands/Consumables';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+import Term from '@/components/Term';
+import { items, wishlist, equipmentTotal, carriedWeight, character, defenses } from '@/data';
+const fmt = (n: number) => n.toLocaleString('es-AR');
+const slotLabel: Record<string, string> = { armor: 'Armadura', shield: 'Escudo', headband: 'Diadema', neck: 'Cuello', shoulders: 'Hombros', belt: 'Cinturón', wrists: 'Muñecas', ring: 'Anillo', weapon: 'Arma', head: 'Cabeza', eyes: 'Ojos', body: 'Cuerpo', chest: 'Pecho', hands: 'Manos', feet: 'Pies' };
+const slotted = items.filter((i) => i.slot !== 'slotless' && i.slot !== 'mundane');
+const slotless = items.filter((i) => i.slot === 'slotless');
+const mundane = items.filter((i) => i.slot === 'mundane');
+const freeSlots = ['head', 'eyes', 'body', 'chest', 'hands', 'feet'];
+const remaining = character.wealthCap - equipmentTotal;
+const snapshot = await loadSnapshot(db());
+---
+
+<App title="Equipo" snapshot={snapshot}>
+  <div class="stack">
+    <section class="card card--tint">
+      <div class="stat-grid">
+        <div class="stat"><span class="label">Valor del equipo</span><span class="value">{fmt(equipmentTotal)} po</span><span class="detail">tope {fmt(character.wealthCap)} (WBL 82.000 + 25 % por <Term k="craft-wondrous-item" />)</span></div>
+        <div class="stat"><span class="label">Oro</span><span class="value">{snapshot.character.gold.toLocaleString('es-AR')} po</span><span class="detail">actual (inicial {fmt(character.gold)}; se edita abajo)</span></div>
+        <div class="stat"><span class="label">Peso encima</span><span class="value">{carriedWeight} lb</span><span class="detail">carga ligera ≤ {defenses.carrying.light}: justo en el límite. El resto va en el haversack</span></div>
+      </div>
+    </section>
+
+    <GoldEditor client:load snapshot={snapshot} />
+    <Consumables client:load snapshot={snapshot} />
+
+    <section class="card">
+      <h2>Ranuras</h2>
+      <div class="scroll-x">
+        <table>
+          <thead><tr><th>Ranura</th><th>Objeto</th><th>Precio</th><th>Peso</th><th>Efecto</th></tr></thead>
+          <tbody>
+            {slotted.map((i) => (
+              <tr>
+                <td class="muted">{slotLabel[i.slot] ?? i.slot}</td>
+                <td><Term k={i.id} /></td>
+                <td class="mono">{fmt(i.price)}</td>
+                <td class="mono">{i.weightCarried || '—'}</td>
+                <td class="muted">{i.effect}</td>
+              </tr>
+            ))}
+            {freeSlots.map((s) => (
+              <tr class="free"><td class="muted">{slotLabel[s]}</td><td class="muted">— libre —</td><td></td><td></td><td></td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Sin ranura</h2>
+      <div class="scroll-x">
+        <table>
+          <thead><tr><th>Objeto</th><th>Precio</th><th>Usos</th><th>Efecto</th></tr></thead>
+          <tbody>
+            {slotless.map((i) => (
+              <tr>
+                <td><Term k={i.id} /></td>
+                <td class="mono">{fmt(i.price)}</td>
+                <td class="mono">{i.quantity ? `${i.quantity}` : i.resource ? 'diario' : '—'}</td>
+                <td class="muted">{i.effect}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Mundano (dentro del haversack)</h2>
+      <div class="scroll-x">
+        <table>
+          <tbody>
+            {mundane.map((i) => (
+              <tr><td><Term k={i.id} /></td><td class="mono">{fmt(i.price)}</td><td class="muted">{i.effect}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="help">La ropa no se cuenta (convención de mesa). Total mundano 531 po + holy symbol (tattoo) 100 po.</p>
+    </section>
+
+    <section class="card">
+      <h2>Lista de deseos</h2>
+      <div class="scroll-x">
+        <table>
+          <thead><tr><th>Objeto</th><th>Precio</th><th>Por qué</th></tr></thead>
+          <tbody>
+            {wishlist.map((w) => (
+              <tr>
+                <td><Term k={w.id} />{w.price <= remaining && <span class="badge badge--solid" style="margin-left:6px">alcanzable</span>}</td>
+                <td class="mono">{fmt(w.price)}</td>
+                <td class="muted">{w.reason}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="help">Nivel 12: Wis 28, Magic Vestment +3, Mythic CCW (tier 4). Nivel 13: conjuros de 7.º (Resurrection, Regenerate, Greater Restoration). Crafteo: mitad de precio, 1.000 po de valor por día, Spellcraft tomando 10 = 18.</p>
+    </section>
+  </div>
+</App>
+
+<style>
+  tr.free td { border-bottom-style: dotted; }
+</style>

@@ -1,0 +1,12 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Additional Traits
+ **Source** Advanced Player's Guide pg. 150, Second Darkness Player's Guide pg. 12, Pathfinder #16: Endless Night pg. 15
+You have more traits than normal.
+ **Benefit** : You gain two character traits of your choice (see Chapter 8). These traits must be chosen from different lists, and cannot be chosen from lists from which you have already selected a character trait. You must meet any additional qualifications for the character traits you choose.
+ | 
+ 

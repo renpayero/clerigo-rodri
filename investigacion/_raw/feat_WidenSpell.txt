@@ -1,0 +1,13 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Widen Spell (Metamagic)
+ **Source** PRPG Core Rulebook pg. 137
+You can cast your spells so that they occupy a larger space.
+ **Benefit** : You can alter a burst, emanation, or spread-shaped spell to increase its area. Any numeric measurements of the spell's area increase by 100%. A widened spell uses up a spell slot three levels higher than the spell's actual level.
+Spells that do not have an area of one of these four sorts are not affected by this feat.
+ | 
+ 

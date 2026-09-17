@@ -1,0 +1,49 @@
+---
+import App from '@/layouts/App.astro';
+import { getCollection } from 'astro:content';
+import { RulesSearch } from '@/components/islands/RulesSearch';
+
+const entries = (await getCollection('rules')).sort((a, b) => a.data.order - b.data.order);
+const sections = Array.from(new Set(entries.map((e) => e.data.section)));
+/** Texto plano para el índice de búsqueda: sin links, énfasis ni tablas. */
+const stripMd = (md: string) =>
+  md
+    .replace(/^>.*$/gm, '')
+    .replace(/\[([^\]]*)\]\(([^)]*)\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/[*_`#|]+/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+const index = entries.map((e) => ({ slug: e.id, title: e.data.title, section: e.data.section, summary: e.data.summary, tags: e.data.tags, body: stripMd(e.body ?? '').slice(0, 20000) }));
+---
+
+<App title="Reglas">
+  <div class="stack">
+    <section class="card card--tint">
+      <h2>Reglas</h2>
+      <p class="muted">{entries.length} entradas curadas del dossier (43.000 palabras verificadas en AoN). Cada regla lleva su link a la fuente.</p>
+      <RulesSearch client:idle index={index} />
+    </section>
+    {sections.map((sec) => (
+      <section class="card">
+        <h3 class="section-title">{sec}</h3>
+        <ul class="rules-list">
+          {entries.filter((e) => e.data.section === sec).map((e) => (
+            <li>
+              <a href={`/reglas/${e.id}`}><b>{e.data.title}</b></a>
+              <span class="muted">{e.data.summary}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</App>
+
+<style>
+  .rules-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s2); }
+  .rules-list li { display: grid; gap: 2px; padding: var(--s2) 0; border-bottom: 1px solid var(--border); font-size: var(--fs-2); }
+  .rules-list li:last-child { border-bottom: 0; }
+  .rules-list a { text-decoration: none; }
+  .rules-list a:hover { text-decoration: underline; }
+</style>

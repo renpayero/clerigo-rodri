@@ -1,0 +1,12 @@
+https://aonprd.com/Rules.aspx?ID=416|abilitydmg2
+https://www.aonprd.com/MonsterTemplates.aspx?ItemName=Lycanthrope|lycanthrope
+https://www.aonprd.com/Rules.aspx?Name=Possession&Category=Occult%20Rules|possession
+https://www.aonprd.com/Rules.aspx?Name=Preparing%20Divine%20Spells&Category=Divine%20Spells|divprep
+https://www.aonprd.com/Rules.aspx?Name=Actions%20in%20Combat&Category=Combat|actionsincombat
+https://www.aonprd.com/TraitDisplay.aspx?ItemName=Focused%20Mind|focusedmind
+https://www.aonprd.com/Rules.aspx?Name=Bleed&Category=Special%20Abilities|bleed
+https://www.aonprd.com/SkillDisplay.aspx?ItemName=Heal|healskill
+https://www.aonprd.com/SpellDisplay.aspx?ItemName=Possession|possessionspell
+https://www.aonprd.com/Rules.aspx?Name=Curses&Category=Special%20Abilities|curses
+https://www.aonprd.com/Rules.aspx?Name=Disease&Category=Special%20Abilities|disease
+https://www.aonprd.com/Rules.aspx?Name=Incorporeal&Category=Special%20Abilities|incorporeal

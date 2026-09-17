@@ -1,0 +1,25 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+## Surmount Affliction
+ **Source** Ultimate Magic pg. 241
+ **School** abjuration; **Level** cleric 2, inquisitor 2, oracle 2, spiritualist 2, warpriest 2
+## Casting
+ **Casting Time** 1 standard action
+ **Components** V, S
+## Effect
+ **Range** you
+ **Target** personal
+ **Duration** 1 round/level
+## Description
+You temporarily overcome one harmful condition. This does not end the effect causing the condition; it just suspends that condition’s effect for the duration of the spell. You can surmount any one of the following conditions: blinded, confused, dazed, dazzled, deafened, fatigued, frightened, paralyzed, shaken, or sickened.
+## Mythic Surmount Affliction
+ **Source** Mythic Adventures pg. 110
+You can cast this spell with no verbal or somatic component, and even if you’re helpless (but not unconscious). You temporarily overcome a number of additional harmful conditions equal to half your tier. 
+ **Augmented (7th)** : If you expend three uses of mythic power, you become immune to all afflictions the spell can normally overcome. In addition, you overcome (but do not become immune to) one of the following conditions: exhausted, nauseated, panicked, petrified, staggered, and stunned.
+ | 
+ 

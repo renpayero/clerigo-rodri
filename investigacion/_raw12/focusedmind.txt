@@ -1,0 +1,29 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## **Basic (Combat)** | 
+ **Basic (Faith)** | 
+ **Basic (Magic)** | 
+ **Basic (Social)** | 
+ **Campaign** | 
+ **Cosmic** | 
+ **Equipment** | 
+ **Exemplar** | 
+ **Faction** | 
+ **Family** | 
+ **Mount** | 
+ **Race** | 
+ **Region** | 
+ **Religion** 
+## **Drawbacks** 
+## Focused Mind
+ **Source** Ultimate Campaign pg. 57, Second Darkness Player's Guide pg. 13, Advanced Player's Guide pg. 329
+ **Category** Basic (Magic)
+ Your childhood was dominated either by
+ lessons of some sort (whether musical, academic, or other)
+ or by a horrible home life that encouraged your ability to
+ block out distractions and focus on the immediate task at
+ hand. You gain a +2 trait bonus on concentration checks.
+ | 
+ 

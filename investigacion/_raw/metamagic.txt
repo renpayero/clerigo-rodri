@@ -1,0 +1,112 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## 
+## Metamagic Feats
+ **Description ** **Source** PRPG Core Rulebook pg. 112
+As a spellcaster's knowledge of magic grows, he can learn to cast spells in ways slightly different from the norm. Preparing and casting a spell in such a way is harder than normal but, thanks to metamagic feats, is at least possible. Spells modified by a metamagic feat use a spell slot higher than normal. This does not change the level of the spell, so the DC for saving throws against it does not go up. Metamagic feats do not affect spell-like abilities. 
+ **Wizards and Divine Spellcasters** : Wizards and divine spellcasters must prepare their spells in advance. During preparation, the character chooses which spells to prepare with metamagic feats (and thus which ones take up higher-level spell slots than normal). 
+ **Sorcerers and Bards** : Sorcerers and bards choose spells as they cast them. They can choose when they cast their spells whether to apply their metamagic feats to improve them. As with other spellcasters, the improved spell uses up a higher-level spell slot. Because the sorcerer or bard has not prepared the spell in a metamagic form in advance, he must apply the metamagic feat on the spot. Therefore, such a character must also take more time to cast a metamagic spell (one enhanced by a metamagic feat) than he does to cast a regular spell. If the spell's normal casting time is a standard action, casting a metamagic version is a full-round action for a sorcerer or bard. (This isn't the same as a 1-round casting time.) The only exception is for spells modified by the Quicken Spell metamagic feat, which can be cast as normal using the feat. 
+ For a spell with a longer casting time, it takes an extra full-round action to cast the spell. 
+ **Spontaneous Casting and Metamagic Feats** : A cleric spontaneously casting a cure or inflict spell, or a druid spontaneously casting a summon nature's ally spell, can cast a metamagic version of it instead. Extra time is also required in this case. Casting a standard action metamagic spell spontaneously is a full-round action, and a spell with a longer casting time takes an extra full-round action to cast. The only exception is for spells modified by the Quicken Spell feat, which can be cast as a swift action. 
+ **Effects of Metamagic Feats on a Spell** : In all ways, a metamagic spell operates at its original spell level, even though it is prepared and cast using a higher-level spell slot. Saving throw modifications are not changed unless stated otherwise in the feat description. 
+ The modifications made by these feats only apply to spells cast directly by the feat user. A spellcaster can't use a metamagic feat to alter a spell being cast from a wand, scroll, or other device. 
+ Metamagic feats that eliminate components of a spell don't eliminate the attack of opportunity provoked by casting a spell while threatened. Casting a spell modified by Quicken Spell does not provoke an attack of opportunity. 
+ Metamagic feats cannot be used with all spells. See the specific feat descriptions for the spells that a particular feat can't modify. 
+ **Multiple Metamagic Feats on a Spell** : A spellcaster can apply multiple metamagic feats to a single spell. Changes to its level are cumulative. You can't apply the same metamagic feat more than once to a single spell. 
+ **Magic Items and Metamagic Spells** : With the right item creation feat, you can store a metamagic version of a spell in a scroll, potion, or wand. Level limits for potions and wands apply to the spell's higher spell level (after the application of the metamagic feat). A character doesn't need the metamagic feat to activate an item storing a metamagic version of a spell. 
+ **Counterspelling Metamagic Spells** : Whether or not a spell has been enhanced by a metamagic feat does not affect its vulnerability to counterspelling or its ability to counterspell another spell (see Magic).
+ *combat feat
+⊤armor mastery feat
+⊤⊤shield mastery feat
+⊤⊤⊤weapon mastery feat
+ NamePrerequisiteDescription
+ Apocalyptic Spell | — | Area affected by spell becomes difficult to move in | 
+ Aquatic Spell | — | Spell functions normally underwater | 
+ Ascendant Spell | — | Imitate mythic version of a spell | 
+ Authoritative Spell | — | Spell forbids target from taking certain actions | 
+ Benthic Spell | — | Modify a spell to inflict damage with pressurized water | 
+ Blissful Spell | — | Target of spell takes combat penalties or gains bonuses
+on skills and saves | 
+ Bouncing Spell | — | Redirect a spell that had no effect on initial target | 
+ Brackish Spell | — | Modfy a spell to sheath you in protective seawater when cast | 
+ Brisk Spell | Dex 13+ | Increase the speed of a granted movement type | 
+ Burning Spell | — | Spell with the acid or fire descriptor deals extra damage the next round | 
+ Centered Spell | Spellcraft 3 ranks | Center a spells area on yourself | 
+ Cherry Blossom Spell | — | Creatures that take damage from your spell have their age manipulated | 
+ Coaxing Spell | Spell Focus (enchantment), Knowledge (dungeoneering) 6 ranks | Use mind-affecting spells to affect mindless oozes or vermin | 
+ Concussive Spell | — | Spell with the sonic descriptor gains a debilitating concussive effect | 
+ Conditional Spell | — | Apply conditional favor to a spell you cast | 
+ Consecrate Spell | Aasimar, able to prepare or cast consecrate | Maximize spell variables against evil creatures. | 
+ Contagious Spell | — | Spell spreads to those who fail to remove it | 
+ Contingent Spell | Ability to cast cure spells (a cure spell is any spell with “cure” in its name) | Turn a healing spell into a contengent effect | 
+ Crypt Spell | — | Damaging spell hinders resurrection or sickens undead | 
+ Dazing Spell | — | Daze creature with spell damage | 
+ Delayed Spell | — | Set a spell to trigger on a delay | 
+ Disruptive Spell | — | Target of spell must make concentration check to cast a spell in the next round | 
+ Echoing Spell | — | Cast a spell a second time | 
+ Eclipsed Spell | — | Alter how your spells affect illumination | 
+ Ectoplasmic Spell | — | Spell fully affects incorporeal and ethereal creatures | 
+ Elemental Spell | — | Inflict energy damage instead of regular spell damage | 
+ Empower Spell | — | Increase spell variables by 50% | 
+ Encouraging Spell | Cha 13, Diplomacy 6 ranks | Increase a granted moral bonus | 
+ Enlarge Spell | — | Double spell range | 
+ Extend Spell | — | Double spell duration | 
+ Familiar Spell | Spellcaster with familiar class feature | Imbue your familiar with a spell, allowing it to cast the spell at a later time | 
+ Fearsome Spell | — | Spell damage causes the shaken condition | 
+ Flaring Spell | — | Spell with the fire, light, or electricity descriptor dazzles creatures it affects | 
+ Fleeting Spell | — | Dismiss spell more easily | 
+ Focused Spell | — | Increase save DC of spell for one target in a group | 
+ Furious Spell | — | Spell deals more damage and can be cast while in a rage | 
+ Heighten Spell | — | Treat spell as a higher level | 
+ Intensified Spell | — | Increase maximum damage dice by 5 levels | 
+ Intuitive Spell | — | Cast spell without thought components | 
+ Jinxed Spell | Any two metamagic feats, Halfling Jinx trait | Combine your jinxes with spells | 
+ Latent Curse | — | Alter curse spells to target objects instead of people | 
+ Lingering Spell | — | Instantaneous area effect spell lasts for 1 round | 
+ Logical Spell | — | Cast spell without emotion components | 
+ Maximize Spell | — | Maximize spell variables | 
+ Merciful Spell | — | Spell inflicts nonlethal damage instead of lethal | 
+ Murky Spell | — | Cloud effects work underwater, with penalties | 
+ Persistent Spell | — | Creatures who saved against a spell must save again | 
+ Piercing Spell | — | Affected spell treats creatures with SR as having an SR of 5 lower | 
+ Quicken Spell | — | Cast spell as a swift action | 
+ Reach Spell | — | Increase spell range to higher range category | 
+ Rime Spell | — | Spell with the cold descriptor also entangles creatures if the spell damages them | 
+ Scarring Spell | — | Emotion or fear spell gives penalties against further such spells | 
+ Scouting Summons | Spell Focus (conjuration), ability to cast magic jar | Possess a summoned creature | 
+ Seeking Spell | — | Allow spells to bend around barriers | 
+ Selective Spell | Spellcraft 10 ranks | Exclude targets from an area effect spell | 
+ Shadow Grasp | Tenebrous Spell, Umbral Spell | Entangle creatures caught within your darkness spells | 
+ Sickening Spell | — | Sicken creature with spell damage | 
+ Silent Spell | — | Cast spell without verbal components | 
+ Snuffing Spell | — | Modify your magic to extinguish light sources | 
+ Solar Spell | — | Enhance your light magic with the power of the sun | 
+ Solid Shadows | Spell Focus (illusion) | Your shadow spells are 20% more real than normal | 
+ Stable Spell | — | Cast spells in areas of primal magic with less chance of triggering a primal magic event | 
+ Steam Spell | — | Use fire spells underwater without a caster level check | 
+ Still Spell | — | Cast spell without somatic components | 
+ Studied Spell | — | Spell uses Knowledge to bypass racial resistances | 
+ Stygian Spell | — | Water spell causes memory loss to target | 
+ Stylized Spell | Bluff 5 ranks, Spellcraft 5 ranks | Spell is difficult to identify and might be mistaken for a similar spell | 
+ Tenacious Spell | — | Spell is difficult to dispel and remains for 1d4 rounds | 
+ Tenebrous Spell | — | Alter a spell so it is stronger in darkness, but weaker in the light | 
+ Thanatopic Spell | Knowledge (religion) 6 ranks, Spell Focus (necromancy) | Affected spell's death effects, energy drain, and negative levels affect undead | 
+ Threatening Illusion | Spell Focus (illusion), Gnome | Force enemies to think of your illusions as real threats | 
+ Threnodic Spell | Knowledge (religion) 6 ranks, Spell Focus (necromancy) | Change a mind-affecting spell so it can affect undead, but not living creatures | 
+ Thundering Spell | — | Deafen creature with spell damage | 
+ Toppling Spell | — | Spell with the force descriptor knocks targets prone | 
+ Toxic Spell | Craft (poison) 5 ranks, ability to cast 2nd-level spells, poison use class feature | Infuse a spell with the power of a poison | 
+ Traumatic Spell | — | Emotion or fear spell causes nightmares | 
+ Trick Spell | Ability to cast 1st-level spells, chaotic neutral alignment, worshiper of Calistria | Spells carry with them a dirty trick | 
+ Tumultuous Spell | — | Spell causes a target to move in a random direction | 
+ Umbral Spell | Tenebrous Spell | Alter a spell to radiate darkness | 
+ Ursurping Spell | — | Targets that fail their saving throw flank with you and can't make attacks of opportunity against you | 
+ Vast Spell | Caster level 3rd | Affect more creatures in an area | 
+ Verdant Spell | Spell Focus (enchantment), Knowledge (nature) 6 ranks | Your spells can affect plant creatures | 
+ Widen Spell | — | Double spell area | 
+ Yai-Mimic Spell | Int 15, Still Spell | Modify a ray spell to fire from your forehead, granting you brief regeneration | 
+ 

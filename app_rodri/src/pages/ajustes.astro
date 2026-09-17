@@ -1,0 +1,22 @@
+---
+import App from '@/layouts/App.astro';
+import { actions } from 'astro:actions';
+import { SettingsPanel } from '@/components/islands/SettingsPanel';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+
+const result = Astro.getActionResult(actions.auth.logout);
+if (result && !result.error) return Astro.redirect('/login');
+
+const snapshot = await loadSnapshot(db());
+---
+
+<App title="Ajustes" snapshot={snapshot}>
+  <SettingsPanel client:load snapshot={snapshot} />
+  <section class="card" id="sesion" style="margin-top: var(--s4)">
+    <h2 class="section-title">Sesión</h2>
+    <form method="POST" action={actions.auth.logout} class="btn-row">
+      <button type="submit" class="btn">Cerrar sesión en este dispositivo</button>
+    </form>
+  </section>
+</App>

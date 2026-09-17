@@ -1,0 +1,118 @@
+                            Sources
+                            Tools
+                            Contact Us
+                            Contributors
+						    Support the Archives
+                            Maximize Menu
+                                    Archives of Nethys
+                            Character Creation +
+                                Classes
+                                Feats
+                                Prestige Classes
+                                Races
+                                Skills
+                                Traits
+                                Mythic Index
+                            Deities
+                            Equipment +
+                                Equipment (Non-Magical)
+                                Magic Items
+                                Technology
+							FAQ
+                            Spells/Rituals
+                            Rules +
+                                Afflictions
+                                NPC Index
+                                Rules
+                                Tools
+                            Hazards
+                            Monsters
+                            Sources
+                            About the Archives +
+                                Licenses
+                                Projects
+                                Contact Us
+                                Contributors
+						        Support the Archives
+                        &nbsp;
+                        Toggle Theme
+    Paizo & Archives of Nethys—Moving Forward Together. Click here to read our partnership status update.
+							Archives of Nethys
+    All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+             RegenerateSource PRPG Core Rulebook pg. 331
+School conjuration (healing); Level cleric 7, druid 9, oracle 7, shaman 7, witch 7CastingCasting Time 3 full rounds
+Components V, S, DFEffectRange touch
+Target living creature touched
+Duration instantaneous
+Saving Throw Fortitude negates (harmless); Spell Resistance yes (harmless)DescriptionThe subject's severed body members (fingers, toes, hands, feet, arms, legs, tails, or even heads of multiheaded creatures), broken bones, and ruined organs grow back. After the spell is cast, the physical regeneration is complete in 1 round if the severed members are present and touching the creature. It takes 2d10 rounds otherwise.
+Regenerate also cures 4d8 points of damage + 1 point per caster level (maximum +35), rids the subject of exhaustion and fatigue, and eliminates all nonlethal damage the subject has taken. It has no effect on nonliving creatures (including undead).Mythic RegenerateSource Mythic Adventures pg. 105
+The casting time changes to 1 standard action and the target changes to 1 living creature or corpse touched. The spell removes the blinded, dazzled, and deafened conditions. The target gains regeneration equal to your tier (overcome by acid and fire) for 1 round per caster level. If the target was killed by amputation or decapitation (such as from a vorpal weapon) within the past 1 round, the spell regenerates lost body parts and brings the creature back to life (as breath of life), treating it as if it had negative hp equal to its Constitution score. 
+                    Site Owner: Blake DavisEmail Spam Checker: MX Guarddog
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4953734518316037"
+                        data-ad-slot="7738185508">
+                (adsbygoogle = window.adsbygoogle || []).push({});
+      initiateToggle(document.getElementById('theme-toggle'));
+      initializeMenuToggle(document.getElementById('minMaxMenu'));
+      var initializeSearch = function (search) {
+          var button;
+          var text;
+          if (search.firstElementChild.classList.contains('search-input'))
+              text = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-input'))
+              text = search.lastElementChild;
+          if (search.firstElementChild.classList.contains('search-button'))
+              button = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-button'))
+              button = search.lastElementChild;
+          if (search) {
+              search.addEventListener('keypress', function (e) {
+                  if (e.keyCode == 13) {
+                      e.preventDefault();
+                      if (text.value != null && text.value.length > 0)
+                          window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+                  }
+              })
+          }
+          if (button) {
+              button.addEventListener('click', function (e) {
+                  window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+              });
+          }
+      };
+      var initializeExpand = function (toggle) {
+          var targetAttrString = "[data-target='" + toggle.dataset.toggle + "']";
+          //target = menu to be collapsed
+          var target = document.querySelector(targetAttrString);
+          toggle.addEventListener('click', function () {
+              var expanded = target.classList.contains('expanded');
+              expanded = !expanded;
+              if (expanded) {
+                  //hide other in group if exists
+                  if (target.dataset.group) {
+                      var otherExpanded = document.querySelector('.expanded[data-group="' + target.dataset.group + '"]');
+                      if (otherExpanded) {
+                          otherExpanded.classList.remove('expanded');
+                      }
+                  }
+                  target.classList.add('expanded');
+              } else {
+                  target.classList.remove('expanded');
+              }
+          });
+      };
+      (function () {
+          //toggles = link that expands/collapses target
+          var toggles = document.querySelectorAll('[data-toggle]');
+          toggles.forEach(function (toggle) {
+              initializeExpand(toggle);
+          });
+          //searches
+          var searches = document.querySelectorAll('.search');
+          searches.forEach(function (search) {
+              initializeSearch(search);
+          });
+      })();

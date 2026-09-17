@@ -1,0 +1,46 @@
+---
+import { Font } from 'astro:assets';
+import '@/styles/tokens.css';
+import '@/styles/base.css';
+import '@/styles/components.css';
+import '@/styles/mesa.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'Rodri Companion', description = 'Ayuda de juego para Rodri, clérigo sanador mítico (Pathfinder 1e)' } = Astro.props;
+const fullTitle = title === 'Rodri Companion' ? title : `${title} · Rodri`;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfbfb" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141414" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rodri" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <Font cssVariable="--font-sans" preload />
+    <Font cssVariable="--font-mono" />
+    <script is:inline>
+      // Tema: 'auto' | 'light' | 'dark' guardado en localStorage (preferencia por dispositivo).
+      try {
+        const t = localStorage.getItem('rodri.theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

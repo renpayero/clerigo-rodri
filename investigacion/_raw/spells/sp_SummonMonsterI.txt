@@ -1,0 +1,77 @@
+
+ Object reference not set to an instance of an object.
+ Server Error in '/' Application.
+## Object reference not set to an instance of an object. 
+ ** Description: ** An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+ ** Exception Details: ** System.NullReferenceException: Object reference not set to an instance of an object.
+ **Source Error:** 
+An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below. 
+ | 
+ **Stack Trace:** 
+[NullReferenceException: Object reference not set to an instance of an object.]
+ System.Data.Linq.SqlClient.QueryConverter.VisitInvocation(InvocationExpression invoke) +1250
+ System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node) +1133
+ System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp) +34
+ System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b) +49
+ System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node) +460
+ System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp) +34
+ System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b) +33
+ System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node) +460
+ System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp) +34
+ System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b) +33
+ System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node) +460
+ System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp) +34
+ System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b) +33
+ System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node) +460
+ System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp) +34
+ System.Data.Linq.SqlClient.QueryConverter.VisitWhere(Expression sequence, LambdaExpression predicate) +159
+ System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node) +874
+ System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node) +133
+ System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations) +168
+ System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query) +165
+ System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator() +55
+ System.Collections.Generic.List`1..ctor(IEnumerable`1 collection) +430
+ System.Linq.Enumerable.ToList(IEnumerable`1 source) +73
+ ArchivesOfNethys.SpellDisplay.LinqDataSourceSpellDisplay_Selecting(Object sender, LinqDataSourceSelectEventArgs e) in F:\Dropbox\Projects\ArchivesOfNethys\archivesofnethys\ArchivesOfNethys\SpellDisplay.aspx.cs:35
+ System.Web.UI.WebControls.LinqDataSourceView.OnSelecting(LinqDataSourceSelectEventArgs e) +139
+ System.Web.UI.WebControls.LinqDataSourceView.GetSource(QueryContext context) +171
+ System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(DataSourceSelectArguments arguments) +82
+ System.Web.UI.WebControls.DataList.CreateControlHierarchy(Boolean useDataSource) +384
+ System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e) +89
+ System.Web.UI.WebControls.BaseDataList.EnsureDataBound() +86
+ System.Web.UI.Control.EnsureChildControls() +107
+ System.Web.UI.Control.PreRenderRecursiveInternal() +58
+ System.Web.UI.Control.PreRenderRecursiveInternal() +227
+ System.Web.UI.Control.PreRenderRecursiveInternal() +227
+ System.Web.UI.Control.PreRenderRecursiveInternal() +227
+ System.Web.UI.Control.PreRenderRecursiveInternal() +227
+ System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +3671
+ | 
+ **Version Information:**  Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.8.4770.0
+.GetEnumerator()
+ at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+ at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+ at ArchivesOfNethys.SpellDisplay.LinqDataSourceSpellDisplay_Selecting(Object sender, LinqDataSourceSelectEventArgs e) in F:\Dropbox\Projects\ArchivesOfNethys\archivesofnethys\ArchivesOfNethys\SpellDisplay.aspx.cs:line 35
+ at System.Web.UI.WebControls.LinqDataSourceView.OnSelecting(LinqDataSourceSelectEventArgs e)
+ at System.Web.UI.WebControls.LinqDataSourceView.GetSource(QueryContext context)
+ at System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(DataSourceSelectArguments arguments)
+ at System.Web.UI.WebControls.DataList.CreateControlHierarchy(Boolean useDataSource)
+ at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+ at System.Web.UI.WebControls.BaseDataList.EnsureDataBound()
+ at System.Web.UI.Control.EnsureChildControls()
+ at System.Web.UI.Control.PreRenderRecursiveInternal()
+ at System.Web.UI.Control.PreRenderRecursiveInternal()
+ at System.Web.UI.Control.PreRenderRecursiveInternal()
+ at System.Web.UI.Control.PreRenderRecursiveInternal()
+ at System.Web.UI.Control.PreRenderRecursiveInternal()
+ at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+[HttpUnhandledException]: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+ at System.Web.UI.Page.HandleError(Exception e)
+ at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ at System.Web.UI.Page.ProcessRequest()
+ at System.Web.UI.Page.ProcessRequest(HttpContext context)
+ at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+ at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+ at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+-->

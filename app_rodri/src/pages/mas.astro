@@ -1,0 +1,25 @@
+---
+import App from '@/layouts/App.astro';
+const links = [
+  { href: '/equipo', label: 'Equipo', desc: 'Objetos por ranura, consumibles y cargas, oro, lista de deseos.' },
+  { href: '/ficha', label: 'Ficha', desc: 'Atributos, defensas, ataques, dotes, rasgos, habilidades e idiomas.' },
+  { href: '/reglas', label: 'Reglas', desc: 'Curación, emergencias, aflicciones, reglas de la mesa y mitos desmentidos.' },
+  { href: '/ajustes', label: 'Ajustes', desc: 'Aliados, notas, historial y deshacer, copias de seguridad, sesión.' },
+];
+---
+
+<App title="Más">
+  <div class="stack">
+    {links.map((l) => (
+      <a class="card link-card" href={l.href}>
+        <h3>{l.label}</h3>
+        <p class="muted">{l.desc}</p>
+      </a>
+    ))}
+  </div>
+</App>
+
+<style>
+  .link-card { text-decoration: none; display: grid; gap: var(--s1); }
+  .link-card:hover { background: var(--bg-2); }
+</style>

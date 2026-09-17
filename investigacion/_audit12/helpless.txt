@@ -1,0 +1,116 @@
+                            Sources
+                            Tools
+                            Contact Us
+                            Contributors
+						    Support the Archives
+                            Maximize Menu
+                                    Archives of Nethys
+                            Character Creation +
+                                Classes
+                                Feats
+                                Prestige Classes
+                                Races
+                                Skills
+                                Traits
+                                Mythic Index
+                            Deities
+                            Equipment +
+                                Equipment (Non-Magical)
+                                Magic Items
+                                Technology
+							FAQ
+                            Spells/Rituals
+                            Rules +
+                                Afflictions
+                                NPC Index
+                                Rules
+                                Tools
+                            Hazards
+                            Monsters
+                            Sources
+                            About the Archives +
+                                Licenses
+                                Projects
+                                Contact Us
+                                Contributors
+						        Support the Archives
+                        &nbsp;
+                        Toggle Theme
+    Paizo & Archives of Nethys—Moving Forward Together. Click here to read our partnership status update.
+							Archives of Nethys
+    Rules Index | GM Screen
+    Combat / Combat Modifiers
+Helpless DefendersSource PRPG Core Rulebook pg. 197
+A helpless opponent is someone who is bound, sleeping, paralyzed, unconscious, or otherwise at your mercy.
+ Regular Attack: A helpless character takes a –4 penalty to AC against melee attacks. In addition, a helpless character is treated as having a Dexterity of 0, giving him a –5 penalty to AC against both melee and ranged attacks (for a total of –9 against melee and –5 against ranged). A helpless character is also flat-footed.
+ Coup de Grace: As a full-round action, you can use a melee weapon to deliver a coup de grace (pronounced “coo day grahs”) to a helpless opponent. You can also use a bow or crossbow, provided you are adjacent to the target.
+ You automatically hit and score a critical hit. If the defender survives the damage, he must make a Fortitude save (DC 10 + damage dealt) or die. A rogue also gets her extra sneak attack damage against a helpless opponent when delivering a coup de grace.
+ Delivering a coup de grace provokes attacks of opportunity from threatening opponents.
+ You can’t deliver a coup de grace against a creature that is immune to critical hits. You can deliver a coup de grace against a creature with total concealment, but doing this requires two consecutive full-round actions (one to “find” the creature once you’ve determined what square it’s in, and one to deliver the coup de grace).
+                    Site Owner: Blake DavisEmail Spam Checker: MX Guarddog
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4953734518316037"
+                        data-ad-slot="7738185508">
+                (adsbygoogle = window.adsbygoogle || []).push({});
+      initiateToggle(document.getElementById('theme-toggle'));
+      initializeMenuToggle(document.getElementById('minMaxMenu'));
+      var initializeSearch = function (search) {
+          var button;
+          var text;
+          if (search.firstElementChild.classList.contains('search-input'))
+              text = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-input'))
+              text = search.lastElementChild;
+          if (search.firstElementChild.classList.contains('search-button'))
+              button = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-button'))
+              button = search.lastElementChild;
+          if (search) {
+              search.addEventListener('keypress', function (e) {
+                  if (e.keyCode == 13) {
+                      e.preventDefault();
+                      if (text.value != null && text.value.length > 0)
+                          window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+                  }
+              })
+          }
+          if (button) {
+              button.addEventListener('click', function (e) {
+                  window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+              });
+          }
+      };
+      var initializeExpand = function (toggle) {
+          var targetAttrString = "[data-target='" + toggle.dataset.toggle + "']";
+          //target = menu to be collapsed
+          var target = document.querySelector(targetAttrString);
+          toggle.addEventListener('click', function () {
+              var expanded = target.classList.contains('expanded');
+              expanded = !expanded;
+              if (expanded) {
+                  //hide other in group if exists
+                  if (target.dataset.group) {
+                      var otherExpanded = document.querySelector('.expanded[data-group="' + target.dataset.group + '"]');
+                      if (otherExpanded) {
+                          otherExpanded.classList.remove('expanded');
+                      }
+                  }
+                  target.classList.add('expanded');
+              } else {
+                  target.classList.remove('expanded');
+              }
+          });
+      };
+      (function () {
+          //toggles = link that expands/collapses target
+          var toggles = document.querySelectorAll('[data-toggle]');
+          toggles.forEach(function (toggle) {
+              initializeExpand(toggle);
+          });
+          //searches
+          var searches = document.querySelectorAll('.search');
+          searches.forEach(function (search) {
+              initializeSearch(search);
+          });
+      })();

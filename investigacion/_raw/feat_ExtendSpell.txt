@@ -1,0 +1,12 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Extend Spell (Metamagic)
+ **Source** PRPG Core Rulebook pg. 123
+You can make your spells last twice as long.
+ **Benefit** : An extended spell lasts twice as long as normal. A spell with a duration of concentration, instantaneous, or permanent is not affected by this feat. An extended spell uses up a spell slot one level higher than the spell's actual level.
+ | 
+ 

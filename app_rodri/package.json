@@ -1,0 +1,46 @@
+{
+  "name": "rodri-companion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ayuda de juego para Rodri, clérigo sanador mítico (Pathfinder 1e)",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview --host",
+    "start": "node ./dist/server/entry.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:studio": "drizzle-kit studio",
+    "aon:validate": "tsx scripts/validate-aon.ts",
+    "rules:import": "tsx scripts/import-dossier.ts",
+    "smoke": "tsx scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "7.0.2",
+    "@astrojs/node": "11.1.6",
+    "@astrojs/preact": "6.0.5",
+    "@nanostores/preact": "1.1.0",
+    "astro": "7.3.3",
+    "drizzle-orm": "0.45.2",
+    "nanostores": "1.5.3",
+    "postgres": "3.4.9",
+    "preact": "10.29.8",
+    "tsx": "4.23.13"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@electric-sql/pglite": "0.5.8",
+    "@types/node": "22.20.3",
+    "drizzle-kit": "0.31.10",
+    "typescript": "5.9.3",
+    "vitest": "5.0.1"
+  }
+}

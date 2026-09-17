@@ -1,0 +1,8 @@
+# Desarrollo local: expone la app en la LAN (celular) y Postgres en localhost (drizzle-kit studio).
+services:
+  app:
+    ports:
+      - "0.0.0.0:4321:4321"
+  db:
+    ports:
+      - "127.0.0.1:5432:5432"

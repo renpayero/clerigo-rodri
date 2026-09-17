@@ -1,0 +1,51 @@
+---
+import App from '@/layouts/App.astro';
+import AbilityScores from '@/components/sheet/AbilityScores.astro';
+import Defenses from '@/components/sheet/Defenses.astro';
+import Features from '@/components/sheet/Features.astro';
+import SkillTable from '@/components/sheet/SkillTable.astro';
+import Term from '@/components/Term';
+import { character, houseRules } from '@/data';
+import { AcCalculator } from '@/components/islands/AcCalculator';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+const c = character;
+const snapshot = await loadSnapshot(db());
+---
+
+<App title="Ficha" snapshot={snapshot}>
+  <div class="stack">
+    <section class="card card--tint">
+      <h1>{c.name}</h1>
+      <p class="muted">{c.className} {c.level} · Mythic {c.mythicPath} tier {c.tier} · <Term k="aasimar-abilities" label="Aasimar" aon={c.aon.aasimar} name="Aasimar" tip="Ajeno nativo, +2 Wis/+2 Cha, visión en la oscuridad, resistencia 5 a ácido/frío/electricidad, Daylight 1/día." /> · <Term name="Sarenrae" tip="Diosa NG del sol, la redención y la curación. Dominios Fire, Glory, Good, Healing, Sun; arma predilecta scimitar." aon={c.aon.sarenrae} label="Sarenrae" /> ({c.deityAlignment}) · alineamiento {c.alignment}</p>
+      <dl class="kv" style="margin-top: var(--s3)">
+        <dt>Dominios</dt><dd><Term k="healing" /> + <Term k="glory-heroism" label="Glory (Heroism)" /></dd>
+        <dt>Jugador</dt><dd>{c.player}</dd>
+        <dt>BAB</dt><dd class="mono">+{c.bab[0]}/+{c.bab[1]}</dd>
+        <dt>CL</dt><dd><Term k="cl">{c.casterLevel} ({c.inspiredCasterLevel} con Inspired Spell)</Term></dd>
+        <dt>Hero Points</dt><dd><Term k="hero-point">1 (máx. 3)</Term></dd>
+        <dt>Poder mítico</dt><dd><Term k="poder-mitico">9/día · Surge 1d6</Term></dd>
+        <dt>Pg</dt><dd>{c.hpMax} = {c.hpRoll}</dd>
+      </dl>
+    </section>
+
+    <AbilityScores />
+    <AcCalculator client:load snapshot={snapshot} />
+    <Defenses />
+    <Features />
+    <SkillTable />
+
+    <section class="card">
+      <h2>Reglas de la mesa y rulings del DM</h2>
+      <ul class="rules">
+        {houseRules.map((r) => (
+          <li><strong>{r.aon ? <Term name={r.label} tip={r.detail} aon={r.aon}>{r.label}</Term> : r.label}</strong> <span class="muted">— {r.detail}</span></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</App>
+
+<style>
+  .rules { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s2); }
+</style>

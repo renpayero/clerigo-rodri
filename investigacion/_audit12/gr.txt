@@ -1,0 +1,117 @@
+                            Sources
+                            Tools
+                            Contact Us
+                            Contributors
+						    Support the Archives
+                            Maximize Menu
+                                    Archives of Nethys
+                            Character Creation +
+                                Classes
+                                Feats
+                                Prestige Classes
+                                Races
+                                Skills
+                                Traits
+                                Mythic Index
+                            Deities
+                            Equipment +
+                                Equipment (Non-Magical)
+                                Magic Items
+                                Technology
+							FAQ
+                            Spells/Rituals
+                            Rules +
+                                Afflictions
+                                NPC Index
+                                Rules
+                                Tools
+                            Hazards
+                            Monsters
+                            Sources
+                            About the Archives +
+                                Licenses
+                                Projects
+                                Contact Us
+                                Contributors
+						        Support the Archives
+                        &nbsp;
+                        Toggle Theme
+    Paizo & Archives of Nethys—Moving Forward Together. Click here to read our partnership status update.
+							Archives of Nethys
+    All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+             Gentle ReposeSource PRPG Core Rulebook pg. 289
+School necromancy; Level arcanist 3, cleric 2, medium 2, occultist 3, oracle 2, shaman 2, sorcerer 3, spiritualist 2, warpriest 2, witch 2, wizard 3CastingCasting Time 1 standard action
+Components V, S, M/DF (salt and a copper piece for each of the corpse's eyes)EffectRange touch
+Target corpse touched
+Duration 1 day/level
+Saving Throw Will negates (object); Spell Resistance yes (object)DescriptionYou preserve the remains of a dead creature so that they do not decay. Doing so effectively extends the time limit on raising that creature from the dead (see raise dead). Days spent under the influence of this spell don't count against the time limit. Additionally, this spell makes transporting a slain (and thus decaying) comrade less unpleasant.
+The spell also works on severed body parts and the like.
+                    Site Owner: Blake DavisEmail Spam Checker: MX Guarddog
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4953734518316037"
+                        data-ad-slot="7738185508">
+                (adsbygoogle = window.adsbygoogle || []).push({});
+      initiateToggle(document.getElementById('theme-toggle'));
+      initializeMenuToggle(document.getElementById('minMaxMenu'));
+      var initializeSearch = function (search) {
+          var button;
+          var text;
+          if (search.firstElementChild.classList.contains('search-input'))
+              text = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-input'))
+              text = search.lastElementChild;
+          if (search.firstElementChild.classList.contains('search-button'))
+              button = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-button'))
+              button = search.lastElementChild;
+          if (search) {
+              search.addEventListener('keypress', function (e) {
+                  if (e.keyCode == 13) {
+                      e.preventDefault();
+                      if (text.value != null && text.value.length > 0)
+                          window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+                  }
+              })
+          }
+          if (button) {
+              button.addEventListener('click', function (e) {
+                  window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+              });
+          }
+      };
+      var initializeExpand = function (toggle) {
+          var targetAttrString = "[data-target='" + toggle.dataset.toggle + "']";
+          //target = menu to be collapsed
+          var target = document.querySelector(targetAttrString);
+          toggle.addEventListener('click', function () {
+              var expanded = target.classList.contains('expanded');
+              expanded = !expanded;
+              if (expanded) {
+                  //hide other in group if exists
+                  if (target.dataset.group) {
+                      var otherExpanded = document.querySelector('.expanded[data-group="' + target.dataset.group + '"]');
+                      if (otherExpanded) {
+                          otherExpanded.classList.remove('expanded');
+                      }
+                  }
+                  target.classList.add('expanded');
+              } else {
+                  target.classList.remove('expanded');
+              }
+          });
+      };
+      (function () {
+          //toggles = link that expands/collapses target
+          var toggles = document.querySelectorAll('[data-toggle]');
+          toggles.forEach(function (toggle) {
+              initializeExpand(toggle);
+          });
+          //searches
+          var searches = document.querySelectorAll('.search');
+          searches.forEach(function (search) {
+              initializeSearch(search);
+          });
+      })();

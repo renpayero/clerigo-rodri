@@ -1,0 +1,27 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+## Harm
+ **Source** PRPG Core Rulebook pg. 293
+ **School** necromancy; **Level** cleric 6, inquisitor 6, occultist 6, oracle 6, shaman 7, spiritualist 6, warpriest 6, witch 7
+## Casting
+ **Casting Time** 1 standard action
+ **Components** V, S
+## Effect
+ **Range** touch
+ **Target** creature touched
+ **Duration** instantaneous
+ **Saving Throw** Will half; see text; **Spell Resistance** yes
+## Description
+Harm charges a subject with negative energy that deals 10 points of damage per caster level (to a maximum of 150 points at 15th level). If the creature successfully saves, harm deals half this amount. Harm cannot reduce the target's hit points to less than 1.
+If used on an undead creature, harm acts like heal.
+## Mythic Harm
+ **Source** Mythic Adventures pg. 97
+The damage dealt increases to 15 points of damage per caster level (maximum 225 points). 
+ **Augmented** : If you expend two uses of mythic power, the spell also acts as poison. 
+ | 
+ 

@@ -1,0 +1,75 @@
+---
+import { feats, traits, racialTraits, classFeatures } from '@/data';
+import Term from '@/components/Term';
+const general = feats.filter((f) => f.category === 'general');
+const mythicFeats = feats.filter((f) => f.category === 'mythic');
+---
+
+<section class="card">
+  <h2>Dotes</h2>
+  <ul class="feature-list">
+    {general.map((f) => (
+      <li>
+        <span class="badge">LVL {f.level}</span>
+        <div>
+          <strong><Term k={f.id} /></strong>
+          <p class="muted">{f.effect}</p>
+          <small>Prerrequisitos: {f.prerequisites}</small>
+        </div>
+      </li>
+    ))}
+    {mythicFeats.map((f) => (
+      <li>
+        <span class="badge badge--solid">Tier {f.level}</span>
+        <div>
+          <strong><Term k={f.id} /></strong>
+          <p class="muted">{f.effect}</p>
+        </div>
+      </li>
+    ))}
+  </ul>
+  <p class="help"><Term k="sacred-geometry" label="Sacred Geometry" tip="Baneada por el GM." /> no está permitida. EitR activo: no afecta a ninguna de estas dotes.</p>
+</section>
+
+<section class="card">
+  <h2>Rasgos y drawback</h2>
+  <ul class="feature-list">
+    {traits.map((t) => (
+      <li>
+        <span class:list={['badge', { 'badge--alert': t.list === 'Drawback' }]}>{t.list}</span>
+        <div>
+          <strong><Term k={t.id} /></strong>
+          <p class="muted">{t.effect}</p>
+          <small>{t.source}</small>
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<div class="grid-2">
+  <section class="card">
+    <h2>Rasgos raciales</h2>
+    <ul class="feature-list feature-list--compact">
+      {racialTraits.map((r) => (
+        <li><div><strong><Term k={r.id} /></strong> <span class="muted">— {r.effect}</span></div></li>
+      ))}
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Rasgos de clase</h2>
+    <ul class="feature-list feature-list--compact">
+      {classFeatures.map((c) => (
+        <li><div><strong><Term k={c.id} /></strong> <span class="muted">— {c.effect}</span></div></li>
+      ))}
+    </ul>
+  </section>
+</div>
+
+<style>
+  .feature-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s3); }
+  .feature-list li { display: grid; grid-template-columns: auto 1fr; gap: var(--s3); align-items: start; }
+  .feature-list--compact li { grid-template-columns: 1fr; }
+  .feature-list .badge { margin-top: 2px; }
+  .feature-list p { margin: 2px 0; }
+</style>

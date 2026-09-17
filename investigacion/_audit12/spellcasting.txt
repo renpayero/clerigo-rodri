@@ -1,0 +1,116 @@
+                            Sources
+                            Tools
+                            Contact Us
+                            Contributors
+						    Support the Archives
+                            Maximize Menu
+                                    Archives of Nethys
+                            Character Creation +
+                                Classes
+                                Feats
+                                Prestige Classes
+                                Races
+                                Skills
+                                Traits
+                                Mythic Index
+                            Deities
+                            Equipment +
+                                Equipment (Non-Magical)
+                                Magic Items
+                                Technology
+							FAQ
+                            Spells/Rituals
+                            Rules +
+                                Afflictions
+                                NPC Index
+                                Rules
+                                Tools
+                            Hazards
+                            Monsters
+                            Sources
+                            About the Archives +
+                                Licenses
+                                Projects
+                                Contact Us
+                                Contributors
+						        Support the Archives
+                        &nbsp;
+                        Toggle Theme
+    Paizo & Archives of Nethys—Moving Forward Together. Click here to read our partnership status update.
+							Archives of Nethys
+    Weapons | Armor | Special Materials | Miscellaneous
+    Adventuring Gear | Alchemical Reagents | Alchemical Remedies | Alchemical Tools | Alchemical Weapons | Animal Gear | Black Market | Channel Foci | Clothing | Concoctions | Dragoncraft | Dungeon Guides | Entertainment | Food/Drink | Fungal Grafts | Herbs | Kits | Lodging/Services | Mounts/Pets | Pathfinder Chronicles | Spellbooks | Tinctures | Tools | Torture Implements | Transport, Air | Transport, Land | Transport, Sea | Vehicles
+             SpellcastingSource Ultimate Equipment pg. 99, PRPG Core Rulebook pg. 159
+Price  caster level × spell level × 10 gp; Weight &mdash;
+Category Lodging/ServicesDescriptionThe indicated amount is how much it costs to get a spellcaster to cast a spell for you. This price assumes that you can go to the spellcaster and have the spell cast at her convenience (generally at least 24 hours later, so that the spellcaster has time to prepare the spell in question, though you may be lucky enough to find someone who has it prepared that day or a spontaneous caster who knows it). If you want to bring the spellcaster somewhere to cast a spell (for example, to cast dispel magic on a magical seal in a dungeon) you need to negotiate with her; the default answer to such requests is typically no, since most people don’t actually like to go on unexpected life-threatening adventures.
+ The price given is for any spell that does not require a costly material component. If the spell includes a material component, add the cost of that component to the cost of the spell. If the spell has a focus component (other than a divine focus), add 1/10 the cost of that focus to the cost of the spell.
+ If a spell has dangerous consequences (such as contact other plane, which has a risk of decreasing the caster’s Intelligence and Charisma), the spellcaster will certainly require proof that you can and will pay for dealing with any such consequences (that is, assuming that the spellcaster even agrees to cast such a spell, which isn’t certain). If these additional costs put the total spellcasting price above 3,000 gp, the spell is not generally available.
+ In the case of spells that transport the caster and characters over a distance, you will likely have to pay for two castings of the spell (one for the caster to take you there and one for the caster to return), even if you aren’t returning with the caster.
+ Not every town or village has a spellcaster of sufficient level to cast any spell. In general, you must travel to a small town (or larger settlement) to be reasonably assured of finding a spellcaster capable of casting 1st-level spells, a large town for 2nd-level spells, a small city for 3rd- or 4thlevel spells, a large city for 5th- or 6th-level spells, and a metropolis for 7th- or 8th-level spells. Even a metropolis isn’t guaranteed to have a local spellcaster able to cast 9th-level spells.
+                    Site Owner: Blake DavisEmail Spam Checker: MX Guarddog
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4953734518316037"
+                        data-ad-slot="7738185508">
+                (adsbygoogle = window.adsbygoogle || []).push({});
+      initiateToggle(document.getElementById('theme-toggle'));
+      initializeMenuToggle(document.getElementById('minMaxMenu'));
+      var initializeSearch = function (search) {
+          var button;
+          var text;
+          if (search.firstElementChild.classList.contains('search-input'))
+              text = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-input'))
+              text = search.lastElementChild;
+          if (search.firstElementChild.classList.contains('search-button'))
+              button = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-button'))
+              button = search.lastElementChild;
+          if (search) {
+              search.addEventListener('keypress', function (e) {
+                  if (e.keyCode == 13) {
+                      e.preventDefault();
+                      if (text.value != null && text.value.length > 0)
+                          window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+                  }
+              })
+          }
+          if (button) {
+              button.addEventListener('click', function (e) {
+                  window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+              });
+          }
+      };
+      var initializeExpand = function (toggle) {
+          var targetAttrString = "[data-target='" + toggle.dataset.toggle + "']";
+          //target = menu to be collapsed
+          var target = document.querySelector(targetAttrString);
+          toggle.addEventListener('click', function () {
+              var expanded = target.classList.contains('expanded');
+              expanded = !expanded;
+              if (expanded) {
+                  //hide other in group if exists
+                  if (target.dataset.group) {
+                      var otherExpanded = document.querySelector('.expanded[data-group="' + target.dataset.group + '"]');
+                      if (otherExpanded) {
+                          otherExpanded.classList.remove('expanded');
+                      }
+                  }
+                  target.classList.add('expanded');
+              } else {
+                  target.classList.remove('expanded');
+              }
+          });
+      };
+      (function () {
+          //toggles = link that expands/collapses target
+          var toggles = document.querySelectorAll('[data-toggle]');
+          toggles.forEach(function (toggle) {
+              initializeExpand(toggle);
+          });
+          //searches
+          var searches = document.querySelectorAll('.search');
+          searches.forEach(function (search) {
+              initializeSearch(search);
+          });
+      })();

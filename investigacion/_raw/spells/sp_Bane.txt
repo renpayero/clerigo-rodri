@@ -1,0 +1,25 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+## Bane
+ **Source** PRPG Core Rulebook pg. 246
+ **School** enchantment (compulsion) [emotion, fear, mind-affecting]; **Level** antipaladin 1, cleric 1, inquisitor 1, mesmerist 1, oracle 1, shaman 1, warpriest 1
+## Casting
+ **Casting Time** 1 standard action
+ **Components** V, S, DF
+## Effect
+ **Range** 50 ft.
+ **Area** 50-ft.-radius burst, centered on you
+ **Duration** 1 min./level
+ **Saving Throw** Will negates; **Spell Resistance** yes
+## Description
+Bane fills your enemies with fear and doubt. Each affected creature takes a –1 penalty on attack rolls and a –1 penalty on saving throws against fear effects. Bane counters and dispels bless.
+## Mythic Bane
+ **Source** Mythic Adventures pg. 85
+The –1 penalty applies on attack rolls, weapon damage rolls, and all saving throws. Each affected creature must roll its next attack roll or saving throw twice and take the lower result.
+ | 
+ 

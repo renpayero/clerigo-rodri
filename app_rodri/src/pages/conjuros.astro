@@ -1,0 +1,43 @@
+---
+import App from '@/layouts/App.astro';
+import Term from '@/components/Term';
+import { spellById, notOnClericList, spells } from '@/data';
+import { SpellBook } from '@/components/islands/SpellBook';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+import { healMath } from '@/lib/rules/healing';
+
+const snapshot = await loadSnapshot(db());
+const cures = ['cure-light-wounds', 'cure-moderate-wounds', 'cure-serious-wounds', 'cure-critical-wounds', 'cure-light-wounds-mass', 'cure-moderate-wounds-mass'].map((id) => spellById[id]!);
+---
+
+<App title="Conjuros" snapshot={snapshot}>
+  <div class="stack">
+    <SpellBook client:load snapshot={snapshot} />
+
+    <div class="grid-2 spellbook-static">
+      <section class="card">
+        <h3><Term k="spontaneous">Conversión espontánea</Term> (×1,5 +1)</h3>
+        <table>
+          <tbody>
+            {cures.map((c) => (
+              <tr><td><Term k={c.id} /></td><td class="mono">{c.level}.º</td><td class="mono">{healMath(c.heal!).formula}</td><td class="mono strong">{healMath(c.heal!).avg}</td></tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="help">Cualquier ranura que no sea de dominio. Heal (110/130/165/195) y Breath of Life no se multiplican.</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h3>Conjuros que la gente cree que el clérigo tiene y NO están en su lista</h3>
+      <p class="muted">{notOnClericList.join(' · ')}</p>
+      <p class="help">Catálogo de la app: {spells.length} conjuros con su página de AoN. Lista completa de clase: <a href="https://www.aonprd.com/Spells.aspx?Class=Cleric" target="_blank" rel="noopener noreferrer">aonprd.com ↗</a>.</p>
+    </section>
+  </div>
+</App>
+
+<style>
+  .spellbook-static { margin-top: var(--s4); }
+  .strong { font-weight: 600; }
+</style>

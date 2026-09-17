@@ -1,0 +1,17 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Iron Will
+ **Source** PRPG Core Rulebook pg. 129
+You are more resistant to mental effects.
+ **Benefit** : You get a +2 bonus on all Will saving throws.
+## Mythic Iron Will
+ **Source** Mythic Adventures pg. 68
+Your will is incorruptible.
+ **Prerequisites** : Iron Will.
+ **Benefit** : Whenever you roll a Will saving throw against a spell, spell-like ability, or supernatural ability from a non-mythic source, roll twice and take the higher result.
+ | 
+ 

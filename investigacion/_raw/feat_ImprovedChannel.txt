@@ -1,0 +1,18 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Improved Channel
+ **Source** PRPG Core Rulebook pg. 126
+Your channeled energy is harder to resist.
+ **Prerequisites** : Channel energy class feature.
+ **Benefit** : Add 2 to the DC of saving throws made to resist the effects of your channel energy ability. 
+## Mythic Improved Channel
+ **Source** Mythic Adventures pg. 66
+As a divine conduit for energy, you’re unmatched.
+ **Prerequisites** : Improved Channel.
+ **Benefit** : Non-mythic creatures that take damage from your channel energy must roll their saving throws twice and take the lower result.
+ | 
+ 

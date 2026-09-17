@@ -1,0 +1,18 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Improved Counterspell
+ **Source** PRPG Core Rulebook pg. 126
+You are skilled at countering the spells of others using similar spells.
+ **Benefit** : When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell.
+ **Normal** : Without this feat, you may counter a spell only with the same spell or with a spell specifically designated as countering the target spell.
+## Mythic Improved Counterspell
+ **Source** Mythic Adventures pg. 66
+Your innate understanding of magical mechanics allows you to unravel spells with pure magical energy.
+ **Prerequisites** : Improved Counterspell.
+ **Benefit** : When counterspelling, you can use a spell of the same school that is the same or higher spell level as the target spell.
+ | 
+ 

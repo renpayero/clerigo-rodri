@@ -1,0 +1,22 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+## Aid
+ **Source** PRPG Core Rulebook pg. 239
+ **School** enchantment (compulsion) [mind-affecting]; **Level** adept 2, alchemist 2, cleric 2, inquisitor 2, investigator 2, medium 2, oracle 2, shaman 2, spiritualist 2, warpriest 2
+## Casting
+ **Casting Time** 1 standard action
+ **Components** V, S, DF
+## Effect
+ **Range** touch
+ **Target** living creature touched
+ **Duration** 1 min./level
+ **Saving Throw** none; **Spell Resistance** yes (harmless)
+## Description
+Aid grants the target a +1 morale bonus on attack rolls and saves against fear effects, plus temporary hit points equal to 1d8 + caster level (to a maximum of 1d8+10 temporary hit points at caster level 10th).
+ | 
+ 

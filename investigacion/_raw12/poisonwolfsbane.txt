@@ -1,0 +1,15 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## Corruptions | Curses | Diseases | Drugs | Haunts | Madnesses | Poisons | Traps
+## 
+## Wolfsbane
+ **Source** Ultimate Equipment pg. 111, PRPG Core Rulebook pg. 560
+ **Price** 500 gp; **Weight** —
+ **Type** ingested; **Save** Fortitude DC 16
+ **Onset** 10 minutes; **Frequency** 1/minute for 6 minutes
+ **Effect** 1d3 Con
+ **Cure** 1 save
+ | 
+ 

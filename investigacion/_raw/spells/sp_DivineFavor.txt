@@ -1,0 +1,24 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+## Divine Favor
+ **Source** PRPG Core Rulebook pg. 273
+ **School** evocation; **Level** cleric 1, inquisitor 1, oracle 1, paladin 1, warpriest 1
+## Casting
+ **Casting Time** 1 standard action
+ **Components** V, S, DF
+## Effect
+ **Range** personal
+ **Target** you
+ **Duration** 1 minute
+## Description
+Calling upon the strength and wisdom of a deity, you gain a +1 luck bonus on attack and weapon damage rolls for every three caster levels you have (at least +1, maximum +3). The bonus doesn't apply to spell damage.
+## Mythic Divine Favor
+ **Source** Mythic Adventures pg. 92
+You also gain the luck bonus on saving throws and skill checks. Alternatively, you can cast this spell on another willing creature, changing the range to touch and target to living creature touched. 
+ | 
+ 

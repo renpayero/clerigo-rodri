@@ -1,0 +1,176 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## 
+## Mythic Feats
+ **Description ** **Source** Mythic Adventures pg. 54
+Only characters with mythic tiers or creatures with mythic ranks can take these feats. If a creature becomes non-mythic, it no longer gains the benefit of these feats, but it doesn’t lose them permanently. If the creature becomes mythic again, it regains the use of all the mythic feats it once had.
+ Many mythic feats enhance non-mythic feats with the same name. When a creature has a mythic version of a feat, that feat is denoted with a superscript “M” in the feat line of its stat block. Other superscript combinations refer to the books cited on page 7.
+ *combat feat
+⊤armor mastery feat
+⊤⊤shield mastery feat
+⊤⊤⊤weapon mastery feat
+ NamePrerequisiteDescription
+ Accursed Hex | Accursed Hex | Target Accursed Hex must roll second save twice and take lower result | 
+ Acrobatic | Acrobatic | Gain an additional +2 bonus on Acrobatic and Fly, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Alertness | Alertness | Gain an additional +2 bonus on Perception and Sense Motive checks, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Alignment Channel | Alignment Channel | Channeled energy effects creatures with the alignment you choose, not just the subtype | 
+ Animal Affinity | Animal Affinity | Gain an additional +2 bonus on Handle Animal and Ride checks, and expend mythic power to use speak with animals | 
+ Arcane Armor Training | Arcane Armor Training | Gain the benefits of this feat without taking a swift action | 
+ Arcane Blast | Arcane BlastAPG | Halve the damage to perform trip or bull rush | 
+ Arcane Shield | Arcane ShieldAPG | Add 1/2 your mythic tier to the bonus granted by Arcane Shield, and expend mythic power to extend the shield's duration | 
+ Arcane Strike | Arcane Strike | Arcane strike lasts 1 minute, and expend mythic power to grant magic weapon special abilities | 
+ Aspect of the Beast | Aspect of the BeastAPG | Aspect manifests itself in new and powerful ways | 
+ Athletic | Athletic | Gain an additional +2 bonus on Climb and Swim checks, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Augment Summoning | Augment Summoning | Summoned creatures are considered mythic | 
+ Bleeding Critical | Bleeding Critical, Critical Focus (mythic) | Bleed damage and the DC to staunch it increases by mythic tier | 
+ Blind-Fight | Blind-Fight | Expend mythic power to ignore concealment miss chance | 
+ Catch Off-Guard | Catch Off-Guard | Add mythic tier to damage with improvised weapons | 
+ Channel Smite | Channel Smite | Gain a bonus on attacks based on power of channel | 
+ Charge Through | Charge ThroughAPG | Ignore allies and make overruns when you charge through | 
+ Cleave | Cleave | Make additional cleaves to any foes in reach regardless of position | 
+ Combat Expertise | Combat Expertise | Gain an additional +2 dodge bonus and expend mythic power to reduce penalties | 
+ Combat Reflexes | Combat Reflexes | You can make any number of attacks of opportunity | 
+ Command Undead | Command Undead | Increase Will save by mythic tier when commanding undead | 
+ Critical Focus | Critical Focus | Automatically confirm critical hits against non-mythic foes and increased chance to bypass fortification | 
+ Critical Mastery | Critical Focus (mythic), Critical Mastery | Deal additional critical feats based on mythic tier | 
+ Dastardly Finish | Dastardly FinishAPG | Coup de grace dazed and staggered non-mythic foes | 
+ Dazzling Display | Dazzling Display | Use Dazzling Display faster and expend mythic power to frighten opponents | 
+ Deadly Aim | Deadly Aim | Increase damage bonus | 
+ Deadly Stroke | Deadly Stroke | Expend mythic power to instantly kill non-mythic targets | 
+ Death from Above | Death from AboveUC | Increase critical threat modifier and make a trip combat maneuver when charging from above | 
+ Deceitful | Deceitful | Gain an additional +2 bonus on Bluff and Disguise, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Deepsight | DeepsightAPG | Darkvision increases by 10 ft. per mythic tier | 
+ Defensive Combat Training | Defensive Combat Training, 4th mythic tier | Add 1/2 mythic tier to CMD | 
+ Deflect Arrows | Deflect Arrows | Deflect additional attacks, and expend mythic power to deflect rays | 
+ Deft Hands | Deft Hands | Gain an additional +2 bonus on Disable Device and Sleight of Hand, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Detect Expertise | Detect ExpertiseUM | Gain the benefit of Detect Expertise immediately | 
+ Disruptive | Disruptive | Increase the DC to cast spells defensively within your threatened area | 
+ Distance Thrower | Str 17, Distance ThrowerUC | Throw weapons twice the normal range | 
+ Divine Interference | Divine InterferenceUM | Double or triple the penalty on your opponent’s attack roll | 
+ Dodge | Dodge | Gain a +1 dodge bonus and expend mythic power to gain a +10 dodge bonus against one attack | 
+ Dreadful Carnage | Dreadful CarnageAPG | Your carnage has a greater effect against non-mythic foes and expend mythic power to frighten foes | 
+ Drink Is Life | Con 19, 3rd mythic tier | Gain benefits from alcohol consumption | 
+ Dual Path | 1st mythic tier | Gain abilities from a second mythic path | 
+ Eagle Eyes | Eagle EyesAPG | Ignore Perception distance penalties | 
+ Eldritch Heritage | Eldritch HeritageUM | Gain increased bloodline powers | 
+ Elemental Channel | Elemental Channel | Affect any elemental subtype | 
+ Elemental Fist | Elemental FistAPG | Increase damage and frequency of Elemental Fist | 
+ Elemental Focus | Elemental FocusAPG | Increase the DCs and expend mythic power to force opponents to roll twice and take the lowest result when saving against focus spells | 
+ Elven Accuracy | Elven AccuracyAPG | Ignore concealment with bows | 
+ Endurance | Endurance | Increase bonus on checks and saves based on mythic tier | 
+ Eschew Materials | Eschew Materials | Cast spells without need for costly material components | 
+ Extra Mythic Power | — | Gain two extra uses of mythic power | 
+ Extra Path Ability | 3rd mythic tier | Gain an extra path ability | 
+ Fabulous Figments | Spell Focus (illusion) | Non-mythic creatures can’t identify your illusions | 
+ Far Shot | Far Shot | Expend mythic power to ignore range increments | 
+ Fast Empathy | Fast EmpathyUM | Use wild empathy as a swift action | 
+ Fire Music | Fire MusicUM | Fire Music ignores fire resistance based on tier | 
+ Fleet | Fleet | Land speed increases by 5 feet regardless of armor or encumbrance | 
+ Furious Focus | Furious FocusAPG | Ignore Power Attack penalties when using Furious Focus | 
+ Gnome Trickster | Gnome TricksterAPG | Gain more spell-like abilities and use your gnome spell-like abilities more often | 
+ Gorgon's Fist | Gorgon’s Fist | Daze target of your Gorgon’s Fist attack | 
+ Great Fortitude | Great Fortitude | Roll twice and take the higher result on Fort saves against a non-mythic source | 
+ Guided Hand | Guided HandUC | Apply Wisdom bonus instead of Strength or Dexterity bonus on favored weapon damage | 
+ Heroic Defiance | Heroic DefianceAPG | Once per day, attempt to negate the onset of a harmful condition or affliction | 
+ Heroic Recovery | Heroic RecoveryAPG | Expend mythic power to save again against a condition or affliction | 
+ Improved Bull Rush | Improved Bull Rush | Gain a bonus on bull rush based on mythic tier | 
+ Improved Channel | Improved Channel | Non-mythic creatures that take damage from your channel roll twice on their saves and take the lower result | 
+ Improved Counterspell | Improved Counterspell | Spells of the same school and equal or higher level can counterspell | 
+ Improved Critical | Improved Critical, base attack bonus +8 | Increase the critical multiplier by 1 | 
+ Improved Dirty Trick | Improved Dirty TrickAPG | Gain a bonus on dirty tricks based on mythic tier | 
+ Improved Disarm | Improved Disarm | Gain a bonus on disarms based on mythic tier | 
+ Improved Drag | Improved DragAPG | Gain a bonus on drags based on mythic tier | 
+ Improved Familiar | Improved Familiar | Familiar’s abilities improve based on mythic tier | 
+ Improved Grapple | Improved Grapple | Gain a bonus on grapples based on mythic tier | 
+ Improved Initiative | Improved Initiative | Increase bonus by mythic tier | 
+ Improved Overrun | Improved Overrun | Gain a bonus on overruns based on mythic tier | 
+ Improved Reposition | Improved RepositionAPG | Gain a bonus on repositions based on mythic tier | 
+ Improved Steal | Improved StealAPG | Gain a bonus on steals based on mythic tier | 
+ Improved Stonecunning | Improved StonecunningAPG | Gain stone tell as a spell-like ability | 
+ Improved Sunder | Improved Sunder | Gain a bonus on sunders based on mythic tier | 
+ Improved Trip | Improved Trip | Gain a bonus on trips based on mythic tier | 
+ Improved Unarmed Strike | Improved Unarmed Strike | Gain a bonus to damage based on mythic tier and expend mythic power to overcome hardness | 
+ Intimidating Prowess | Intimidating Prowess | Gain a bonus on Intimidate against non-mythic creatures based on mythic tier | 
+ Iron Will | Iron Will | When you make a Will save from a non-mythic source, roll twice and take the higher result | 
+ Knockout Artist | Knockout ArtistUC | Use d8s for sneak attacks with unarmed strike nonlethal damage | 
+ Legendary Teamwork | Any two teamwork feats | Increase any fixed numeric bonuses to teamwork feats by 1 | 
+ Lightning Reflexes | Lightning Reflexes | When making a Reflex save from a non-mythic source, roll twice and take the higher result | 
+ Lucky Halfling | Lucky HalflingAPG | Increase the bonus based on tier and expend mythic power to negate the effects of a successful save | 
+ Lucky Surge | Potent Surge, 3rd mythic tier | Roll surge twice and take the highest result | 
+ Lunge | Lunge | When you hit with lunge, don’t take an AC penalty against that creature | 
+ Magical Aptitude | Magical Aptitude | Gain an additional +2 bonus on Spellcraft and Use Magic Device, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Manyshot | Manyshot | Fire two arrows with your first and second attack | 
+ Maximize Surge | 6th mythic tier | Expend use of mythic power to maximize surge | 
+ Medusa's Wrath | Medusa’s Wrath | Make a single attack to stagger your foe | 
+ Missile Shield | Missile ShieldAPG | Deflect a number of ranged attacks equal to 1/2 your mythic tier | 
+ Mobility | Mobility | Gain a +6 bonus instead of +4 and when an attack misses move 5 feet | 
+ Monastic Legacy | Monastic LegacyUC | Add 1/2 your non-monk class levels to determine AC bonus, and expend mythic power to increase your unarmed strike damage and AC bonus | 
+ Mounted Archery | Mounted Archery | When using your mount as cover, make a ranged weapon attack as a standard action | 
+ Mounted Combat | Mounted Combat | Negate additional number of hits against your mount based on mythic tier | 
+ Mythic Crafter | Any item creation feat | Create mythic magic items | 
+ Mythic Paragon | — | Your mythic tier is considered 2 higher when determining the potency of your mythic abilities | 
+ Mythic Spell Lore | Ability to cast spells | Gain mythic spells equal to your mythic tier | 
+ Natural Spell | Natural Spell | Use spell completion and spell trigger items while in wild shape | 
+ Nimble Moves | Nimble Moves | Ignore an amount of difficult terrain based on your tier | 
+ Penetrating Strike | Penetrating Strike | Ignore additional DR based on mythic tier | 
+ Persuasive | Persuasive | Gain an additional +2 bonus on Diplomacy and Intimidate, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Pinpoint Targeting | Pinpoint Targeting | Use Pinpoint Targeting even when you move | 
+ Point-Blank Shot | Point-Blank Shot | Gain greater bonuses with Point-Blank Shot | 
+ Potent Surge | — | Add 1 to surge result | 
+ Power Attack | Power Attack | Power Attack damage increases based on tier | 
+ Powerful Shape | Powerful ShapeUM | Apply the giant simple template to wild shape | 
+ Prophetic Visionary | Prophetic VisionaryUM | Use augury at will | 
+ Quick Draw | Quick Draw | Draw any item as a free action, expend mythic power to draw two items | 
+ Racial Heritage | Racial HeritageAPG | Gain a single racial trait of your choice | 
+ Rapid Reload | Rapid Reload | Reload all weapons faster | 
+ Rapid Shot | Rapid Shot | Ignore the –2 penalty or make two additional attacks | 
+ Rhetorical Flourish | Rhetorical FlourishUC | Increase the bonus on Diplomacy checks based on mythic tier | 
+ Ride-By Attack | Ride-By Attack | Make additional attacks against successive targets after you hit | 
+ Run | Run | Run faster and for longer | 
+ Saving Shield | Saving ShieldAPG | When you negate an attack, make attack of opportunity against attacker | 
+ Scorpion Style | Scorpion Style | Add mythic tier to duration or slow your target | 
+ Selective Channeling | Selective Channeling | Increase the power of your channel based on the number of creatures excluded | 
+ Self-Sufficient | Self-Sufficient | Gain an additional +2 bonus on Heal and Survival, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Shatter Defenses | Shatter Defenses | Target is flat-footed to all attacks | 
+ Shield Focus | Shield Focus | Add shield bonus and shield’s enhancement’s bonus to touch AC | 
+ Shield Slam | Shield Slam | Those knocked into walls or other barriers take additional damage | 
+ Shot on the Run | Shot on the Run, base attack bonus +6 | Make two attacks during a move instead of one | 
+ Skill Focus | Skill Focus | Always take 10 or 20 even when rushed or threatened | 
+ Snatch Arrows | Snatch Arrows | Use snatched thrown weapons as immediate attack melee weapons | 
+ Sociable | SociableAPG | Increase the bonus on Diplomacy or gain the normal bonus without an action | 
+ Spell Focus | Spell Focus | Increase the DC of Spell Focus and Greater Spell Focus | 
+ Spell Mastery | Spell Mastery | Prepare selected spells as a full-round action | 
+ Spell Penetration | Spell Penetration | Add 1/2 mythic tier to level checks to overcome spell resistance | 
+ Spellbreaker | Spellbreaker | Non-mythic casters provoke attacks of opportunity when casting defensively | 
+ Spirited Charge | Spirited Charge | Stagger those your mount charges | 
+ Spontaneous Metafocus | Spontaneous MetafocusUM | Change the spells of your metafocus each morning | 
+ Spring Attack | Spring Attack, base attack bonus +6 | Make first attack before moving | 
+ Stealthy | Stealthy | Gain an additional +2 bonus on Escape Artist and Stealth, and expend mythic power to treat one of these checks as if you rolled a 20 | 
+ Strike Back | Strike Back | Move toward the subject of your readied action attack | 
+ Strong Comeback | Strong ComebackUC | When rerolling, roll twice and take the higher result | 
+ Stunning Fist | Stunning Fist | Increase the DC of Stunning Fist based on mythic tier | 
+ Throw Anything | Throw Anything | Gain a +2 bonus on attack and damage rolls with improvised thrown weapons and splash weapons | 
+ Titan Strike | Improved Unarmed Strike (mythic) | Your unarmed strike deals damage as if you were one size category larger | 
+ Toughness | Toughness | Gain twice as many hit points, and gain DR 10/epic below 0 hit points | 
+ Trample | Trample | Mount can make two hoof attacks instead of one | 
+ Tripping Staff | Tripping StaffUM | Your CMD against trips is increased based on tier and those who trip you and fail provoke an attack of opportunity from you | 
+ Turn Undead | Turn Undead | Turning range increases by tier, and you can use Turn Undead to destroy undead | 
+ Two-Fisted Drinker | Quick Draw | Draw two potions or drinks as a move action and drink both as a standard action | 
+ Two-Weapon Defense | Two-Weapon Defense | Apply the enhancement bonus from your weapons to your shield bonus | 
+ Two-Weapon Fighting | Two-Weapon Fighting | Expend mythic power to negate penalties | 
+ Two-Weapon Rend | Two-Weapon Rend | Rend damage increases to 2d8 plus twice Strength modifier | 
+ Undead Master | Undead MasterUM | Add your mythic tier to your caster level to determine number of undead animated | 
+ Unseat | Unseat | When unseated, your target takes falling damage based on tier | 
+ Valiant Vault | Mounted Combat, Ride-By Attack, Ride 5 ranks | When mount leaps over foes attack as you pass | 
+ Vital Strike | Vital Strike | Multiply all damage when you Vital Strike | 
+ Voice of the Sibyl | Voice of the SibylUM | Increase Bluff, Diplomacy, and Perform (oratory) skill bonus based on mythic tier | 
+ Warrior Priest | Warrior PriestUM | Increase bonus on initiative and concentration checks based on mythic tier | 
+ Weapon Finesse | Weapon Finesse | Use Dexterity modifier on both attack and damage rolls | 
+ Weapon Focus | Weapon Focus | Double the bonuses on attack rolls and expend mythic power to gain a higher bonus | 
+ Weapon Specialization | Weapon Specialization | Increase bonus to damage rolls based on mythic tier | 
+ Witch Knife | Witch KnifeUM | Use your witch knife as a focus for all spells, not just patron spells | 
+ 

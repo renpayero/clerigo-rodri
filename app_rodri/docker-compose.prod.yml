@@ -1,0 +1,18 @@
+# VPS: usar con  docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+# La app NO expone puertos al host: se une a la red externa del proxy reverso (Nginx Proxy Manager, Traefik, Caddy...).
+# Crear la red una vez si no existe:  docker network create proxy
+# En el proxy, apuntar rodri.dakodev.com -> http://rodri-app:4321
+services:
+  app:
+    container_name: rodri-app
+    environment:
+      TRUST_PROXY: "true"
+      SECURE_COOKIES: "true"
+    networks:
+      - default
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: ${PROXY_NETWORK:-proxy}

@@ -1,0 +1,42 @@
+---
+import Base from './Base.astro';
+import Nav from '@/components/ui/Nav.astro';
+import { HeaderStatus } from '@/components/islands/HeaderStatus';
+import { Toast } from '@/components/islands/Toast';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+import type { StateSnapshot } from '@/lib/snapshot';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Si la página ya cargó el snapshot, lo pasa para no consultar dos veces. */
+  snapshot?: StateSnapshot;
+}
+const { title, description } = Astro.props;
+const snapshot = Astro.props.snapshot ?? (await loadSnapshot(db()));
+---
+
+<Base title={title} description={description}>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="/" aria-label="Rodri Companion, ir a Mesa">
+        Rodri
+        <small>Cleric 11 · Hierophant 3</small>
+      </a>
+      <div class="header-status" id="header-status">
+        <HeaderStatus client:load snapshot={snapshot} />
+      </div>
+    </header>
+    <Nav current={Astro.url.pathname} />
+    <main class="app-main">
+      <slot />
+    </main>
+  </div>
+  <Toast client:load />
+</Base>
+
+<style>
+  .brand { text-decoration: none; }
+  .header-status { margin-left: auto; display: flex; align-items: center; gap: var(--s2); font-family: var(--font-mono); font-size: var(--fs-2); font-variant-numeric: tabular-nums; }
+</style>

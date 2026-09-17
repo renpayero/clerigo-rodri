@@ -1,0 +1,39 @@
+---
+interface Props {
+  current: string;
+}
+const { current } = Astro.props;
+
+type Item = { href: string; label: string; icon: string; mobile?: boolean };
+const items: Item[] = [
+  { href: '/', label: 'Mesa', mobile: true, icon: 'M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z' },
+  { href: '/conjuros', label: 'Conjuros', mobile: true, icon: 'M12 2 9.5 8.5 3 9l5 4.5L6.5 20 12 16.5 17.5 20 16 13.5l5-4.5-6.5-.5z' },
+  { href: '/poderes', label: 'Poderes', mobile: true, icon: 'M11 2 3 14h7l-1 8 8-12h-7z' },
+  { href: '/tactica', label: 'Táctica', mobile: true, icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z' },
+  { href: '/equipo', label: 'Equipo', icon: 'M4 7h16v13H4zM8 7V4h8v3' },
+  { href: '/ficha', label: 'Ficha', icon: 'M6 2h9l5 5v15H6zM14 2v6h6' },
+  { href: '/reglas', label: 'Reglas', icon: 'M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zm16 0h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z' },
+  { href: '/ajustes', label: 'Ajustes', icon: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm8.9 4a8.9 8.9 0 0 0-.1-1.3l2-1.6-2-3.4-2.4 1a9 9 0 0 0-2.2-1.3L15.8 2h-4l-.4 2.5A9 9 0 0 0 9.2 5.8l-2.4-1-2 3.4 2 1.6a9 9 0 0 0 0 2.6l-2 1.6 2 3.4 2.4-1a9 9 0 0 0 2.2 1.3l.4 2.5h4l.4-2.5a9 9 0 0 0 2.2-1.3l2.4 1 2-3.4-2-1.6c.1-.4.1-.9.1-1.3z' },
+];
+const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
+const moreActive = items.filter((i) => !i.mobile).some((i) => isCurrent(i.href));
+---
+
+<nav class="app-nav" aria-label="Secciones">
+  <ul>
+    {items.map((i) => (
+      <li class:list={[{ 'desktop-only': !i.mobile }]}>
+        <a href={i.href} aria-current={isCurrent(i.href) ? 'page' : undefined}>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d={i.icon} /></svg>
+          <span>{i.label}</span>
+        </a>
+      </li>
+    ))}
+    <li class="mobile-only">
+      <a href="/mas" aria-current={moreActive || current === '/mas' ? 'page' : undefined}>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="5" cy="12" r="2" /><circle cx="12" cy="12" r="2" /><circle cx="19" cy="12" r="2" /></svg>
+        <span>Más</span>
+      </a>
+    </li>
+  </ul>
+</nav>

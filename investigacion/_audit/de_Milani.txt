@@ -1,0 +1,62 @@
+id="main">
+ Deities by Alignment | 
+ Deities by Pantheon
+ Milani
+The Everbloom
+Source Inner Sea Faiths pg. 71
+Pathfinder Wiki MilaniDetails
+Alignment CG
+Pantheon Other Deities
+Areas of Concern Devotion, hope, uprisings
+Domains Chaos, Good, Healing, Liberation, Protection
+Subdomains Azata (Chaos), Azata (Good), Defense, Freedom, Purity, Restoration, Revolution, Riot
+* Requires the Acolyte of Apocrypha trait.
+Favored Weapon Morningstar
+Symbol Rose on bloody street
+Sacred Animal(s) Mouse
+Sacred Color(s) Red, white
+Obedience
+Spend time meditating among roses you have planted yourself, so you can inhale their sacred scent while offering prayers to Milani. If no such roses are available, you can instead brew tea from herbs and rose petals and share the tea with close friends or neighbors. Preferred topics for conversation during this teatime include hopes for the future and preparations for times of need, but the act of sharing is itself enough. During times of war or conflict, though, you must instead spend time sparring, preferably with friends or neighbors whom you plan to fight alongside during the conflicts to come. If you are imprisoned and unable to spar, you can instead sing any song of hope or resistance in unison with one or more fellow prisoners. You gain a +2 sacred bonus on all saving throws against charm and compulsion effects, and a +2 sacred bonus on all rolls made to dispel or remove such effects from others.On Golarion
+Centers of Worship Cheliax, Galt, Irrisen, Isger, Rahadoum
+Nationality half-elfBoons - Deific Obedience
+ Evangelist
+Source Inner Sea Faiths pg. 71
+1: Voice of the Everbloom (Sp) command 3/day, enthrall 2/day, or suggestion 1/day
+2: Inspiring Presence (Su) Your mere presence bolsters your companions to fight harder in the face of even the most overwhelming odds and bolsters their hearts against growing weary of battle. Once per day as a standard action, you can provide all allies within 30 feet of you with a +1 sacred bonus on attack rolls, saving throws, and weapon damage rolls for a number of rounds equal to your Hit Dice.
+3: Invoke Uprising (Sp) Even shackles of the mind do not escape your notice, and you can use an inspiring word from the teachings of Milani to help others find the strength to break those shackles. You are automatically aware of any creature within 10 feet of you that is currently under the effects of a charm, compulsion, or possession effect. Three times per day as a swift action, you can inspire such a creature to throw off the influence, granting that creature a new saving throw to immediately end the effect. If the effect does not normally allow a saving throw, calculate the save DC as normal if it is a spell; if it’s not a spell, the DC is equal to 10 + 1/2 the source’s Hit Dice + the source’s Charisma modifier. The creature gains a sacred bonus on this saving throw equal to your Charisma bonus (minimum +1). This bonus is doubled if you include a physical touch as part of your invocation to rise up against the effect. In either case, this is a language-dependent effect. Exalted
+Source Inner Sea Faiths pg. 71
+1: Sacred Partisan (Sp) divine favor 3/day, spiritual weapon 2/day, or magic vestment 1/day
+2: Alleyport (Sp) As the patron deity of urban uprisings, the Everbloom grants you the power to appear wherever in a settlement, dungeon, or other tight space you are most needed, or to escape to fight another day. Once per day as a swift action, you can teleport as per dimension door, but only when you are in an area no wider than your space, and you can arrive in only an area of similar width.
+3: Wall of Roses (Sp) You can call upon Milani’s symbolic roses to defend the innocent and the righteous while stymieing oppressors and their minions. Once per day, you can cast wall of thorns. The wall consists of a dense tangle of roses through which you and other worshipers of Milani can pass with ease. The wall of roses heals from damage dealt to it at a rate of 5 hit points per round; it is immune to fire damage; and all piercing damage it deals bypasses damage reduction as if it were a good, magic, and silver weapon. Evil and lawful creatures damaged by a wall of roses automatically become sickened for the next minute (this is a poison effect). Sentinel
+Source Inner Sea Faiths pg. 71
+1: Neighborhood Guardian (Sp) protection from evil 3/day, shield other 2/day, or magic circle against evil 1/day
+2: Stoic Guardian (Ex) Inspired by Milani’s valor and steadfastness, you refuse to let magic corrupt your thoughts and deny fear any hold on your actions. You are immune to fear and charm effects, and gain a +4 sacred bonus on all saving throws against compulsion effects.
+3: Martyrdom (Su) Your deeds and faith have earned you the Everbloom’s blessing to give your life for a worthy cause and still fight on, and she shelters you in battle. As an immediate action once per day, whenever a single creature within 300 feet of you is slain by an effect or hit point damage, you can redirect that effect or damage onto yourself. You gain no saving throw to reduce effects redirected in this manner. If the effect kills you, you are restored to life in 1d4 rounds, as per resurrection, but once this resurrection effect occurs, you lose the ability to use martyrdom for 1 year.For Followers of Milani
+Archetypes
+Champion of the Faith (Warpriest), Crusader (Cleric), Divine Strategist (Cleric), Hidden Priest (Cleric), Kintargo Rebel (Rogue), Urban Ranger (Ranger), Wilderness Medic (Ranger)Feats
+Beacon of HopeMagic Items - Armor
+Milanite ArmorMagic Items - Weapons
+Enduring Bloom, Everbloom Thorn, Everbloom's RosePrestige Classes
+Rose WardenSpells
+Martyr's Bargain, Martyr's Last Blessing, Peasant ArmamentsTraits
+Split-Second Defense, Talented OrganizerUnique Spell Rules
+ Source Inner Sea Faiths pg. 74
+Cleric/Warpriest
+Coordinated Effort can be prepared as a 3rd-level spell
+Good Hope can be prepared as a 3rd-level spell
+Inquisitor
+Good Hope can be prepared as a 3rd-level spell
+Ranger
+Coordinated Effort can be prepared as a 3rd-level spell
+Good Hope can be prepared as a 3rd-level spell
+Remove Fear can be prepared as a 1st-level spell
+Imbue with Spell Ability can be prepared as a 3rd-level spell
+Unique Summon Rules
+Source Pathfinder #68: The Shackled Hut pg. 69
+ Summon Monster I: Great Horned Owl (extraplanar)
+ Summon Monster IV: Hound Archon - CG
+Other Rules
+Source Inner Sea Faiths pg. 72
+Milani’s priests understand that a revolutionary’s work is often rewarded with death, and they accept that they may one day be called to die for a cause. Fortunately, the goddess teaches that the truly devout who are martyred saving other people from death or tyranny will rise again in some way—perhaps even immediately, though being reborn in the faith is much more likely.
+ Some priests claim to be the incarnations of past followers of the goddess, able to access memories of past lives with the proper magic and meditation. A follower born after Milani ascended to godhood (about a century ago) can attempt to search for his past lives’ memories by casting legend lore, which Milani grants only for this purpose to clerics, inquisitors, and warpriests as a 4th-level divine spell. The first time a caster attempts this use of the spell, he rolls 1d4–1 to determine the number of specific followers of Milani whose memories he accesses; each time he uses the spell, it reveals only information known to those individuals. If the result of the roll is 0, the caster can access no memories, either because he is not a reincarnated follower of Milani or because the goddess has not made his past lives’ memories available.
+ Site Owner: Blake DavisEmail Spam Checker: MX Guarddog

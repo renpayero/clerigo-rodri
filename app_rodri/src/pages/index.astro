@@ -1,0 +1,57 @@
+---
+import App from '@/layouts/App.astro';
+import { MesaPanel } from '@/components/islands/MesaPanel';
+import { Term } from '@/components/Term';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+import { roundPatterns, channelAverage, healAmount } from '@/lib/rules/healing';
+
+const snapshot = await loadSnapshot(db());
+const patterns = roundPatterns();
+const ch = channelAverage();
+
+const emergencies = [
+  { when: 'Un aliado bajo el 40 %', what: 'Heal (110) sobre él; Quick Channel (≈ ' + ch + ' a todos) como movimiento. Si hay dos bajos: Heal al peor + channel.', k: 'heal' },
+  { when: 'Un aliado a 0 o menos (vivo)', what: 'Heal (110) lo pone de pie; Rebuke Death (1d4+7) es el plan pobre si no queda ranura.', k: 'rebuke-death' },
+  { when: 'Murió este asalto o el anterior', what: 'Heal + Relentless Healing (−1 PM): si 110 supera sus pg negativos, revive estabilizado. Inspired Spell (CL 13, 130) si hace falta más.', k: 'relentless-healing' },
+  { when: 'Murió hace 2 asaltos o por efecto de muerte', what: 'Mythic Breath of Life (−1 PM, 5d12+11): revive incluso a quien murió por efecto de muerte. Scroll of Breath of Life ×2 como respaldo.', k: 'breath-of-life' },
+  { when: 'Me van a bajar a 0', what: 'Reactive Healing (inmediata, −1 channel): 8d6 +1 a vos antes del golpe. Si igual caés a ≤ −36: Cheat Death (2 Hero Points).', k: 'reactive-healing' },
+  { when: 'Un DPS anulado (paralizado, cegado, aterrado, agarrado)', what: 'Remove Paralysis / Remove Blindness / Remove Fear / Liberating Command (inmediata, +20 a Escapar). Restoration para niveles negativos y Wis/Con drenada.', k: 'restoration' },
+  { when: 'Nadie está herido', what: 'Aura ON (rápida) + Blessing of Fervor / Prayer; Amazing Initiative sobra: guardá el PM. Sin gastar: Guidance, Spiritual Ally, Dispel Magic.', k: 'blessing-of-fervor' },
+];
+---
+
+<App title="Mesa" snapshot={snapshot}>
+  <MesaPanel client:load snapshot={snapshot} />
+
+  <div class="mesa-static">
+    <section class="card">
+      <h2 class="section-title">Patrones por asalto (promedios)</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Combinación</th><th class="num">Herido</th><th class="num">Resto</th><th>Costo</th></tr></thead>
+          <tbody>
+            {patterns.map((p) => (
+              <tr><td>{p.label}</td><td class="num">{p.single}</td><td class="num">{p.others}</td><td class="muted">{p.cost}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="help">
+        <Term k="heal">Heal</Term> cura {healAmount(11)} (mítico {healAmount(11, true)}, Inspired CL 13 {healAmount(13)}); el channel promedia {ch} con reroll de los 1 y +1 de <Term k="blessed-touch">Blessed Touch</Term>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Emergencias</h2>
+      <ul class="emergency-list">
+        {emergencies.map((e) => (
+          <li>
+            <b>{e.when}</b>
+            <span>{e.what} <Term k={e.k}>↗</Term></span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</App>

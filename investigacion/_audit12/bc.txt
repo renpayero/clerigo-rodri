@@ -1,0 +1,135 @@
+                            Sources
+                            Tools
+                            Contact Us
+                            Contributors
+						    Support the Archives
+                            Maximize Menu
+                                    Archives of Nethys
+                            Character Creation +
+                                Classes
+                                Feats
+                                Prestige Classes
+                                Races
+                                Skills
+                                Traits
+                                Mythic Index
+                            Deities
+                            Equipment +
+                                Equipment (Non-Magical)
+                                Magic Items
+                                Technology
+							FAQ
+                            Spells/Rituals
+                            Rules +
+                                Afflictions
+                                NPC Index
+                                Rules
+                                Tools
+                            Hazards
+                            Monsters
+                            Sources
+                            About the Archives +
+                                Licenses
+                                Projects
+                                Contact Us
+                                Contributors
+						        Support the Archives
+                        &nbsp;
+                        Toggle Theme
+    Paizo & Archives of Nethys—Moving Forward Together. Click here to read our partnership status update.
+							Archives of Nethys
+    All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+             Bestow CurseSource PRPG Core Rulebook pg. 247
+School necromancy [curse]; Level adept 3, antipaladin 3, arcanist 4, bloodrager 4, cleric 3, medium 2, mesmerist 3, occultist 3, oracle 3, shaman 3, sorcerer 4, spiritualist 3, warpriest 3, witch 3, wizard 4CastingCasting Time 1 standard action
+Components V, SEffectRange touch
+Target creature touched
+Duration permanent
+Saving Throw Will negates; Spell Resistance yesDescriptionYou place a curse on the subject. Choose one of the following.–6 decrease to an ability score (minimum 1).–4 penalty on attack rolls, saves, ability checks, and skill checks.Each turn, the target has a 50% chance to act normally; otherwise, it takes no action.You may also invent your own curse, but it should be no more powerful than those described above.
+The curse bestowed by this spell cannot be dispelled, but it can be removed with a break enchantment, limited wish, miracle, remove curse, or wish spell.
+Bestow curse counters remove curse. Bestow Curse, GreaterSource Pathfinder #82: Secrets of the Sphinx pg. 75
+School necromancy; Level arcanist 8, cleric 7, oracle 7, sorcerer 8, witch 7, wizard 8CastingCasting Time 1 standard action
+Components V, SEffectRange touch
+Target creature touched
+Duration permanent
+Saving Throw Will negates; Spell Resistance  yesDescriptionYou place a curse on the subject. Choose one of the following. –12 penalty to an ability score, or –6 penalty to two ability scores (to a minimum ability score of 1).–8 penalty on attack rolls, saves, ability checks, and skill checks.Each turn, the target has a 25% chance to act normally; otherwise, it takes no actions.Bestow one of the curses or variants in this article.Bestow curse of the ages or unluck (Core Rulebook 557). If a specific affliction is bestowed, the save DC of the spell replaces the usual save DC of the affliction. You can also invent your own curse, but it should be no more powerful than those described above.
+ The curse bestowed by this spell cannot be dispelled, but it can be removed with a break enchantment, limited wish, miracle, or wish spell. It cannot be removed with remove curse or suppressed with abeyance. The DC to remove the curse with break enchantment increases by 5. Conditional CurseSource <a href="http://paizo.com/products/btpy9j6p?Pathfinder-Roleplaying-Game-Ultimate-Intrigue
+" target="_blank" class="external-link">Ultimate Intrigue pg. 206
+School necromancy [curse]; Level antipaladin 4, arcanist 5, cleric 4, inquisitor 4, medium 3, mesmerist 3, occultist 4, oracle 4, psychic 5, shaman 4, sorcerer 5, spiritualist 5, warpriest 4, witch 4, wizard 5CastingCasting Time 1 standard action
+Components V, SEffectRange close (25 ft. + 5 ft./2 levels)
+Target one creature
+Duration permanent (see text)
+Saving Throw Will negates; Spell Resistance yesDescriptionThis spell functions as bestow curse, except that you must state a condition under which the curse is broken, ending its effect. An intelligent target, even one of animal intelligence, innately understands this condition even if it doesn’t understand your language. The condition must be possible for the target to bring about within a year and a day without ensuring its own death and stated in 25 or fewer words. The curse is more difficult to remove via magic. The DC to remove conditional curse with break enchantment or remove curse increases by 5. Curse, MajorSource Ultimate Magic pg. 215
+School necromancy [curse]; Level arcanist 6, cleric 5, mesmerist 4, occultist 5, oracle 5, psychic 6, shaman 5, sorcerer 6, spiritualist 5, warpriest 5, witch 5, wizard 6CastingCasting Time 1 standard action
+Components V, SEffectRange close (25 ft. + 5 ft./2 levels)
+Target one creature
+Duration permanent
+Saving Throw Will negates; Spell Resistance  yesDescriptionThis spell functions as bestow curse, except the DC to remove the curse is equal to the save DC + 5.
+                    Site Owner: Blake DavisEmail Spam Checker: MX Guarddog
+                    <ins class="adsbygoogle"
+                        style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4953734518316037"
+                        data-ad-slot="7738185508">
+                (adsbygoogle = window.adsbygoogle || []).push({});
+      initiateToggle(document.getElementById('theme-toggle'));
+      initializeMenuToggle(document.getElementById('minMaxMenu'));
+      var initializeSearch = function (search) {
+          var button;
+          var text;
+          if (search.firstElementChild.classList.contains('search-input'))
+              text = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-input'))
+              text = search.lastElementChild;
+          if (search.firstElementChild.classList.contains('search-button'))
+              button = search.firstElementChild;
+          if (search.lastElementChild.classList.contains('search-button'))
+              button = search.lastElementChild;
+          if (search) {
+              search.addEventListener('keypress', function (e) {
+                  if (e.keyCode == 13) {
+                      e.preventDefault();
+                      if (text.value != null && text.value.length > 0)
+                          window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+                  }
+              })
+          }
+          if (button) {
+              button.addEventListener('click', function (e) {
+                  window.location = window.location.origin + "/Search.aspx?Query=" + text.value + "&Filter=111111111111111111&AllTerms=True";
+              });
+          }
+      };
+      var initializeExpand = function (toggle) {
+          var targetAttrString = "[data-target='" + toggle.dataset.toggle + "']";
+          //target = menu to be collapsed
+          var target = document.querySelector(targetAttrString);
+          toggle.addEventListener('click', function () {
+              var expanded = target.classList.contains('expanded');
+              expanded = !expanded;
+              if (expanded) {
+                  //hide other in group if exists
+                  if (target.dataset.group) {
+                      var otherExpanded = document.querySelector('.expanded[data-group="' + target.dataset.group + '"]');
+                      if (otherExpanded) {
+                          otherExpanded.classList.remove('expanded');
+                      }
+                  }
+                  target.classList.add('expanded');
+              } else {
+                  target.classList.remove('expanded');
+              }
+          });
+      };
+      (function () {
+          //toggles = link that expands/collapses target
+          var toggles = document.querySelectorAll('[data-toggle]');
+          toggles.forEach(function (toggle) {
+              initializeExpand(toggle);
+          });
+          //searches
+          var searches = document.querySelectorAll('.search');
+          searches.forEach(function (search) {
+              initializeSearch(search);
+          });
+      })();

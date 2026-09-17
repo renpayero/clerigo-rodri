@@ -1,0 +1,53 @@
+---
+import { defenses, attacks, character } from '@/data';
+import Term from '@/components/Term';
+const d = defenses;
+const fmt = (n: number) => (n >= 0 ? `+${n}` : `${n}`);
+---
+
+<section class="card">
+  <h2>Defensas</h2>
+  <div class="stat-grid">
+    <div class="stat"><span class="label">Puntos de golpe</span><span class="value">{character.hpMax}</span><span class="detail">Muerte a <Term k="umbral">{character.deathThreshold}</Term> (<Term k="hard-to-kill" />)</span></div>
+    <div class="stat"><span class="label">CA</span><span class="value">{d.ac.total}</span><span class="detail">toque {d.ac.touch} · desprevenida {d.ac.flatFooted}</span></div>
+    <div class="stat"><span class="label">CA con buffs</span><span class="value">{d.ac.withMagicVestment} / {d.ac.withMagicVestmentAndShieldOfFaith}</span><span class="detail"><Term k="magic-vestment">Magic Vestment ×2</Term> / + <Term k="shield-of-faith" /></span></div>
+    <div class="stat"><span class="label">Fortaleza</span><span class="value">{fmt(d.saves.fort.total)}</span><span class="detail">{d.saves.fort.base} + {d.saves.fort.ability} Con + {d.saves.fort.resistance}</span></div>
+    <div class="stat"><span class="label">Reflejos</span><span class="value">{fmt(d.saves.ref.total)}</span><span class="detail">{d.saves.ref.base} + {d.saves.ref.ability} Dex + {d.saves.ref.resistance}</span></div>
+    <div class="stat"><span class="label">Voluntad</span><span class="value">{fmt(d.saves.will.total)}</span><span class="detail">{d.saves.will.base} + {d.saves.will.ability} Wis + {d.saves.will.resistance}</span></div>
+    <div class="stat"><span class="label">Iniciativa</span><span class="value">{fmt(d.initiative.total)}</span><span class="detail">{d.initiative.breakdown.map((b) => `${b.label} ${fmt(b.value)}`).join(' · ')}</span></div>
+    <div class="stat"><span class="label">CMB / CMD</span><span class="value">{fmt(d.cmb)} / {d.cmd}</span><span class="detail">CMD {d.cmdWithShieldOfFaith} con Shield of Faith</span></div>
+    <div class="stat"><span class="label">Concentración</span><span class="value">{fmt(d.concentration.total)}</span><span class="detail"><Term k="lanzar-defensiva">Heal 65 % · 4.º 85 %</Term></span></div>
+    <div class="stat"><span class="label">Velocidad</span><span class="value">30</span><span class="detail">mithral: sin reducción</span></div>
+  </div>
+  <dl class="kv" style="margin-top: var(--s4)">
+    <dt>CA desglose</dt><dd>{d.ac.breakdown.map((b) => `${b.label} ${b.value}`).join(' + ')} = {d.ac.total}</dd>
+    <dt>Nota</dt><dd>{d.ac.note}</dd>
+    <dt>Salvaciones</dt><dd>{d.saves.note}</dd>
+    <dt>Concentración</dt><dd>{d.concentration.note}</dd>
+    <dt>Pruebas de CL</dt><dd>{d.casterLevelCheck}</dd>
+    <dt>Resistencias</dt><dd>{d.resistances.join(' · ')} (<Term k="aasimar-resistance">Celestial Resistance</Term>)</dd>
+    <dt>Inmunidades</dt><dd>{d.immunities.join(', ')} (<Term k="aasimar-outsider">ajeno nativo</Term>)</dd>
+    <dt>Sentidos</dt><dd>{d.senses.join(', ')}</dd>
+    <dt>Carga</dt><dd>{d.carrying.carried} lb encima = carga ligera justa (≤ {d.carrying.light}); media hasta {d.carrying.medium}, pesada hasta {d.carrying.heavy}</dd>
+  </dl>
+</section>
+
+<section class="card">
+  <h2>Ataques</h2>
+  <div class="scroll-x">
+    <table>
+      <thead><tr><th>Ataque</th><th>Bono</th><th>Daño</th><th>Crítico</th><th>Notas</th></tr></thead>
+      <tbody>
+        {attacks.map((a) => (
+          <tr>
+            <td><Term name={a.name} tip={a.notes} aon={a.aon}>{a.name}</Term></td>
+            <td class="mono">{a.attack}</td>
+            <td class="mono">{a.damage}</td>
+            <td class="mono">{a.crit}</td>
+            <td class="muted">{a.notes}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

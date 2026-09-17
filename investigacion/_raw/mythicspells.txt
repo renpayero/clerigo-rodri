@@ -1,0 +1,590 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## All Spells | Mythic | Custom Search | Definitions
+Adept | Alchemist | Antipaladin | Arcanist | Bard | Bloodrager | Cleric | Druid | Hunter | Inquisitor | Investigator | Magus | Medium | Mesmerist | Occultist | Oracle | Paladin | Psychic | Ranger | Red Mantis Assassin | Sahir-Afiyun | Shaman | Skald | Sorcerer | Spiritualist | Summoner | Summoner (Unchained) | Warpriest | Witch | Wizard
+Occult Rituals
+## 
+## Mythic Spells
+ **No Sort | Sort by School** 
+ F This spell has a focus component not normally included in a spell component pouch.
+ M This spell has a material component not normally included in a spell component pouch.
+ R Spell requires a requisite religion or race. If religion, spellcaster must worship the listed deity to utilize the spell. If race, the spell might only target members of the listed race (the spell will say this if it does), but often are just the race's guarded secrets. Members of other races can learn to cast them with GM permission.
+ T In order to prepare any of these spells, the caster must spend an hour performing a ritual in which he beseeches Torag (or a member of his family) for the aid of one of his divine family members. For 24 hours after the ritual, the caster may prepare spells of the requested deity. The caster may only attune himself to one additional deity at a time.
+ Y This spell has a Mythic version.
+ ** Ablative Barrier** Y **** : Surrounds the target with layers of force.
+ | 
+ ** Animal Aspect** Y **** : You gain some of the beneficial qualities of an animal.
+ | 
+ ** Animate Dead** M **** Y **** : Creates undead skeletons and zombies.
+ | 
+ ** Animate Objects** Y **** : Objects attack your foes.
+ | 
+ ** Animate Plants** Y **** : One or more plants animate and fight for you.
+ | 
+ ** Anticipate Peril** Y **** : Target gains a bonus on one initiative check.
+ | 
+ ** Antimagic Field** Y **** : Negates magic within 10 ft.
+ | 
+ ** Arboreal Hammer** Y **** : Tree branches attack opponents.
+ | 
+ **Arcane Cannon** F **** Y **** : Your focus becomes a magical cannon that fires on its own.
+ | 
+ ** Aroden's Spellbane** F **** Y **** : Create an area to completely block out spells of your choosing.
+ | 
+ **Ascension** M **** Y **** : Imbue creatures with mythic power.
+ | 
+ ** Baleful Polymorph** Y **** : Transforms subject into harmless animal.
+ | 
+ ** Bane** Y **** : Enemies take –1 on attack rolls and saves against fear.
+ | 
+ ** Barkskin** Y **** : Grants +2 (or higher) enhancement to natural armor.
+ | 
+ ** Battle Trance** R **** Y **** : Gain ferocity, bonus hit points, and +4 vs. mind-affecting effects.
+ | 
+ ** Battlemind Link** Y **** : You and an ally gain attack and AC bonuses.
+ | 
+ ** Beast Shape I** Y **** : You take the form and some of the powers of a Small or Medium animal.
+ | 
+ ** Beast Shape II** Y **** : You take the form and some of the powers of a Tiny or Large animal.
+ | 
+ ** Beast Shape III** Y **** : You take the form of a Diminutive or Huge animal, or Small or Medium magical beast.
+ | 
+ ** Beast Shape IV** Y **** : You take the form of a Diminutive to Huge animal or a Tiny to Large magical beast.
+ | 
+ ** Black Mark** R **** Y **** : Mark someone which makes them afraid of water and turns aquatic creatures against them.
+ | 
+ ** Black Tentacles** Y **** : Tentacles grapple all creatures within a 20-ft. spread.
+ | 
+ ** Blade Barrier** Y **** : Wall of blades deals 1d6/level damage.
+ | 
+ ** Blasphemy** Y **** : Kills, paralyzes, weakens, or dazes nonevil subjects.
+ | 
+ ** Bless** Y **** : Allies gain +1 on attack rolls and saves against fear.
+ | 
+ ** Blessing of Fervor** Y **** : Gives allies a choice of benefits.
+ | 
+ ** Blinding Ray** R **** Y **** : Fire blinding rays of sunlight to blind enemies and damage those with sensitivity to light.
+ | 
+ ** Blindness/Deafness** Y **** : Makes subject blinded or deafened.
+ | 
+ ** Blink** Y **** : You randomly vanish and reappear for 1 round per level.
+ | 
+ ** Blistering Invective** Y **** : Make an Intimidate check against all foes within 30 feet; those demoralized also take fire damage.
+ | 
+ ** Blood Crow Strike** Y **** : Unarmed strikes create crows that deal fire and negative energy damage.
+ | 
+ ** Boiling Blood** Y **** : Targets take fire damage; orcs get +2 Strength.
+ | 
+ **Borrowed Time** Y **** : Take extra swift actions at the cost of Con damage.
+ | 
+ ** Break** Y **** : Gives an object the broken condition.
+ | 
+ ** Break Enchantment** Y **** : Frees subjects from enchantments, transmutations, and curses.
+ | 
+ ** Breath of Life** Y **** : Cures 5d8 damage + 1/level and restores life to recently slain creatures.
+ | 
+ ** Burning Gaze** Y **** : Inflict 1d6 fire damage to creature by looking at it.
+ | 
+ ** Burning Hands** Y **** : 1d4/level fire damage (max 5d4).
+ | 
+ ** Burrow** Y **** : Target gains a burrow speed of 15.
+ | 
+ ** Call Animal** Y **** : Makes an animal come to you.
+ | 
+ ** Call Lightning** Y **** : Calls down lightning bolts (3d6 per bolt) from sky.
+ | 
+ ** Cape of Wasps** Y **** : Wasp swarm defends or carries you.
+ | 
+ ** Chain Lightning** Y **** : 1d6/level damage and 1 secondary bolt/level.
+ | 
+ ** Changestaff** Y **** : Your staff becomes a treant on command.
+ | 
+ ** Chaos Hammer** Y **** : Harms and slows lawful creatures (1d8 damage/2 levels).
+ | 
+ ** Chill Metal** Y **** : Cold metal damages those who touch it.
+ | 
+ ** Chord of Shards** Y **** : Performance deals 2d6 piercing damage.
+ | 
+ ** Circle of Death** M **** Y **** : Kills 1d4/level HD of creatures.
+ | 
+ ** Cloudkill** Y **** : Kills 3 HD or less; 4–6 HD save or die, 6+ HD take Con damage.
+ | 
+ ** Color Spray** Y **** : Knocks unconscious, blinds, and/or stuns weak creatures.
+ | 
+ ** Command** Y **** : One subject obeys selected command for 1 round.
+ | 
+ ** Companion Mind Link** Y **** : You can talk with your animal companion, and can handle it with supernatural ease.
+ | 
+ ** Cone of Cold** Y **** : 1d6/level cold damage.
+ | 
+ ** Confusion** Y **** : Subjects behave oddly for 1 round/level.
+ | 
+ ** Conjure Black Pudding** M **** Y **** : Summon a black pudding.
+ | 
+ ** Consecrate** M **** Y **** : Fills area with positive energy, weakening undead.
+ | 
+ ** Contagion** Y **** : Infects subject with chosen disease.
+ | 
+ ** Contingency** F **** Y **** : Sets trigger condition for another spell.
+ | 
+ ** Control Weather** Y **** : Changes weather in local area.
+ | 
+ ** Covetous Aura** Y **** : Sap the powers of beneficial spells cast near to you.
+ | 
+ ** Crusader's Edge** Y **** : Grant a weapon the evil outsider bane quality and nauseate evil outsiders with a critical hit.
+ | 
+ ** Cup of Dust** Y **** : Causes a creature to become dehydrated.
+ | 
+ ** Cure Critical Wounds** Y **** : Cures 4d8 damage + 1/level (max +20).
+ | 
+ ** Cure Light Wounds** Y **** : Cures 1d8 damage + 1/level (max +5).
+ | 
+ ** Cure Moderate Wounds** Y **** : Cures 2d8 damage + 1/level (max +10).
+ | 
+ ** Cure Serious Wounds** Y **** : Cures 3d8 damage + 1/level (max +15).
+ | 
+ ** Damnation Stride** R **** Y **** : As dimension door, except you leave behind a burst of flame.
+ | 
+ ** Darkness** Y **** : 20-ft. radius of supernatural shadow.
+ | 
+ ** Daybreak Arrow** Y **** : Targeted ammunition exudes radiant energy.
+ | 
+ ** Daylight** Y **** : 60-ft. radius of bright light.
+ | 
+ ** Death Knell** Y **** : Kills dying creature; you gain 1d8 temporary hp, +2 to Str, and +1 caster level.
+ | 
+ **Deathless** Y **** : Prevent death from hit point damage so long as this spell persists.
+ | 
+ ** Deep Slumber** Y **** : Puts 10 HD of creatures to sleep.
+ | 
+ ** Defile Armor** Y **** : As sanctify armor, but gain DR 5/good when using judgment or smite.
+ | 
+ ** Desecrate** M **** Y **** : Fills area with negative energy, making undead stronger.
+ | 
+ ** Detect Scrying** Y **** : Alerts you to magical eavesdropping.
+ | 
+ ** Devolution** Y **** : An eidolon temporarily loses 1 evolution +1/five levels.
+ | 
+ ** Dictum** Y **** : Kills, paralyzes, staggers, or deafens nonlawful targets.
+ | 
+ ** Dimension Door** Y **** : Teleports you a short distance.
+ | 
+ ** Dimensional Lock** Y **** : Teleportation and interplanar travel blocked for 1 day/level.
+ | 
+ ** Dirge of the Victorious Knights** F **** Y **** : Call forth spectral Hellknights to trample targets in your path
+ | 
+ ** Discordant Blast** Y **** : 3d6 sonic damage in 10-ft. burst or 30-ft. cone can also bull rush creatures.
+ | 
+ ** Disfiguring Touch** Y **** : Target becomes disfigured.
+ | 
+ ** Disintegrate** Y **** : Reduces one creature or object to dust.
+ | 
+ ** Dispel Magic** Y **** : Cancels one magical spell or effect.
+ | 
+ ** Divine Favor** Y **** : You gain +1 per three levels on attack and damage rolls.
+ | 
+ ** Divine Pursuit** Y **** : Gain a movement type of your prey.
+ | 
+ ** Dominate Person** Y **** : Controls humanoid telepathically.
+ | 
+ ** Draconic Reservoir** Y **** : Subject can absorb energy damage and enhance melee attacks with it.
+ | 
+ ** Dragon's Breath** Y **** : Gives you a dragon's breath weapon.
+ | 
+ ** Dream** Y **** : Sends message to anyone sleeping.
+ | 
+ ** Dust of Twilight** Y **** : Black particles extinguish light sources within area.
+ | 
+ ** Ear-Piercing Scream** Y **** : Deal sonic damage and daze target.
+ | 
+ ** Earthquake** Y **** : Intense tremor shakes 80-ft. radius.
+ | 
+ ** Elemental Body I** Y **** : Turns you into a Small elemental.
+ | 
+ ** Elemental Body II** Y **** : Turns you into a Medium elemental.
+ | 
+ ** Elemental Body III** Y **** : Turns you into a Large elemental.
+ | 
+ ** Elemental Body IV** Y **** : Turns you into a Huge elemental.
+ | 
+ **Elemental Bombardment** Y **** : Hurl elementals from their respective planes onto your enemies.
+ | 
+ ** Endure Elements** Y **** : Exist comfortably in hot or cold regions.
+ | 
+ ** Enemy Hammer** Y **** : Allows you to telekinetically use a creature as a weapon.
+ | 
+ ** Enervation** Y **** : Subject gains 1d4 negative levels.
+ | 
+ ** Enlarge Person** Y **** : Humanoid creature doubles in size.
+ | 
+ ** Entangle** Y **** : Plants entangle everyone in 40-ft. radius.
+ | 
+ ** Entropic Shield** Y **** : Ranged attacks against you have 20% miss chance.
+ | 
+ ** Expeditious Retreat** Y **** : Your base land speed increases by 30 ft.
+ | 
+ ** Faerie Fire** Y **** : Outlines subjects with light, canceling blur, concealment, and the like.
+ | 
+ ** False Life** Y **** : Gain 1d10 temporary hp + 1/level (max +10).
+ | 
+ ** Feast of Ashes** Y **** : A target starves with an insatiable hunger.
+ | 
+ ** Feather Fall** Y **** : Objects or creatures fall slowly.
+ | 
+ ** Finger of Death** Y **** : Deals 10 damage/level to one subject.
+ | 
+ ** Fire Seeds** Y **** : Acorns and berries become grenades and bombs.
+ | 
+ ** Fire Shield** Y **** : Creatures attacking you take fire damage; you're protected from heat or cold.
+ | 
+ ** Fire Snake** Y **** : Creates a serpentine path of fire 5 ft. long/level that deals 1d6 fire damage/level.
+ | 
+ ** Fire Storm** Y **** : Deals 1d6/level fire damage.
+ | 
+ ** Fireball** Y **** : 1d6 damage per level, 20-ft. radius.
+ | 
+ ** Firestream** R **** Y **** : Spray a rushing stream of fire from your hand.
+ | 
+ ** Flame Blade** Y **** : Touch attack deals 1d8 + 1/two levels damage.
+ | 
+ ** Flame Strike** Y **** : Smites foes with divine fire (1d6/level damage).
+ | 
+ ** Flames of the Faithful** Y **** : Gives weapon flaming property.
+ | 
+ ** Flesh to Stone** Y **** : Turns subject creature into statue.
+ | 
+ ** Fleshcurdle** Y **** : Warp a creature's flesh, penalizing it in attack, defense, or movement.
+ | 
+ ** Floating Disk** Y **** : Creates 3-ft.-diameter horizontal disk that holds 100 lbs./level.
+ | 
+ ** Fly** Y **** : Subject flies at speed of 60 ft.
+ | 
+ ** Fog Cloud** Y **** : Fog obscures vision.
+ | 
+ ** Force Punch** Y **** : Target takes force damage and is pushed away.
+ | 
+ ** Foresight** Y **** : “Sixth sense” warns of impending danger.
+ | 
+ ** Form of the Dragon I** Y **** : Turns you into a Medium dragon.
+ | 
+ ** Form of the Dragon II** Y **** : Turns you into a Large dragon.
+ | 
+ ** Form of the Dragon III** Y **** : Turns you into a Huge dragon.
+ | 
+ ** Gaseous Form** Y **** : Subject becomes insubstantial and can fly slowly.
+ | 
+ ** Geniekind** Y **** : Gain the power and influence of a genie.
+ | 
+ ** Giant Vermin** Y **** : Turns centipedes, scorpions, or spiders into giant vermin.
+ | 
+ ** Globe of Invulnerability** Y **** : As lesser globe of invulnerability, plus 4th-level spell effects.
+ | 
+ ** Glyph of Warding** M **** Y **** : Inscription harms those who pass it.
+ | 
+ ** Goodberry** Y **** : 2d4 berries each cure 1 hp (max 8 hp/24 hours).
+ | 
+ ** Gorum's Armor** Y **** : Make a suit of armor or shield erupt in thousands of spikes, causing damage to natural attacks against you.
+ | 
+ ** Grease** Y **** : Makes 10-ft. square or one object slippery.
+ | 
+ ** Guards and Wards** Y **** : Array of magic effects protect area.
+ | 
+ ** Gust of Wind** Y **** : Blows away or knocks down smaller creatures.
+ | 
+ ** Harm** Y **** : Deals 10 points/level damage to target.
+ | 
+ **Harrowing** Y **** : Use a Harrow deck to predict the future.
+ | 
+ ** Haste** Y **** : One creature/level moves faster, receives +1 on attack rolls, AC, and Reflex saves.
+ | 
+ ** Heal** Y **** : Cures 10 points/level damage, all diseases and mental conditions.
+ | 
+ ** Healing Thief** Y **** : You siphon half of all magical healing that the targeted creature receives.
+ | 
+ ** Heat Metal** Y **** : Makes metal so hot it damages those who touch it.
+ | 
+ ** Heroism** Y **** : Gives +2 on attack rolls, saves, skill checks.
+ | 
+ ** Hex Ward** Y **** : Target gains +4 on saves against witch hexes.
+ | 
+ ** Hideous Laughter** Y **** : Subject loses actions for 1 round/ level.
+ | 
+ ** Hold Portal** Y **** : Holds door shut.
+ | 
+ ** Holy Smite** Y **** : Harms and possibly blinds evil creatures (1d8 damage/2 levels).
+ | 
+ ** Holy Word** Y **** : Kills, paralyzes, blinds, or deafens nongood subjects.
+ | 
+ ** Hydraulic Push** Y **** : Wave of water bull rushes an enemy.
+ | 
+ ** Hydraulic Torrent** Y **** : Creates torrent of water that bull rushes any creature in its path.
+ | 
+ ** Ice Storm** Y **** : Hail deals 5d6 damage in cylinder 40 ft. across.
+ | 
+ ** Ill Omen** Y **** : Target rolls twice for checks and attacks and uses worst roll.
+ | 
+ **Imbue with Flight** Y **** : Grant creatures the ability to fly at your command.
+ | 
+ ** Inflict Critical Wounds** Y **** : Touch attack, 4d8 damage + 1/level (max +20).
+ | 
+ ** Inflict Light Wounds** Y **** : Touch deals 1d8 damage +1/level (max +5).
+ | 
+ ** Inflict Moderate Wounds** Y **** : Touch attack, 2d8 damage + 1/level (max +10).
+ | 
+ ** Inflict Serious Wounds** Y **** : Touch attack, 3d8 damage + 1/level (max +15).
+ | 
+ ** Invisibility** Y **** : Subject is invisible for 1 min./level or until it attacks.
+ | 
+ ** Irresistible Dance** Y **** : Forces subject to dance.
+ | 
+ ** Jitterbugs** R **** Y **** : Force a creature to become jittery, taking a penalty on Dexterity-related checks and being unable to delay, ready, or take a total defense action.
+ | 
+ ** Knock** Y **** : Opens locked or magically sealed door.
+ | 
+ ** Know the Enemy** Y **** : Gain +10 on a monster Knowledge check.
+ | 
+ ** Levitate** Y **** : Subject moves up and down at your direction.
+ | 
+ ** Lightning Arc** Y **** : Targets in a line take 1d6 electricity/level.
+ | 
+ ** Lightning Bolt** Y **** : Electricity deals 1d6/level damage.
+ | 
+ ** Limited Wish** M **** Y **** : Alters reality (within limits).
+ | 
+ ** Mage Armor** Y **** : Gives subject +4 armor bonus.
+ | 
+ ** Mage's Disjunction** Y **** : Dispels magic, disenchants magic items.
+ | 
+ ** Magic Fang** Y **** : One natural weapon of subject creature gets +1 on attack and damage rolls.
+ | 
+ ** Magic Fang, Greater** Y **** : One natural weapon gets + 1/four levels (max +5).
+ | 
+ ** Magic Missile** Y **** : 1d4+1 damage; +1 missile per two levels above 1st (max 5).
+ | 
+ ** Magic Vestment** Y **** : Armor or shield gains +1 enhancement per four levels.
+ | 
+ ** Magic Weapon, Greater** Y **** : Weapon gains +1 bonus/four levels (max +5).
+ | 
+ ** Make Whole** Y **** : Repairs an object.
+ | 
+ ** Maze** Y **** : Traps subject in extradimensional maze.
+ | 
+ ** Memory Lapse** Y **** : Subject forgets events back to last turn.
+ | 
+ ** Meteor Swarm** Y **** : Four exploding spheres each deal 6d6 fire damage.
+ | 
+ ** Mighty Fist of the Earth** R **** Y **** : Fling a fist-sized rock at your opponent, this rock can channel your ki.
+ | 
+ ** Mirror Image** Y **** : Creates decoy duplicates of you (1d4 + 1 per three levels, max 8).
+ | 
+ ** Mislead** Y **** : Turns you invisible and creates illusory double.
+ | 
+ ** Modify Memory** Y **** : Changes 5 minutes of subject's memories.
+ | 
+ ** Monstrous Physique I** Y **** : Take the form and some of the powers of a Small or Medium monstrous humanoid.
+ | 
+ ** Monstrous Physique II** Y **** : Take the form and some of the powers of a Tiny or Large monstrous humanoid.
+ | 
+ ** Monstrous Physique III** Y **** : Take the form and some of the powers of a Diminutive or Huge monstrous humanoid.
+ | 
+ ** Monstrous Physique IV** Y **** : As monstrous physique III, with more abilities.
+ | 
+ ** Move Earth** Y **** : Digs trenches and builds hills.
+ | 
+ ** Murderous Command** Y **** : Target is compelled to kill its ally.
+ | 
+ ** Named Bullet** Y **** : Imbues ammunition with accuracy against a specific creature type.
+ | 
+ ** Nightmare** Y **** : Sends vision dealing 1d10 damage, fatigue.
+ | 
+ ** Oath of Peace** Y **** : Grants +5 AC and DR 10/evil, can't attack.
+ | 
+ ** Obscuring Mist** Y **** : Fog surrounds you.
+ | 
+ ** Orb of the Void** M **** Y **** : Sphere inflicts negative levels.
+ | 
+ ** Order's Wrath** Y **** : Harms and dazes chaotic creatures (1d8 damage/2 levels).
+ | 
+ ** Pernicious Poison** Y **** : Target takes a -4 penalty against poison.
+ | 
+ ** Phantasmal Killer** Y **** : Fearsome illusion kills subject or deals 3d6 damage.
+ | 
+ ** Phantom Steed** Y **** : Magic horse appears for 1 hour/level.
+ | 
+ ** Pillar of Life** Y **** : Created pillar heals 2d8 + 1/level (max +20).
+ | 
+ ** Plane Shift** Y **** : As many as 8 subjects travel to another plane.
+ | 
+ ** Polar Ray** Y **** : Ranged touch attack deals 1d6/level cold damage and 1d4 points of Dexterity drain.
+ | 
+ ** Power Word Blind** Y **** : Blinds creature with 200 hp or less.
+ | 
+ ** Power Word Kill** Y **** : Kills one creature with 100 hp or less.
+ | 
+ ** Power Word Stun** Y **** : Stuns creature with 150 hp or less.
+ | 
+ ** Pox Pustules** Y **** : Subject is sickened and has –4 Dex.
+ | 
+ ** Prayer** Y **** : Allies get +1 bonus on most rolls, enemies –1 penalty.
+ | 
+ ** Prismatic Sphere** Y **** : As prismatic wall, but surrounds on all sides.
+ | 
+ ** Prismatic Spray** Y **** : Rays hit subjects with variety of effects.
+ | 
+ ** Protection from Arrows** Y **** : Subject gains DR 10/magic against ranged attacks.
+ | 
+ ** Protection from Chaos** Y **** : +2 to AC and saves, plus additional protection against selected alignment.
+ | 
+ ** Protection from Evil** Y **** : +2 to AC and saves, plus additional protection against selected alignment.
+ | 
+ ** Protection from Good** Y **** : +2 to AC and saves, plus additional protection against selected alignment.
+ | 
+ ** Protection from Law** Y **** : +2 to AC and saves, plus additional protection against selected alignment.
+ | 
+ ** Ray of Enfeeblement** Y **** : Ray causes 1d6 Str penalty + 1 per 2 levels.
+ | 
+ ** Reduce Person** Y **** : Humanoid creature halves in size.
+ | 
+ ** Regenerate** Y **** : Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35).
+ | 
+ ** Repel Wood** Y **** : Pushes away wooden objects.
+ | 
+ ** Resist Energy** Y **** : Ignores 10 (or more) points of damage/attack from specified energy type.
+ | 
+ ** Resonating Word** Y **** : Target is damaged, staggered, and stunned.
+ | 
+ ** Reverse Gravity** Y **** : Objects and creatures fall upward.
+ | 
+ ** Ricochet Shot** Y **** : Imbues a projectile weapon to give its ammunition the ability to ricochet.
+ | 
+ ** Sacred Bond** F **** Y **** : Cast touch healing spells from a distance.
+ | 
+ ** Sanctify Armor** Y **** : +1 AC/four levels (max +5).
+ | 
+ ** Sanctuary** Y **** : Opponents can't attack you, and you can't attack.
+ | 
+ ** Sands of Time** Y **** : Target temporarily ages.
+ | 
+ ** Saving Finale** Y **** : Subject rerolls failed saving throw.
+ | 
+ ** Scorching Ash Form** R **** Y **** : Change someone into a gaseous cloud of hot ash and smoke, dealing fire damage to those they move through.
+ | 
+ ** Scorching Ray** Y **** : Ranged touch attack deals 4d6 fire damage, + 1 ray/four levels (max 3).
+ | 
+ ** Scouring Winds** Y **** : Winds block vision and deal 3d6 damage per round.
+ | 
+ ** Searing Light** Y **** : Ray deals 1d8/two levels damage (more against undead).
+ | 
+ ** Sending** Y **** : Delivers short message anywhere, instantly.
+ | 
+ ** Shadow Anchor** R **** Y **** : Tether a creature to its shadow, preventing it from moving too far.
+ | 
+ ** Shadow Weapon** Y **** : Create a quasi-real masterwork weapon.
+ | 
+ ** Shatter** Y **** : Sonic vibration damages objects or crystalline creatures.
+ | 
+ ** Shield of Faith** Y **** : Aura grants +2 or higher deflection bonus.
+ | 
+ ** Shield of the Dawnflower** R **** Y **** : Create a protective shield of sunlight.
+ | 
+ ** Shield Other** F **** Y **** : You take half of subject's damage.
+ | 
+ ** Shocking Grasp** Y **** : Touch delivers 1d6/level electricity damage (max 5d6).
+ | 
+ ** Shout** Y **** : Deafens all within cone and deals 5d6 sonic damage.
+ | 
+ ** Silence** Y **** : Negates sound in 20-ft. radius.
+ | 
+ ** Silent Image** Y **** : Creates minor illusion of your design.
+ | 
+ ** Sleep** Y **** : Puts 4 HD of creatures into magical slumber.
+ | 
+ ** Slow** Y **** : One subject/level takes only one action/round, –1 to AC, Reflex saves, and attack rolls.
+ | 
+ ** Solid Fog** Y **** : Blocks vision and slows movement.
+ | 
+ **Soulreaver** Y **** : Deal 1d6 damage/level to living creatures in a 20-ft. radius area.
+ | 
+ **Spawn Calling** R **** Y **** : Call the Spawn of Rovagug.
+ | 
+ ** Spider Climb** Y **** : Grants ability to walk on walls and ceilings.
+ | 
+ ** Spike Stones** Y **** : Creatures in area take 1d8 damage, may also be slowed.
+ | 
+ ** Spiritual Weapon** Y **** : Magic weapon attacks on its own.
+ | 
+ ** Stinking Cloud** Y **** : Nauseating vapors, 1 round/level.
+ | 
+ ** Stone Shape** Y **** : Sculpts stone into any shape.
+ | 
+ ** Stoneskin** M **** Y **** : Grants DR 10/adamantine.
+ | 
+ ** Storm of Vengeance** Y **** : Storm rains acid, lightning, and hail.
+ | 
+ ** Strangling Hair** Y **** : Your hair animates and grapples.
+ | 
+ ** Suggestion** Y **** : Compels subject to follow stated course of action.
+ | 
+ ** Summon Swarm** Y **** : Summons swarm of bats, rats, or spiders.
+ | 
+ ** Sun Metal** Y **** : Weapon touched bursts into flames.
+ | 
+ ** Sunbeam** Y **** : Beam blinds and deals 4d6 damage.
+ | 
+ ** Surmount Affliction** Y **** : Temporarily suppress one condition.
+ | 
+ ** Telekinesis** Y **** : Moves object, attacks creature, or hurls object or creature.
+ | 
+ ** Theft Ward** R **** Y **** : Gain a +10 Perception bonus to notice someone trying to take a specific object from you.
+ | 
+ ** Time Stop** Y **** : You act freely for 1d4+1 rounds.
+ | 
+ ** Touch Injection** Y **** : You can deliver an infusion, elixir, poison, or potion as a touch attack.
+ | 
+ ** Transformation** Y **** : You gain combat bonuses.
+ | 
+ ** True Form** Y **** : Removes polymorph effects.
+ | 
+ ** True Strike** Y **** : +20 on your next attack roll.
+ | 
+ ** Tsunami** Y **** : Huge wave damages and sweeps up all in its path.
+ | 
+ ** Unholy Blight** Y **** : Harms and sickens good creatures (1d8 damage/2 levels).
+ | 
+ ** Unshakable Chill** Y **** : Target is afflicted with severe cold.
+ | 
+ ** Vampiric Touch** Y **** : Touch deals 1d6 damage per two levels; caster gains damage as temporary hp.
+ | 
+ ** Vermin Shape I** Y **** : Take the form and some of the powers of a Small or Medium vermin.
+ | 
+ ** Vermin Shape II** Y **** : As vermin shape, but Tiny or Large.
+ | 
+ **Vomit Twin** R **** Y **** : Vomit an ooze copy of yourself that you can swap places with.
+ | 
+ ** Walk through Space** Y **** : You can spend a move action to teleport 30 feet or to stand while prone without provoking attacks of opportunity.
+ | 
+ ** Wall of Fire** Y **** : Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.
+ | 
+ ** Wall of Force** Y **** : Wall is immune to damage.
+ | 
+ ** Wall of Ice** Y **** : Ice plane creates wall or hemisphere creates dome.
+ | 
+ ** Wall of Iron** M **** Y **** : 30 hp/four levels; can topple onto foes.
+ | 
+ ** Wall of Stone** Y **** : Creates a stone wall that can be shaped.
+ | 
+ ** Wall of Thorns** Y **** : Thorns damage anyone who tries to pass.
+ | 
+ ** Waters of Lamashtu** M **** Y **** : Create a poison which looks like clean and pure water.
+ | 
+ ** Web** Y **** : Fills 20-ft.-radius spread with sticky spiderwebs that can grapple foes and impair movement.
+ | 
+ ** Whirlwind** Y **** : Cyclone deals damage and can pick up creatures.
+ | 
+ ** Wish** M **** Y **** : As limited wish, but with fewer limits.
+ | 
+ ** Word of Chaos** Y **** : Kills, confuses, stuns, or deafens nonchaotic subjects.
+ | 
+ 

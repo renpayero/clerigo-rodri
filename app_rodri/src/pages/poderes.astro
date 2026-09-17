@@ -1,0 +1,144 @@
+---
+import App from '@/layouts/App.astro';
+import Term from '@/components/Term';
+import { PowerCounters } from '@/components/islands/PowerCounters';
+import { db } from '@/db';
+import { loadSnapshot } from '@/db/repo/snapshot';
+const snapshot = await loadSnapshot(db());
+import { domains, domainRules, mythic, mythicAbilities, mythicSpells, mythicBudget, mythicProgression, classFeatures } from '@/data';
+const channel = classFeatures.find((c) => c.id === 'channel')!;
+const tiers = [1, 2, 3].map((t) => ({ t, list: mythicAbilities.filter((m) => m.tier === t) }));
+const actionLabel: Record<string, string> = { free: 'gratuita', swift: 'rápida', immediate: 'inmediata', move: 'movimiento', standard: 'estándar', special: 'especial' };
+---
+
+<App title="Poderes" snapshot={snapshot}>
+  <div class="stack">
+    <PowerCounters client:load snapshot={snapshot} />
+    <section class="card card--tint">
+      <h2><Term k="channel">Channel Positive Energy</Term></h2>
+      <div class="stat-grid">
+        <div class="stat"><span class="label">Dados</span><span class="value">8d6</span><span class="detail">6d6 + 2d6 Phylactery · media 28 (≈32 con <Term k="envoy-of-healing" /> y <Term k="blessed-touch" />)</span></div>
+        <div class="stat"><span class="label">Usos/día</span><span class="value">7</span><span class="detail">3 + 2 Cha + 2 <Term k="extra-channel" /></span></div>
+        <div class="stat"><span class="label">DC</span><span class="value">17</span><span class="detail">19 contra no muertos (Glory)</span></div>
+        <div class="stat"><span class="label">Área</span><span class="value">30 ft</span><span class="detail">estallido; no provoca</span></div>
+      </div>
+      <ul class="modes">
+        <li><strong>Estándar</strong> — 1 uso. Excluís hasta 2 criaturas (<Term k="selective-channeling" />; hay que verlas).</li>
+        <li><strong>Movimiento</strong> — 2 usos (<Term k="quick-channel" />). Con la estándar libre para Heal o un buff.</li>
+        <li><strong>Inmediata</strong> — 1 uso, solo a vos (<Term k="reactive-healing" />), antes de un golpe que te dejaría a ≤ 0.</li>
+        <li><strong>Extra</strong> — <Term k="amazing-initiative" /> (1 poder mítico) da una estándar más: un channel más en el asalto de crisis.</li>
+      </ul>
+      <p class="help">{channel.effect}</p>
+    </section>
+
+    {domains.map((d) => (
+      <section class="card">
+        <h2><Term k={d.id} />{d.subdomain && <span class="muted"> → subdominio {d.subdomain}</span>}</h2>
+        <ul class="powers">
+          {d.powers.map((p) => (
+            <li>
+              <div class="row row--between">
+                <strong><Term k={p.id} /></strong>
+                <span class="row">
+                  {p.action && <span class="badge">{actionLabel[p.action] ?? p.action}</span>}
+                  {p.usesPerDay && <span class="badge badge--solid">{p.usesPerDay}/día</span>}
+                  <span class="badge">nivel {p.level}</span>
+                </span>
+              </div>
+              <p class="muted">{p.effect}</p>
+              {p.numbers && <p class="mono small">{p.numbers}</p>}
+            </li>
+          ))}
+        </ul>
+        <p class="section-title" style="margin-top: var(--s4)">Conjuros de dominio</p>
+        <p class="domain-spells">
+          {d.domainSpells.map((ds) => (
+            <span class="badge badge--domain">{ds.level}.º <Term k={ds.spellId} label={ds.name} /></span>
+          ))}
+        </p>
+      </section>
+    ))}
+
+    <section class="card">
+      <h3>Reglas de dominio</h3>
+      <ul class="rules">
+        <li>{domainRules.slot}</li>
+        <li>{domainRules.subdomain}</li>
+        <li>{domainRules.moral}</li>
+      </ul>
+    </section>
+
+    <section class="card card--tint">
+      <h2>Mítico: <Term name="Hierophant" tip="Senda mítica del lanzador divino. Divine Surge (Inspired Spell), +4 pg por tier." aon={mythic.aon.hierophant}>Hierophant</Term> tier {mythic.tier}</h2>
+      <div class="stat-grid">
+        <div class="stat"><span class="label">Poder mítico</span><span class="value">{mythic.mythicPower}</span><span class="detail">3 + 2 × tier · se recarga al descansar</span></div>
+        <div class="stat"><span class="label">Surge</span><span class="value">1{mythic.surgeDie}</span><span class="detail">inmediata, 1 uso, tras ver el d20</span></div>
+        <div class="stat"><span class="label">Pg míticos</span><span class="value">+{mythic.hpPerTier * mythic.tier}</span><span class="detail">{mythic.hpPerTier} por tier</span></div>
+      </div>
+      {tiers.map(({ t, list }) => (
+        <div class="tier">
+          <p class="section-title">Mythic tier {t}</p>
+          <ul class="powers">
+            {list.map((m) => (
+              <li>
+                <div class="row row--between">
+                  <strong><Term k={m.id} /></strong>
+                  <span class="row">
+                    <span class="badge">{m.kind === 'path' ? 'path ability' : m.kind === 'feat' ? 'dote mítica' : m.kind === 'surge' ? 'divine surge' : m.kind}</span>
+                    {m.action && <span class="badge">{actionLabel[m.action] ?? m.action}</span>}
+                    {m.cost && <span class="badge badge--solid">{m.cost}</span>}
+                  </span>
+                </div>
+                <p class="muted">{m.effect}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <section class="card">
+      <h2>Conjuros míticos (<Term k="mythic-spell-lore" />)</h2>
+      <ul class="powers">
+        {mythicSpells.map((m) => (
+          <li>
+            <div class="row row--between"><strong><Term k={m.spellId} label={m.name} /></strong><span class="badge badge--solid">{m.cost} poder mítico</span></div>
+            <p class="muted">{m.effect}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <h3>Presupuesto de los 9 poderes (día de dos combates grandes)</h3>
+        <table>
+          <tbody>
+            {mythicBudget.map((b) => (
+              <tr><td>{b.label}</td><td class="mono">{b.uses}</td><td class="muted">{b.when}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+      <section class="card">
+        <h3>Próximos tiers</h3>
+        {mythicProgression.map((p) => (
+          <div>
+            <p class="section-title">Tier {p.tier}</p>
+            <ul class="rules">{p.items.map((i) => <li>{i}</li>)}</ul>
+          </div>
+        ))}
+      </section>
+    </div>
+  </div>
+</App>
+
+<style>
+  .modes, .powers, .rules { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s2); }
+  .powers { list-style: none; padding: 0; gap: var(--s3); }
+  .powers p { margin: 2px 0 0; }
+  .small { font-size: var(--fs-2); }
+  .domain-spells { display: flex; flex-wrap: wrap; gap: var(--s2); }
+  .tier + .tier { margin-top: var(--s4); }
+  .tier .section-title { margin-top: var(--s4); }
+</style>

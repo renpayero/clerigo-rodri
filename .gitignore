@@ -1,0 +1,14 @@
+# Caché de páginas de AoN y descargas de la investigación (42 MB, se regeneran)
+investigacion/_aon_cache/
+investigacion/_tmp/
+
+# App (además de app_rodri/.gitignore)
+app_rodri/node_modules/
+app_rodri/dist/
+app_rodri/.astro/
+app_rodri/.env
+app_rodri/scripts/out/
+app_rodri/backups/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Mythic Spell Lore
+ **Source** Mythic Adventures pg. 70
+You have learned how to unlock the power of your spells, combining them with your mythic power.
+ **Prerequisites** : Ability to cast spells.
+ **Benefit** : You can learn a number of mythic spells equal to your tier and can expend mythic power when casting them to enhance the results. To select a mythic spell, you must be able to cast the non-mythic version or have it on your list of spells known. Every time you gain a new tier, you can select an additional mythic spell.
+ **Special** : You can select this feat multiple times. Each time you select this feat, you must select different spells.
+ | 
+ 

@@ -1,0 +1,13 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Fast Healer
+ **Source** Advanced Player's Guide pg. 160
+You benefit greatly from your healing, be it from spells or natural healing.
+ **Prerequisites** : Con 13, Diehard, Endurance.
+ **Benefit** : When you regain hit points by resting or through magical healing, you recover additional hit points equal to half your Constitution modifier (minimum +1).
+ | 
+ 

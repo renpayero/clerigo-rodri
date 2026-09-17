@@ -1,0 +1,51 @@
+id="main">
+ Basic (Combat) | 
+ Basic (Faith) | 
+ Basic (Magic) | 
+ Basic (Social) | 
+ Campaign | 
+ Cosmic | 
+ Equipment | 
+ Exemplar | 
+ Faction | 
+ Family | 
+ Mount | 
+ Race | 
+ Region | 
+ Religion
+ Drawbacks
+ Acolyte of Apocrypha
+Source Divine Anthology pg. 22
+Category Basic (Faith)
+Your religious studies hinged on teachings rarely recognized by your faith. You can select one of the apocryphal subdomains detailed below, provided the subdomain is associated with your patron deity. In some cases, you can select a subdomain associated with a deity despite that deity not offering the associated domain—these exceptions are noted with an asterisk (*), and you gain domain powers and domain spells from the associated domain as usual, even though your deity normally doesn’t grant access to that domain. When selecting a subdomain associated with two domains, a priest can choose only a subdomain that modifies a domain to which he has access. All deities referenced in the following subdomains appear in Pathfinder Campaign Setting: Inner Sea Gods or Pathfinder Campaign Setting: Dragon Empires Gazetteer
+Alchemy (Artifice/Magic)
+ Brigh, Haagenti, Norgorber* (Artifice only), Orgesh* (Magic only), Qi Zhong)
+Captivation
+Calistria, Kofusachi, Nalinivati, Norgorber, Shelyn
+Hubris (Glory/Nobility)
+ Dispater, General Susumu, Iomedae, Jaidz, Lissala, Olheon, Ydersius
+Insect
+Achaekek*, Aldinach, Deskari*, Ghlaunder, Kitumu, Mazmezz
+Legend
+General Susumu, Gorum, Shizuru
+Lightning
+Gozreh, Hei Feng, Rovagug, Rull
+Medicine
+Dalenydra, Immonhiel, Irori, Korada, Qi Zhong, Sarenrae
+Monsoon
+Daikitsu, Gozreh, Hei Feng, Rull
+Petrification
+Ayrzul, Minderhal, Soralyon, Xoveron
+Portal
+Abadar, Alseta*, Barbatos, Yog-Sothoth
+Rites
+Abraxas, Asmodeus, Nalinivati, Nethys, Nyarlathotep, Sivanah
+Self-Realization (Liberation/Strength)
+Arshea, Falayna, Haagenti, Irori, Kurgess, Shei, Urgathoa
+Thirst
+Aldinach, Lalaci, Nurgal, Sarenrae
+Thorns
+The Green Mother, Shub-Niggurath, Zyphus
+Truth
+Groetus, Lamashtu, Sifkesh, Sivanah
+ Site Owner: Blake DavisEmail Spam Checker: MX Guarddog

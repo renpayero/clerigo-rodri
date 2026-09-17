@@ -1,0 +1,17 @@
+partnership status update.
+## 
+ Archives of Nethys
+## 
+## General | Combat Stamina
+Achievement | Alignment | Armor Mastery | Armor Style | Betrayal | Blood Hex | Called Shot | Combat | Combination | Conduit | Coven | Critical | Damnation | Esoteric | Faction | Familiar | Gathlain Court Title | Grit | Hero Point | Item Creation | Item Mastery | Meditation | Metamagic | Monster | Origin | Panache | Performance | Shield Mastery | Shield Style | Stare | Story | Style | Targeting | Teamwork | Trick | Weapon Mastery | Words of Power
+## Lightning Reflexes
+ **Source** PRPG Core Rulebook pg. 130
+You have faster reflexes than normal.
+ **Benefit** : You get a +2 bonus on all Reflex saving throws.
+## Mythic Lightning Reflexes
+ **Source** Mythic Adventures pg. 68
+Your reflexes are superhuman.
+ **Prerequisites** : Lightning Reflexes.
+ **Benefit** : Whenever you roll a Reflex saving throw against a spell, spell-like ability, or supernatural ability from a non-mythic source, roll twice and take the higher result.
+ | 
+ 

@@ -1,0 +1,69 @@
+/* Tokens de diseño — Rodri Companion. Monocromático (grises oklch) + un único color de alerta. */
+:root {
+  color-scheme: light dark;
+
+  /* Escala de grises (10 pasos) */
+  --g0: oklch(99% 0 0);
+  --g1: oklch(96.5% 0 0);
+  --g2: oklch(92% 0 0);
+  --g3: oklch(85% 0 0);
+  --g4: oklch(73% 0 0);
+  --g5: oklch(58% 0 0);
+  --g6: oklch(45% 0 0);
+  --g7: oklch(32% 0 0);
+  --g8: oklch(21% 0 0);
+  --g9: oklch(12% 0 0);
+
+  /* Semánticos (cambian con el tema) */
+  --bg: light-dark(var(--g0), var(--g9));
+  --bg-2: light-dark(var(--g1), var(--g8));
+  --bg-3: light-dark(var(--g2), var(--g7));
+  --fg: light-dark(var(--g9), var(--g0));
+  --fg-2: light-dark(var(--g6), var(--g3));
+  --muted: light-dark(var(--g5), var(--g4));
+  --border: light-dark(var(--g3), var(--g7));
+  --border-strong: light-dark(var(--g6), var(--g4));
+  --inverse-bg: var(--fg);
+  --inverse-fg: var(--bg);
+
+  /* Único color de alerta: estados críticos (pg ≤ 0, muerte, recurso agotado, error) */
+  --alert: light-dark(oklch(52% 0.16 25), oklch(72% 0.14 25));
+  --alert-bg: light-dark(oklch(96% 0.03 25), oklch(24% 0.05 25));
+
+  /* Tipografía (Astro Fonts API define --font-sans / --font-mono) */
+  --fs-1: 0.75rem;
+  --fs-2: 0.875rem;
+  --fs-3: 1rem;
+  --fs-4: 1.125rem;
+  --fs-5: 1.375rem;
+  --fs-6: 1.75rem;
+  --fs-7: clamp(2.25rem, 8vw, 3.5rem);
+  --lh-tight: 1.15;
+  --lh: 1.45;
+
+  /* Espaciado y forma */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --r1: 4px;
+  --r2: 8px;
+  --r3: 12px;
+  --shadow-1: 0 1px 2px oklch(0% 0 0 / 0.08);
+  --shadow-2: 0 8px 24px oklch(0% 0 0 / 0.18);
+
+  --tap: 44px;
+  --focus: 2px solid var(--fg);
+  --content-max: 1100px;
+  --nav-h: 56px;
+}
+
+html[data-theme='light'] { color-scheme: light; }
+html[data-theme='dark'] { color-scheme: dark; }
+
+@media (prefers-contrast: more) {
+  :root { --border: var(--border-strong); --muted: var(--fg-2); }
+}

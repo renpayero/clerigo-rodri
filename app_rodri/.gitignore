@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.env
+backups/
+scripts/out/
+*.log
+.DS_Store
+*.log
