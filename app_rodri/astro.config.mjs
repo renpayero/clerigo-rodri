@@ -9,7 +9,12 @@ export default defineConfig({
   adapter: node({ mode: 'standalone' }),
   integrations: [preact(), mdx()],
   server: { host: true, port: 4321 },
-  security: { checkOrigin: true },
+  security: {
+    checkOrigin: true,
+    // Detrás del proxy (Astro 7 solo honra X-Forwarded-Proto/Host para hosts permitidos): sin esto el
+    // chequeo de Origin compara https:// con http:// y las actions devuelven 403. http libre para dev/LAN.
+    allowedDomains: [{ hostname: 'rodri.dakodev.com', protocol: 'https' }, { protocol: 'http' }],
+  },
   fonts: [
     {
       provider: fontProviders.google(),
