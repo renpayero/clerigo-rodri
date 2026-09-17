@@ -36,6 +36,9 @@
 .sheet .field span:first-child { font-size: var(--fs-2); font-weight: 500; }
 
 /* Formularios */
+.field { align-content: start; }
+.field > .input { align-self: start; }
+.grid-2 { align-items: start; }
 .check { display: flex; gap: var(--s3); align-items: flex-start; font-size: var(--fs-2); line-height: var(--lh); }
 .check input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--fg); flex: none; }
 .check.is-disabled { color: var(--muted); }

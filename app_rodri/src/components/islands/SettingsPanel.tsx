@@ -166,8 +166,9 @@ function AlliesEditor({ snap }: { snap: StateSnapshot }) {
             <label class="field"><span>Rol (tanque, DPS, apoyo…)</span><input class="input" maxLength={20} value={edit.role} onInput={(e) => set('role', (e.target as HTMLInputElement).value)} /></label>
             <div class="grid-2">
               <label class="field"><span>Pg máximos</span><input class="input" type="number" inputMode="numeric" min={1} value={edit.maxHp} onInput={(e) => set('maxHp', (e.target as HTMLInputElement).value)} /></label>
-              <label class="field"><span>Constitución (puntuación, no el modificador)</span><input class="input" type="number" inputMode="numeric" min={1} max={60} value={edit.con} placeholder="ej. 18" onInput={(e) => set('con', (e.target as HTMLInputElement).value)} /><span class="help">Muere a −Con (−2 × Con si es mítico): define si Breath of Life o Relentless Healing lo reviven.</span></label>
+              <label class="field"><span>Constitución (puntuación)</span><input class="input" type="number" inputMode="numeric" min={1} max={60} value={edit.con} placeholder="ej. 18" onInput={(e) => set('con', (e.target as HTMLInputElement).value)} /></label>
             </div>
+            <p class="help">Constitución es la puntuación (18), no el modificador (+4). El aliado muere a −Con (−2 × Con si es mítico): con eso la app sabe si Breath of Life o Relentless Healing lo reviven.</p>
             <label class="field"><span>Pg actuales (vacío = máximos)</span><input class="input" type="number" inputMode="numeric" value={edit.hpCurrent} onInput={(e) => set('hpCurrent', (e.target as HTMLInputElement).value)} /></label>
             <label class="check"><input type="checkbox" checked={edit.isMythic} onChange={(e) => set('isMythic', (e.target as HTMLInputElement).checked)} /><span>Es mítico (Hard to Kill: muere a −2 × Con)</span></label>
             <label class="check"><input type="checkbox" checked={edit.frontLine} onChange={(e) => set('frontLine', (e.target as HTMLInputElement).checked)} /><span>Primera línea (recibe más daño)</span></label>
