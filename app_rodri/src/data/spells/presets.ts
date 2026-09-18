@@ -10,7 +10,7 @@ function level(lvl: number, ids: (string | null)[]): PresetSlot[] {
 }
 
 const combate: PresetSlot[] = [
-  ...level(0, ['detect-magic', 'guidance', 'light', 'stabilize']),
+  ...level(0, ['detect-magic', 'guidance', 'light', 'read-magic']),
   ...level(1, ['shield-of-faith', 'protection-from-evil', 'protection-from-evil', 'liberating-command', 'remove-fear', null, null]),
   ...level(2, ['cure-moderate-wounds', 'protection-from-evil-communal', 'resist-energy', 'status', 'remove-paralysis', 'silence', 'restoration-lesser']),
   ...level(3, ['heroism', 'magic-vestment', 'magic-vestment', 'prayer', 'resist-energy-communal', 'dispel-magic', 'remove-blindness-deafness']),
@@ -25,7 +25,7 @@ const jefe: PresetSlot[] = combate.map((s) =>
 
 /** Día de viaje/social: solo los cambios que lista la ficha; el resto queda libre. */
 const viaje: PresetSlot[] = [
-  ...level(0, ['detect-magic', 'guidance', 'light', 'stabilize']),
+  ...level(0, ['detect-magic', 'guidance', 'light', 'read-magic']),
   ...level(1, ['shield-of-faith', 'comprehend-languages', 'endure-elements', 'protection-from-evil', null, null, null]),
   ...level(2, ['cure-moderate-wounds', 'augury', 'zone-of-truth', 'gentle-repose', 'status', null, null]),
   ...level(3, ['heroism', 'water-walk', 'locate-object', 'magic-vestment', 'magic-vestment', null, null]),

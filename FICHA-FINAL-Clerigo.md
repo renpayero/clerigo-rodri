@@ -200,7 +200,7 @@ Statistic Block (contabilidad): `LV1-11: 2 + 0 Int = 2 aventura + 2 BG por nivel
 
 | Nivel | Preparados |
 |---|---|
-| **0 (4)** | Detect Magic · Guidance · Light · **Stabilize** (50 pies, estabiliza sin tirada) |
+| **0 (4)** | Detect Magic · Guidance · Light · **Read Magic** (descifra pergaminos: sin él, Spellcraft DC 20 + nivel; el Scroll of Heal es DC 26). Stabilize sobra entre míticos (Hard to Kill) |
 | **1.º (7)** | `[D]` Shield of Faith (+3 desvío, 11 min) · Protection from Evil ×2 · **Liberating Command** (inmediata: el aliado hace Escape Artist con +20, tope del conjuro) · **Remove Fear** (presencia aterradora de dragones) · 2 `[libre]` |
 | **2.º (7)** | `[D]` Cure Moderate Wounds (28,5) · **Protection from Evil, Communal** (ajenos) · **Resist Energy** (30 al tanque, 110 min) · Status (3 aliados, 11 h) · Remove Paralysis · Silence · Lesser Restoration — día de jefe: **Heroic Fortune** (100 po: un Hero Point temporal que **dura 11 asaltos y se gasta primero**; lanzarlo al empezar el combate, compite con la estándar de Blessing of Fervor) en lugar de Lesser Restoration |
 | **3.º (7)** | `[D]` Heroism (110 min al DPS que se aleja de la aura) · **Magic Vestment ×2** (armadura y escudo +2, 11 h → 22 h con la vara) · **Prayer** (+1 suerte / −1, 40 pies, 11 asaltos) · **Resist Energy, Communal** (resistencia **30 a cada tocado**; lo que se reparte es la duración: 110 min en bloques de 10, p. ej. 5 aliados × 20 min) · Dispel Magic · Remove Blindness/Deafness (o Invisibility Purge) |
@@ -246,6 +246,7 @@ Resurrection (7.º, nivel 13; contra efectos de muerte y cuerpos destruidos; PNJ
 - ✅ **EitR**: no afecta a ninguna dote de Rodri; no hace falta consultar.
 
 - ✅ **Mythic Domain**: la recarga devuelve todo como si hubiera dormido 8 h (ambos dominios; aura 15 + 15 asaltos/día).
+- ✅ **Read Magic en vez de Stabilize** (17/09/2026): todos los PJ son míticos (Hard to Kill estabiliza solo); Read Magic hace falta para descifrar los pergaminos comprados (una vez cada uno).
 - ✅ **Sin Con ni Hard to Kill de los aliados** (17/09/2026): la mesa considera metajuego llevar la Constitución y el umbral de muerte de los compañeros. La app trackea solo sus pg; si Breath of Life / Relentless Healing reviven, lo decide el DM en la mesa.
 - ✅ **Masterwork en objetos mágicos** (17/09/2026): lo mágico es masterwork de por sí y no paga ese componente: +1 Scimitar 2.015, +1 Darkwood Heavy Wooden Shield 1.107, +1 Mithral Breastplate 5.050 (el mithral incluía el masterwork: −150). Equipo 101.728, sobran 772 po.
 
