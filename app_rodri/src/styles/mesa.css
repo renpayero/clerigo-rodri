@@ -238,3 +238,21 @@ details summary { cursor: pointer; font-weight: 500; }
 .rec-num { font-size: var(--fs-2); white-space: nowrap; }
 .rec-detail { margin: 0; font-size: var(--fs-2); color: var(--fg-2); line-height: var(--lh); }
 .rec-foot { display: flex; justify-content: space-between; gap: var(--s3); align-items: center; }
+
+/* Retrato */
+.avatar { width: 36px; height: 48px; padding: 0; border: 1px solid var(--border); border-radius: var(--r2); overflow: hidden; background: var(--bg-2); flex: none; cursor: zoom-in; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.avatar:hover { border-color: var(--border-strong); }
+.sheet-head-card { display: grid; gap: var(--s4); }
+@media (min-width: 720px) { .sheet-head-card { grid-template-columns: 200px 1fr; align-items: start; } }
+.sheet-head-text { min-width: 0; }
+.portrait { margin: 0; display: grid; gap: var(--s2); max-width: 200px; }
+.portrait-btn { padding: 0; border: 1px solid var(--border); border-radius: var(--r2); overflow: hidden; background: var(--bg-2); cursor: zoom-in; display: block; }
+.portrait-btn img { width: 100%; height: auto; display: block; }
+.portrait figcaption { gap: var(--s1); }
+.portrait figcaption .btn { flex: 1; min-height: 36px; }
+.lightbox { width: min(96vw, 900px); max-height: 96dvh; padding: 0; margin: auto; background: var(--bg); box-shadow: var(--shadow-2); }
+.lightbox::backdrop { background: oklch(0% 0 0 / 0.75); }
+.lightbox-inner { display: grid; grid-template-rows: 1fr auto; max-height: 96dvh; }
+.lightbox-inner img { width: 100%; height: auto; max-height: calc(96dvh - 60px); object-fit: contain; display: block; background: var(--bg-3); }
+.lightbox-bar { display: flex; justify-content: space-between; align-items: center; gap: var(--s3); padding: var(--s2) var(--s3); border-top: 1px solid var(--border); }

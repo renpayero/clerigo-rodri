@@ -3,6 +3,7 @@ import Base from './Base.astro';
 import Nav from '@/components/ui/Nav.astro';
 import { HeaderStatus } from '@/components/islands/HeaderStatus';
 import { Toast } from '@/components/islands/Toast';
+import { Portrait } from '@/components/islands/Portrait';
 import { db } from '@/db';
 import { loadSnapshot } from '@/db/repo/snapshot';
 import type { StateSnapshot } from '@/lib/snapshot';
@@ -20,6 +21,7 @@ const snapshot = Astro.props.snapshot ?? (await loadSnapshot(db()));
 <Base title={title} description={description}>
   <div class="app-shell">
     <header class="app-header">
+      <Portrait client:idle variant="avatar" />
       <a class="brand" href="/" aria-label="Rodri Companion, ir a Mesa">
         Rodri
         <small>Cleric 11 · Hierophant 3</small>

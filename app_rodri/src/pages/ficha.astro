@@ -7,6 +7,7 @@ import SkillTable from '@/components/sheet/SkillTable.astro';
 import Term from '@/components/Term';
 import { character, houseRules } from '@/data';
 import { AcCalculator } from '@/components/islands/AcCalculator';
+import { Portrait } from '@/components/islands/Portrait';
 import { db } from '@/db';
 import { loadSnapshot } from '@/db/repo/snapshot';
 const c = character;
@@ -15,7 +16,9 @@ const snapshot = await loadSnapshot(db());
 
 <App title="Ficha" snapshot={snapshot}>
   <div class="stack">
-    <section class="card card--tint">
+    <section class="card card--tint sheet-head-card">
+      <Portrait client:idle variant="card" />
+      <div class="sheet-head-text">
       <h1>{c.name}</h1>
       <p class="muted">{c.className} {c.level} · Mythic {c.mythicPath} tier {c.tier} · <Term k="aasimar-abilities" label="Aasimar" aon={c.aon.aasimar} name="Aasimar" tip="Ajeno nativo, +2 Wis/+2 Cha, visión en la oscuridad, resistencia 5 a ácido/frío/electricidad, Daylight 1/día." /> · <Term name="Sarenrae" tip="Diosa NG del sol, la redención y la curación. Dominios Fire, Glory, Good, Healing, Sun; arma predilecta scimitar." aon={c.aon.sarenrae} label="Sarenrae" /> ({c.deityAlignment}) · alineamiento {c.alignment}</p>
       <dl class="kv" style="margin-top: var(--s3)">
@@ -27,6 +30,7 @@ const snapshot = await loadSnapshot(db());
         <dt>Poder mítico</dt><dd><Term k="poder-mitico">9/día · Surge 1d6</Term></dd>
         <dt>Pg</dt><dd>{c.hpMax} = {c.hpRoll}</dd>
       </dl>
+      </div>
     </section>
 
     <AbilityScores />
