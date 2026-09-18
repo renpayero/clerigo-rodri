@@ -27,7 +27,7 @@ export const character = {
   gold: 772,
   wealthCap: 102_500,
   equipmentTotal: 101_728,
-  sheetVersion: 'FICHA-FINAL v3.1 (17/09/2026)',
+  sheetVersion: 'FICHA-FINAL v3.2 (18/09/2026)',
   aon: {
     cleric: aon('class', 'Cleric', 'Core Rulebook pg. 38'),
     aasimar: aon('race', 'Aasimar', 'Advanced Race Guide pg. 84'),

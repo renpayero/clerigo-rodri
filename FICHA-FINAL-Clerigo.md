@@ -21,7 +21,7 @@ Clériga **aasimar** (rasgos de serie) **NG de Sarenrae**, sin arquetipo, domini
 | Deidad · Alineamiento | **Sarenrae** (NG; Fire, Glory, Good, Healing, Sun; arma predilecta scimitar) · personaje **NG** — https://www.aonprd.com/DeityDisplay.aspx?ItemName=Sarenrae |
 | Dominios | **Healing** (https://www.aonprd.com/DomainDisplay.aspx?ItemName=Healing) · **Glory → subdominio Heroism** (https://www.aonprd.com/DomainDisplay.aspx?ItemName=Glory) |
 | Tamaño · Velocidad | Mediano · 30 pies (mithral breastplate) |
-| Aspecto | Varón, **30 años** (madurez equivalente a un humano de 28: aasimar adulto a los 20, madurez a los 35 — ARG, Apéndice 1) · **1,80 m** (5'11") · **70 kg** (155 lb; promedio de la tabla aasimar 5'2" + 2d8, 110 lb + 2d8×5) · ojos **plateados sin pupila, con un brillo tenue** · pelo **rubio dorado a los hombros, barba corta** · cicatriz en el pómulo (Scarred). Retrato en la app (`app_rodri/public/img/rodri.jpg`). |
+| Aspecto | Varón, **30 años** (madurez equivalente a un humano de 28: aasimar adulto a los 20, madurez a los 35 — ARG, Apéndice 1) · **1,80 m** (5'11") · **70 kg** (155 lb; promedio de la tabla aasimar 5'2" + 2d8, 110 lb + 2d8×5) · ojos **plateados sin pupila, con un brillo tenue** · pelo **rubio dorado a los hombros, barba corta** · sin cicatriz en la cara (el drawback Scarred pide una marca visible: ubicarla en otro lado o cambiarlo por Provincial, pendiente). Retrato en la app (`app_rodri/public/img/rodri.jpg`). |
 | Idiomas | Common, Celestial + Linguistics 5: Abyssal, Infernal, Draconic, Undercommon, Sylvan |
 | Hero Points | **1** (máx. 3; Cheat Death cuesta 2) |
 | Poder mítico | **9/día** (3 + 2 × tier) · Surge **1d6** |
@@ -202,7 +202,7 @@ Statistic Block (contabilidad): `LV1-11: 2 + 0 Int = 2 aventura + 2 BG por nivel
 | Nivel | Preparados |
 |---|---|
 | **0 (4)** | Detect Magic · Guidance · Light · **Read Magic** (descifra pergaminos: sin él, Spellcraft DC 20 + nivel; el Scroll of Heal es DC 26). Stabilize sobra entre míticos (Hard to Kill) |
-| **1.º (7)** | `[D]` Shield of Faith (+3 desvío, 11 min) · Protection from Evil ×2 · **Liberating Command** (inmediata: el aliado hace Escape Artist con +20, tope del conjuro) · **Remove Fear** (presencia aterradora de dragones) · 2 `[libre]` |
+| **1.º (7)** | `[D]` Shield of Faith (+3 desvío, 11 min) · Protection from Evil (una: corta un control mental; la de grupo es la Communal de 2.º) · **Liberating Command** (inmediata: el aliado hace Escape Artist con +20, tope del conjuro) · **Remove Fear ×2** (3 criaturas cada uno: dos cubren a los cinco aliados contra la presencia aterradora de un dragón, y suprimen el miedo ya activo) · 2 `[libre]` |
 | **2.º (7)** | `[D]` Cure Moderate Wounds (28,5) · **Protection from Evil, Communal** (ajenos) · **Resist Energy** (30 al tanque, 110 min) · Status (3 aliados, 11 h) · Remove Paralysis · Silence · Lesser Restoration — día de jefe: **Heroic Fortune** (100 po: un Hero Point temporal que **dura 11 asaltos y se gasta primero**; lanzarlo al empezar el combate, compite con la estándar de Blessing of Fervor) en lugar de Lesser Restoration |
 | **3.º (7)** | `[D]` Heroism (110 min al DPS que se aleja de la aura) · **Magic Vestment ×2** (armadura y escudo +2, 11 h → 22 h con la vara) · **Prayer** (+1 suerte / −1, 40 pies, 11 asaltos) · **Resist Energy, Communal** (resistencia **30 a cada tocado**; lo que se reparte es la duración: 110 min en bloques de 10, p. ej. 5 aliados × 20 min) · Dispel Magic · Remove Blindness/Deafness (o Invisibility Purge) |
 | **4.º (6)** | `[D]` Cure Critical Wounds (43,5) — o Holy Smite contra grupos de ajenos malvados · **Blessing of Fervor ×2** (11 aliados, 11 asaltos; mítico: dos beneficios) · **Freedom of Movement** (presas, agarres, tragar entero) · **Protection from Energy, Communal** (absorbe hasta **120 a cada tocado**; la duración de 110 min se reparte en bloques de 10) · Death Ward (drenajes de ajenos) — o **Dismissal** si el día es de extraplanares |
@@ -256,6 +256,8 @@ Resurrection (7.º, nivel 13; contra efectos de muerte y cuerpos destruidos; PNJ
 ---
 
 **Revisión adversarial (16/09/2026):** un auditor independiente intentó refutar esta ficha contra AoN: 0 hallazgos críticos, 2 medios y 10 menores, todos corregidos en la v2 (Liberating Command +20, Protection/Resist Energy Communal por sujeto, Rebuke Death sin Faith's Reach, Heroic Fortune 11 asaltos, mundano 631, FAQ de crafteo, proyección de tier 5, rápida/inmediata, Silence sobre un punto, peso al límite).
+
+**v3.2 (18/09/2026):** preset de combate/jefe: una sola Protection from Evil en 1.º (la de grupo es la Communal de 2.º) y Remove Fear ×2 (cubre a los cinco aliados contra la presencia aterradora). Sin cicatriz en la cara (drawback Scarred pendiente de ubicar o cambiar por Provincial). Trasfondo en `TRASFONDO-Rodri.md` / `HISTORIA-Rodri.md`.
 
 **v3.1 (17/09/2026):** precios sin masterwork en lo mágico (DM): equipo 101.728, sobran 772 po; hoja y app actualizadas.
 

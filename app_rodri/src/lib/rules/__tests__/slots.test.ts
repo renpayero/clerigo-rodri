@@ -67,6 +67,13 @@ describe('presets', () => {
     const hb = applyPreset(presetById.combate, true);
     expect(hb.filter((l) => l.disabled).map((l) => `${l.level}:${l.idx}`)).toEqual(['3:6', '4:5']);
   });
+  it('combate y jefe llevan una Protection from Evil y dos Remove Fear en 1.º', () => {
+    for (const id of ['combate', 'jefe'] as const) {
+      const first = applyPreset(presetById[id]).filter((l) => l.level === 1).map((l) => l.spellId);
+      expect(first.filter((s) => s === 'protection-from-evil')).toHaveLength(1);
+      expect(first.filter((s) => s === 'remove-fear')).toHaveLength(2);
+    }
+  });
   it('jefe cambia Lesser Restoration por Heroic Fortune', () => {
     const ids = applyPreset(presetById.jefe).map((l) => l.spellId);
     expect(ids).toContain('heroic-fortune');

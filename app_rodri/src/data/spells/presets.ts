@@ -11,7 +11,9 @@ function level(lvl: number, ids: (string | null)[]): PresetSlot[] {
 
 const combate: PresetSlot[] = [
   ...level(0, ['detect-magic', 'guidance', 'light', 'read-magic']),
-  ...level(1, ['shield-of-faith', 'protection-from-evil', 'protection-from-evil', 'liberating-command', 'remove-fear', null, null]),
+  // Una sola Protection from Evil: la de grupo la hace la Communal de 2.º; esta es para cortar un control mental.
+  // Remove Fear ×2: a CL 11 toca 3 criaturas cada uno, dos cubren a los cinco aliados contra la presencia aterradora.
+  ...level(1, ['shield-of-faith', 'protection-from-evil', 'remove-fear', 'remove-fear', 'liberating-command', null, null]),
   ...level(2, ['cure-moderate-wounds', 'protection-from-evil-communal', 'resist-energy', 'status', 'remove-paralysis', 'silence', 'restoration-lesser']),
   ...level(3, ['heroism', 'magic-vestment', 'magic-vestment', 'prayer', 'resist-energy-communal', 'dispel-magic', 'remove-blindness-deafness']),
   ...level(4, ['cure-critical-wounds', 'blessing-of-fervor', 'blessing-of-fervor', 'freedom-of-movement', 'protection-from-energy-communal', 'death-ward']),
