@@ -60,11 +60,13 @@ Actualizar: `cd /root/projects/clerigo-rodri && git pull && cd app_rodri && dock
 ## Estructura
 
 ```
-src/data        ficha estática tipada (fuente: FICHA-FINAL v3.1) + URLs de AoN verificadas
+src/data        ficha estática tipada (fuente: FICHA-FINAL v3.3) + URLs de AoN verificadas
+                spells/full.json: los 985 conjuros de clérigo 0-6 de AoN (descarga + clasificación por agentes, 18/09/2026);
+                catalog.ts (83 curados) manda sobre full.json cuando el id coincide
 src/lib/rules   lógica pura y testeada (curación, ranuras, descansos, dados, buffs)
 src/db          schema Drizzle, seed, snapshot, patches (deshacer)
 src/actions     astro:actions: cada una es una transacción con FOR UPDATE + evento deshacible
 src/components  Term (tooltip + AoN), islas Preact (Mesa, Conjuros, Ajustes…)
 src/content     reglas curadas del dossier (Markdown)
-scripts         migrate, seed, smoke, backup, import-dossier, validate-aon, make-icons
+scripts         migrate, seed, smoke, check-enduring (integración de Enduring Blessing), backup, import-dossier, validate-aon, make-icons
 ```

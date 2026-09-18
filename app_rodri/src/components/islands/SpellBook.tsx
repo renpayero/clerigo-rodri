@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks';
+import { useMemo, useState } from 'preact/hooks';
 import { actions } from 'astro:actions';
 import { useStore } from '@nanostores/preact';
 import { $snapshot, $busy, initSnapshot, toast } from './store';
@@ -23,6 +23,16 @@ import { Term } from '@/components/Term';
 type Slot = StateSnapshot['slots'][number];
 type Mode = { kind: 'slot'; slot: Slot } | { kind: 'inspired'; spellId: string } | null;
 
+/** Precalculado una vez: lo lanzable con Inspired Spell por nivel (≤ 1 estándar, permitido), con texto de búsqueda y ★ para los más útiles. */
+const WORTH = Object.fromEntries(fullRecords.map((r) => [r.id, r.worth])) as Record<string, number>;
+const INSPIRABLE_BY_LEVEL = [0, 1, 2, 3, 4, 5, 6].map((lvl) => ({
+  lvl,
+  spells: allSpellsByLevel(lvl)
+    .filter((sp) => ['free', 'swift', 'immediate', 'move', 'standard'].includes(sp.castingTime))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((sp) => ({ id: sp.id, label: `${sp.name}${(WORTH[sp.id] ?? 0) >= 3 ? ' ★' : ''}`, search: `${sp.name} ${sp.tip} ${sp.tags.join(' ')}`.toLowerCase() })),
+}));
+
 const LEVELS = [0, 1, 2, 3, 4, 5, 6];
 const STATUS_LABEL: Record<Slot['status'], string> = { prepared: '', spent: 'gastada', converted: 'convertida', free: 'libre', sacrificed: 'sacrificada' };
 
@@ -46,15 +56,11 @@ export function SpellBook({ snapshot }: { snapshot: StateSnapshot }) {
   const [allQuery, setAllQuery] = useState('');
   const pm = snap.resources.mythic_power?.current ?? 0;
   const q = allQuery.trim().toLowerCase();
-  const worthOf = Object.fromEntries(fullRecords.map((r) => [r.id, r.worth])) as Record<string, number>;
-  // Lista completa de clérigo (0-6) lanzable con Inspired Spell: ≤ 1 estándar y permitido para Rodri.
-  const allLevels = [0, 1, 2, 3, 4, 5, 6].map((lvl) => ({
-    lvl,
-    spells: allSpellsByLevel(lvl)
-      .filter((sp) => ['free', 'swift', 'immediate', 'move', 'standard'].includes(sp.castingTime))
-      .filter((sp) => !q || sp.name.toLowerCase().includes(q) || sp.tip.toLowerCase().includes(q) || sp.tags.some((t) => t.includes(q)))
-      .sort((a, b) => a.name.localeCompare(b.name)),
-  })).filter((g) => g.spells.length);
+  // Lista completa de clérigo (0-6) lanzable con Inspired Spell, filtrada por la búsqueda (memo: son ~650 opciones).
+  const allLevels = useMemo(
+    () => INSPIRABLE_BY_LEVEL.map((g) => ({ lvl: g.lvl, spells: q ? g.spells.filter((sp) => sp.search.includes(q)) : g.spells })).filter((g) => g.spells.length),
+    [q],
+  );
   const allCount = allLevels.reduce((n, g) => n + g.spells.length, 0);
 
   return (
@@ -130,7 +136,7 @@ export function SpellBook({ snapshot }: { snapshot: StateSnapshot }) {
                 <option value="">{allCount ? 'Elegí un conjuro…' : 'Nada coincide'}</option>
                 {allLevels.map((g) => (
                   <optgroup key={g.lvl} label={g.lvl === 0 ? 'Orisones' : `${g.lvl}.º nivel`}>
-                    {g.spells.map((sp) => <option key={sp.id} value={sp.id}>{sp.name}{(worthOf[sp.id] ?? 0) >= 3 ? ' ★' : ''}</option>)}
+                    {g.spells.map((sp) => <option key={sp.id} value={sp.id}>{sp.label}</option>)}
                   </optgroup>
                 ))}
               </select>

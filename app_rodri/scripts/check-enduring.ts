@@ -4,6 +4,7 @@
  *   termina el primero → Communal rechaza Enduring → deshacer todo.
  * Uso: BASE_URL=http://localhost:4321 APP_PASSWORD=... npx tsx scripts/check-enduring.ts
  */
+export {};
 const BASE = process.env.BASE_URL ?? 'http://localhost:4321';
 const PASSWORD = process.env.APP_PASSWORD ?? '';
 let cookie = '';

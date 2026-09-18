@@ -14,7 +14,7 @@ export type FullRecord = {
   forbidden: string[];
   buff: boolean; targets: 'self' | 'one' | 'many' | 'area' | null; effect: string | null; energyChoice: boolean;
   heal: HealSpec | null; tags: string[]; tip: string; worth: number;
-  url: string; book: string; curated: boolean;
+  url: string; book: string;
 };
 
 export const fullRecords = data as FullRecord[];
