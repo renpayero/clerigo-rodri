@@ -27,6 +27,15 @@ export default defineConfig({
     },
     {
       provider: fontProviders.google(),
+      name: 'IBM Plex Serif',
+      cssVariable: '--font-serif',
+      weights: [400, 500],
+      styles: ['normal', 'italic'],
+      subsets: ['latin', 'latin-ext'],
+      fallbacks: ['Georgia', 'serif'],
+    },
+    {
+      provider: fontProviders.google(),
       name: 'IBM Plex Mono',
       cssVariable: '--font-mono',
       weights: [400, 500, 600],

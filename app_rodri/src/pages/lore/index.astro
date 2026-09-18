@@ -1,0 +1,34 @@
+---
+import App from '@/layouts/App.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('lore')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<App title="Lore" description="Trasfondos de la mesa, para leer en la app.">
+  <div class="stack">
+    <section class="card card--tint">
+      <h2>Lore</h2>
+      <p class="muted">Las historias, escritas por Renzo. Se leen acá y viven en Google Docs.</p>
+    </section>
+    {entries.map((e) => (
+      <article class="card lore-card">
+        <p class="section-title">{e.data.kind}</p>
+        <h3><a href={`/lore/${e.id}`}>{e.data.title}{e.data.subtitle && <span class="muted">, «{e.data.subtitle}»</span>}</a></h3>
+        <p class="muted">{e.data.summary}</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--sm" href={`/lore/${e.id}`}>Leer</a>
+          {e.data.docUrl && <a class="btn btn--sm" href={e.data.docUrl} target="_blank" rel="noopener noreferrer">Google Docs ↗</a>}
+        </div>
+      </article>
+    ))}
+  </div>
+</App>
+
+<style>
+  .lore-card { display: grid; gap: var(--s2); }
+  .lore-card h3 { font-family: var(--font-serif); font-size: var(--fs-5); font-weight: 500; margin: 0; }
+  .lore-card h3 a { text-decoration: none; }
+  .lore-card h3 a:hover { text-decoration: underline; }
+  .lore-card .btn-row { margin-top: var(--s1); }
+</style>

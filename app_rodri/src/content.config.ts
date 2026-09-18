@@ -14,4 +14,19 @@ const rules = defineCollection({
   }),
 });
 
-export const collections = { rules };
+/** Lore de la mesa: trasfondos escritos por Renzo (src/content/lore/*.md). El cuerpo es la historia; knows/hooks son notas de mesa. */
+const lore = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/lore' }),
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    kind: z.string(),
+    order: z.number(),
+    summary: z.string(),
+    docUrl: z.string().url().optional(),
+    knows: z.array(z.string()).default([]),
+    hooks: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { rules, lore };

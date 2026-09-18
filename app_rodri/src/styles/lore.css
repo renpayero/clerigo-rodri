@@ -1,0 +1,66 @@
+/* Lore: la historia se lee sobre un pergamino. Monocromo como el resto (papel gris con grano y borde desparejo). */
+
+.scroll { filter: drop-shadow(0 10px 18px oklch(0% 0 0 / 0.22)) drop-shadow(0 1px 2px oklch(0% 0 0 / 0.15)); margin: var(--s4) auto; max-width: 74ch; }
+
+.parchment {
+  --paper: light-dark(oklch(94.5% 0 0), oklch(23% 0 0));
+  --paper-edge: light-dark(oklch(0% 0 0 / 0.14), oklch(0% 0 0 / 0.5));
+  --ink: light-dark(oklch(16% 0 0), oklch(90% 0 0));
+  --ink-2: light-dark(oklch(40% 0 0), oklch(72% 0 0));
+  position: relative;
+  padding: clamp(var(--s5), 6vw, 56px) clamp(var(--s4), 8vw, 72px) clamp(var(--s6), 8vw, 64px);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  background-color: var(--paper);
+  /* grano (feTurbulence) + viñeta hacia los bordes + una luz suave arriba */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 90% 80% at 50% 45%, transparent 52%, var(--paper-edge) 100%),
+    linear-gradient(180deg, oklch(100% 0 0 / 0.25), transparent 18%);
+  /* borde desparejo, como cortado a mano; la sombra la pone .scroll con drop-shadow para seguir la forma */
+  clip-path: polygon(
+    0 6px, 5% 1px, 12% 5px, 21% 0, 30% 4px, 41% 1px, 50% 6px, 59% 0, 69% 5px, 79% 1px, 88% 4px, 95% 0, 100% 5px,
+    calc(100% - 2px) 14%, 100% 30%, calc(100% - 4px) 48%, 100% 66%, calc(100% - 3px) 84%,
+    100% calc(100% - 5px), 92% 100%, 83% calc(100% - 4px), 72% calc(100% - 1px), 62% calc(100% - 6px), 51% 100%, 40% calc(100% - 2px), 29% calc(100% - 6px), 18% calc(100% - 1px), 9% calc(100% - 5px), 0 calc(100% - 2px),
+    3px 82%, 0 64%, 4px 46%, 0 28%, 2px 12%
+  );
+}
+
+.parchment-head { text-align: center; margin-bottom: clamp(var(--s5), 5vw, var(--s7)); }
+.parchment-head .kind { font-family: var(--font-sans); font-size: var(--fs-1); text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-2); margin: 0 0 var(--s3); }
+.parchment-head h1 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(2rem, 7vw, 3rem); line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+.parchment-head .subtitle { font-style: italic; color: var(--ink-2); margin: var(--s2) 0 0; font-size: 1.15em; }
+.parchment-head .ornament { display: flex; align-items: center; justify-content: center; gap: var(--s3); margin-top: var(--s4); color: var(--ink-2); }
+.parchment-head .ornament::before, .parchment-head .ornament::after { content: ''; width: 72px; height: 1px; background: currentColor; opacity: 0.5; }
+.parchment-head .ornament span { width: 6px; height: 6px; transform: rotate(45deg); background: currentColor; opacity: 0.7; }
+
+/* La historia: títulos con filetes, capitular en el primer párrafo de cada parte */
+.parchment .prose { line-height: inherit; }
+.parchment .prose p { margin: 0 0 1em; text-wrap: pretty; hyphens: auto; }
+.parchment .prose h2 { display: flex; align-items: center; gap: 1em; margin: 2.4em 0 1.1em; font-family: var(--font-serif); font-weight: 500; font-size: 1.1rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); }
+.parchment .prose h2::before, .parchment .prose h2::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: 0.35; }
+.parchment .prose h3 { margin: 2em 0 0.7em; font-family: var(--font-serif); font-weight: 500; font-style: italic; font-size: 1.35rem; letter-spacing: 0; color: var(--ink); }
+.parchment .prose h2 + p::first-letter { float: left; font-size: 3.4em; line-height: 0.78; padding: 0.1em 0.1em 0 0; font-weight: 500; color: var(--ink); }
+.parchment .prose em { font-style: italic; }
+
+/* Cierre: firma y link al doc */
+.parchment-foot { margin-top: clamp(var(--s5), 5vw, var(--s7)); text-align: center; color: var(--ink-2); font-style: italic; font-size: 0.95em; }
+.parchment-foot a { color: inherit; }
+
+/* Barra y notas de mesa (fuera del pergamino, con la estética normal) */
+.lore-tools { display: flex; justify-content: space-between; align-items: center; gap: var(--s2); flex-wrap: wrap; }
+.lore-notes ul { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s2); }
+
+@media (max-width: 600px) {
+  .parchment { font-size: 1rem; line-height: 1.6; }
+  .parchment .prose h2 + p::first-letter { font-size: 2.8em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .parchment { transition: background-color 0.3s ease; }
+}
+@media print {
+  .scroll { filter: none; }
+  .parchment { clip-path: none; background-image: none; }
+}

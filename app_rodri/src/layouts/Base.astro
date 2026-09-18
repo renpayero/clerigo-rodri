@@ -4,6 +4,7 @@ import '@/styles/tokens.css';
 import '@/styles/base.css';
 import '@/styles/components.css';
 import '@/styles/mesa.css';
+import '@/styles/lore.css';
 
 interface Props {
   title?: string;
@@ -32,6 +33,7 @@ const fullTitle = title === 'Rodri Companion' ? title : `${title} · Rodri`;
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <Font cssVariable="--font-sans" preload />
     <Font cssVariable="--font-mono" />
+    <Font cssVariable="--font-serif" />
     <script is:inline>
       // Tema: 'auto' | 'light' | 'dark' guardado en localStorage (preferencia por dispositivo).
       try {

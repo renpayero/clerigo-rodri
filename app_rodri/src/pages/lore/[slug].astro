@@ -1,0 +1,59 @@
+---
+import App from '@/layouts/App.astro';
+import { getEntry, render } from 'astro:content';
+
+const { slug } = Astro.params;
+const entry = slug ? await getEntry('lore', slug) : undefined;
+if (!entry) return new Response(null, { status: 404 });
+const { Content } = await render(entry);
+const d = entry.data;
+const fullTitle = d.subtitle ? `${d.title}, «${d.subtitle}»` : d.title;
+---
+
+<App title={fullTitle} description={d.summary}>
+  <div class="stack">
+    <nav class="lore-tools" aria-label="Lore">
+      <a class="btn btn--sm btn--ghost" href="/lore">← Lore</a>
+      {d.docUrl && <a class="btn btn--sm" href={d.docUrl} target="_blank" rel="noopener noreferrer">Abrir en Google Docs ↗</a>}
+    </nav>
+
+    <div class="scroll">
+      <article class="parchment">
+        <header class="parchment-head">
+          <p class="kind">{d.kind}</p>
+          <h1>{d.title}</h1>
+          {d.subtitle && <p class="subtitle">«{d.subtitle}»</p>}
+          <div class="ornament" aria-hidden="true"><span /></div>
+        </header>
+        <div class="prose">
+          <Content />
+        </div>
+        <footer class="parchment-foot">
+          {d.docUrl ? <p>Esta es la versión que vive en <a href={d.docUrl} target="_blank" rel="noopener noreferrer">Google Docs</a>.</p> : <p>Escrito por Renzo.</p>}
+        </footer>
+      </article>
+    </div>
+
+    {(d.knows.length > 0 || d.hooks.length > 0) && (
+      <section class="card lore-notes">
+        <h3 class="section-title">Notas de mesa</h3>
+        {d.knows.length > 0 && (
+          <>
+            <h4>Lo que {d.title} sabe y lo que no</h4>
+            <ul>{d.knows.map((k) => <li>{k}</li>)}</ul>
+          </>
+        )}
+        {d.hooks.length > 0 && (
+          <>
+            <h4 style="margin-top: var(--s4)">Cabos para el DM</h4>
+            <ul>{d.hooks.map((h) => <li>{h}</li>)}</ul>
+          </>
+        )}
+      </section>
+    )}
+  </div>
+</App>
+
+<style>
+  .lore-notes h4 { font-size: var(--fs-3); margin: 0 0 var(--s2); }
+</style>
