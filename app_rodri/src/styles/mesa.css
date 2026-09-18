@@ -221,24 +221,6 @@ details summary { cursor: pointer; font-weight: 500; }
 .prose table { font-size: var(--fs-2); margin-bottom: var(--s3); display: block; overflow-x: auto; }
 .prose code { font-size: 0.9em; background: var(--bg-2); padding: 1px 4px; border-radius: var(--r1); }
 
-/* Táctica */
-.tactics .card + .card { margin-top: 0; }
-.tq { display: grid; gap: var(--s3); }
-.tq-row { display: grid; gap: var(--s1); }
-.tq-label { font-size: var(--fs-2); font-weight: 500; }
-@media (min-width: 720px) { .tq-row { grid-template-columns: 220px 1fr; align-items: start; } .tq-label { padding-top: 8px; } }
-.tq .input { max-width: 320px; }
-.tactics-warn { border-color: var(--border-strong); background: var(--bg-2); }
-.tactics-warn ul { margin: 0; padding-left: 1.2em; font-size: var(--fs-2); display: grid; gap: var(--s1); }
-.rec-list { display: grid; gap: var(--s2); }
-.rec { display: grid; gap: var(--s1); padding: var(--s3); border: 1px solid var(--border); border-radius: var(--r2); }
-.rec.is-top { border-color: var(--fg); box-shadow: inset 3px 0 0 var(--fg); }
-.rec.is-unavailable { opacity: 0.55; border-style: dashed; }
-.rec-head { display: flex; justify-content: space-between; gap: var(--s3); align-items: baseline; flex-wrap: wrap; }
-.rec-num { font-size: var(--fs-2); white-space: nowrap; }
-.rec-detail { margin: 0; font-size: var(--fs-2); color: var(--fg-2); line-height: var(--lh); }
-.rec-foot { display: flex; justify-content: space-between; gap: var(--s3); align-items: center; }
-
 /* Retrato */
 .avatar { width: 36px; height: 48px; padding: 0; border: 1px solid var(--border); border-radius: var(--r2); overflow: hidden; background: var(--bg-2); flex: none; cursor: zoom-in; }
 .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }

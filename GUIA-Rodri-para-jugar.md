@@ -110,9 +110,8 @@ Cada turno tenés cuatro "espacios" ([acciones en combate](https://www.aonprd.co
 
 1. **Antes de la sesión:** Ajustes → aliados (nombre, rol, pg máximos) · Conjuros → preset del día · Ajustes → Descanso completo.
 2. **Combate:** Mesa → **Iniciar combate**; cada turno tuyo termina con **Siguiente asalto →** (descuenta aura y buffs, libera rápida/inmediata). Los botones de acciones muestran el costo y se apagan si no alcanza. **Daño entrante…** ofrece Reactive Healing. Conjuros → ranura → **Lanzar / Convertir en cure / Inspired Spell**. **Deshacer** revierte lo último.
-3. **Sin saber qué hacer:** Táctica → responde solo desde la Mesa y ordena rápida / estándar / movimiento / inmediata con **Ejecutar**.
-4. **Fuera de combate:** Terminar combate · +1 min / +10 min / +1 h / +8 h para los buffs por minutos · Recuperation · Equipo para varitas, pergaminos y oro.
-5. Todo nombre subrayado es un tooltip con la regla y su link a AoN; **Reglas** tiene el dossier con buscador.
+3. **Fuera de combate:** Terminar combate · +1 min / +10 min / +1 h / +8 h para los buffs por minutos · Recuperation · Equipo para varitas, pergaminos y oro.
+4. Todo nombre subrayado es un tooltip con la regla y su link a AoN; **Reglas** tiene el dossier con buscador.
 
 ## 8. Rulings de la mesa que ya están aplicados
 

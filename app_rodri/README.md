@@ -1,6 +1,6 @@
 # Rodri Companion
 
-Ayuda de juego para **Rodri** (Cleric 11 / Mythic Hierophant 3, aasimar de Sarenrae) en Pathfinder 1.ª ed. Complementa la hoja de Myth-Weavers en la mesa: pg, recursos, buffs, ranuras, dados, guía táctica y reglas con link a aonprd.com.
+Ayuda de juego para **Rodri** (Cleric 11 / Mythic Hierophant 3, aasimar de Sarenrae) en Pathfinder 1.ª ed. Complementa la hoja de Myth-Weavers en la mesa: pg, recursos, buffs, ranuras, dados y reglas con link a aonprd.com.
 
 - Stack: Astro 7 (SSR, `@astrojs/node`) · Preact (islas) · PostgreSQL 18 · Drizzle ORM · CSS puro.
 - Fuente de verdad de los números: `FICHA-FINAL-Clerigo.md` (v3.1) → `src/data/*`. La DB solo guarda lo mutable.
@@ -25,7 +25,7 @@ Todo en Docker (app + db): `docker compose up --build` (la app queda en `0.0.0.0
 | Comando | Qué hace |
 |---|---|
 | `npm run check` | `astro check` (tipos, .astro) |
-| `npm test` | Vitest: reglas puras (curación, ranuras, descansos, dados, buffs, táctica) y datos |
+| `npm test` | Vitest: reglas puras (curación, ranuras, descansos, dados, buffs) y datos |
 | `npm run smoke` | Prueba de humo contra un servidor en marcha: login → −3 pg → recargar → deshacer (`BASE_URL`, `APP_PASSWORD`) |
 | `npm run aon:validate` | Verifica que cada URL de AoN de `src/data` responda y contenga el nombre |
 | `npm run rules:import` | Regenera `src/content/rules` desde `../DOSSIER-Clerigo-PF1e.md` y `../FICHA-FINAL-Clerigo.md` |
@@ -61,10 +61,10 @@ Actualizar: `cd /root/projects/clerigo-rodri && git pull && cd app_rodri && dock
 
 ```
 src/data        ficha estática tipada (fuente: FICHA-FINAL v3.1) + URLs de AoN verificadas
-src/lib/rules   lógica pura y testeada (curación, ranuras, descansos, dados, buffs, táctica)
+src/lib/rules   lógica pura y testeada (curación, ranuras, descansos, dados, buffs)
 src/db          schema Drizzle, seed, snapshot, patches (deshacer)
 src/actions     astro:actions: cada una es una transacción con FOR UPDATE + evento deshacible
-src/components  Term (tooltip + AoN), islas Preact (Mesa, Conjuros, Táctica, Ajustes…)
+src/components  Term (tooltip + AoN), islas Preact (Mesa, Conjuros, Ajustes…)
 src/content     reglas curadas del dossier (Markdown)
 scripts         migrate, seed, smoke, backup, import-dossier, validate-aon, make-icons
 ```
