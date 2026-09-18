@@ -4,6 +4,8 @@ import type { AbilityScore, RacialTrait, ClassFeature } from './types';
 export const character = {
   name: 'Rodri',
   player: 'Dako',
+  /** Aspecto (17/09/2026): edad equivalente a un humano de 28 (aasimar: adulto 20, madurez 35); promedio de la tabla del ARG. */
+  appearance: { age: 30, gender: 'varón', height: '1,80 m (5 pies 11)', weight: '70 kg (155 lb)', eyes: 'plateados, sin pupila, brillo tenue', hair: 'rubio dorado a los hombros; barba corta' },
   className: 'Cleric',
   level: 11,
   mythicPath: 'Hierophant',

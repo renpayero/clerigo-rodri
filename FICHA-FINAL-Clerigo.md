@@ -21,6 +21,7 @@ Clériga **aasimar** (rasgos de serie) **NG de Sarenrae**, sin arquetipo, domini
 | Deidad · Alineamiento | **Sarenrae** (NG; Fire, Glory, Good, Healing, Sun; arma predilecta scimitar) · personaje **NG** — https://www.aonprd.com/DeityDisplay.aspx?ItemName=Sarenrae |
 | Dominios | **Healing** (https://www.aonprd.com/DomainDisplay.aspx?ItemName=Healing) · **Glory → subdominio Heroism** (https://www.aonprd.com/DomainDisplay.aspx?ItemName=Glory) |
 | Tamaño · Velocidad | Mediano · 30 pies (mithral breastplate) |
+| Aspecto | Varón, **30 años** (madurez equivalente a un humano de 28: aasimar adulto a los 20, madurez a los 35 — ARG, Apéndice 1) · **1,80 m** (5'11") · **70 kg** (155 lb; promedio de la tabla aasimar 5'2" + 2d8, 110 lb + 2d8×5) · ojos **plateados sin pupila, con un brillo tenue** · pelo **rubio dorado a los hombros, barba corta** · cicatriz en el pómulo (Scarred). Retrato en la app (`app_rodri/public/img/rodri.jpg`). |
 | Idiomas | Common, Celestial + Linguistics 5: Abyssal, Infernal, Draconic, Undercommon, Sylvan |
 | Hero Points | **1** (máx. 3; Cheat Death cuesta 2) |
 | Poder mítico | **9/día** (3 + 2 × tier) · Surge **1d6** |

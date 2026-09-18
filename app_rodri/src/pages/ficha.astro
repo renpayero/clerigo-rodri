@@ -24,6 +24,7 @@ const snapshot = await loadSnapshot(db());
       <dl class="kv" style="margin-top: var(--s3)">
         <dt>Dominios</dt><dd><Term k="healing" /> + <Term k="glory-heroism" label="Glory (Heroism)" /></dd>
         <dt>Jugador</dt><dd>{c.player}</dd>
+        <dt>Aspecto</dt><dd>{c.appearance.gender}, {c.appearance.age} años · {c.appearance.height} · {c.appearance.weight} · ojos {c.appearance.eyes} · pelo {c.appearance.hair}</dd>
         <dt>BAB</dt><dd class="mono">+{c.bab[0]}/+{c.bab[1]}</dd>
         <dt>CL</dt><dd><Term k="cl">{c.casterLevel} ({c.inspiredCasterLevel} con Inspired Spell)</Term></dd>
         <dt>Hero Points</dt><dd><Term k="hero-point">1 (máx. 3)</Term></dd>
