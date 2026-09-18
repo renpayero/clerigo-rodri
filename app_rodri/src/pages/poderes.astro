@@ -112,13 +112,13 @@ const actionLabel: Record<string, string> = { free: 'gratuita', swift: 'rápida'
     <div class="grid-2">
       <section class="card">
         <h3>Presupuesto de los 9 poderes (día de dos combates grandes)</h3>
-        <table>
+        <div class="table-wrap"><table>
           <tbody>
             {mythicBudget.map((b) => (
               <tr><td>{b.label}</td><td class="mono">{b.uses}</td><td class="muted">{b.when}</td></tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       </section>
       <section class="card">
         <h3>Próximos tiers</h3>

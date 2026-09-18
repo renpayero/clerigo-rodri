@@ -18,13 +18,15 @@ const cures = ['cure-light-wounds', 'cure-moderate-wounds', 'cure-serious-wounds
     <div class="grid-2 spellbook-static">
       <section class="card">
         <h3><Term k="spontaneous">Conversión espontánea</Term> (×1,5 +1)</h3>
-        <table>
-          <tbody>
-            {cures.map((c) => (
-              <tr><td><Term k={c.id} /></td><td class="mono">{c.level}.º</td><td class="mono">{healMath(c.heal!).formula}</td><td class="mono strong">{healMath(c.heal!).avg}</td></tr>
-            ))}
-          </tbody>
-        </table>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              {cures.map((c) => (
+                <tr><td><Term k={c.id} /></td><td class="mono">{c.level}.º</td><td class="mono">{healMath(c.heal!).formula}</td><td class="mono strong">{healMath(c.heal!).avg}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p class="help">Cualquier ranura que no sea de dominio. Heal (110/130/165/195) y Breath of Life no se multiplican.</p>
       </section>
     </div>

@@ -258,7 +258,8 @@ details summary { cursor: pointer; font-weight: 500; }
 .cheat-row dd { margin: 0; display: grid; gap: 2px; min-width: 0; }
 .cheat-row b { font-family: var(--font-sans); font-variant-numeric: tabular-nums; font-size: var(--fs-3); font-weight: 600; line-height: 1.3; }
 .cheat-row small { color: var(--fg-2); font-size: var(--fs-1); line-height: 1.4; }
+.cheat-block--wide { min-width: 0; overflow-x: auto; }
 .cheat-table { font-size: var(--fs-2); }
 .cheat-table td, .cheat-table th { padding: var(--s1) var(--s2); }
-.guest-banner { grid-column: 1 / -1; padding: var(--s1) var(--s4); font-size: var(--fs-2); background: var(--bg-2); border-bottom: 1px solid var(--border); display: flex; justify-content: center; align-items: center; gap: var(--s3); margin: 0; }
+.guest-banner { grid-column: 1 / -1; padding: var(--s1) var(--s4); font-size: var(--fs-2); background: var(--bg-2); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--s1) var(--s3); margin: 0; }
 @media (min-width: 900px) { .guest-banner { grid-column: 1 / -1; grid-row: 2; } .app-shell:has(.guest-banner) { grid-template-rows: auto auto 1fr; } .app-shell:has(.guest-banner) .app-nav, .app-shell:has(.guest-banner) .app-main { grid-row: 3; } }
