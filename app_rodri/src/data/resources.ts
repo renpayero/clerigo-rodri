@@ -18,8 +18,6 @@ export const resources = [
   { key: 'mythic_domain_recharge', label: 'Recarga de Mythic Domain', max: 1, reset: ['daily'], group: 'mythic', recoverHint: '1/día: acción estándar + 1 poder mítico → Rebuke Death, Touch of Glory y aura al máximo.', aon: aon('pathAbilities', 'Hierophant', 'Mythic Adventures pg. 34') },
   // ---- racial / objetos ----
   { key: 'daylight_sla', label: 'Daylight (SLA)', max: 1, reset: ['daily'], group: 'item', recoverHint: '1/día (racial, CL 11).', aon: aon('race', 'Aasimar', 'ARG pg. 84') },
-  { key: 'rod_extend', label: 'Rod of Extend (lesser)', max: 3, reset: ['daily'], group: 'item', recoverHint: '3/día; conjuros ≤ 3.º.', aon: aon('rod', 'Rod+of+Metamagic%2C+Extendlesser', 'Ultimate Equipment pg. 189') },
-  { key: 'pearl_1st', label: 'Pearl of Power (1st)', max: 1, reset: ['daily'], group: 'item', recoverHint: '1/día: recupera un conjuro de 1.º.', aon: aon('wondrous', 'Pearl+of+Power1st', 'Ultimate Equipment pg. 315') },
   // ---- por asalto ----
   { key: 'amazing_initiative', label: 'Amazing Initiative (este asalto)', max: 1, reset: ['round'], group: 'round', recoverHint: '1 por asalto (+1 poder mítico).', aon: aon('rulesId', '1618', 'Mythic Adventures pg. 12') },
   { key: 'swift_action', label: 'Acción rápida', max: 1, reset: ['round'], group: 'round', recoverHint: 'Una por asalto. Usar una inmediata fuera de tu turno la consume hasta tu próximo turno.', aon: aon('rulesName', 'Name=Actions%20in%20Combat&Category=Combat', 'Core Rulebook pg. 183') },
@@ -29,18 +27,12 @@ export const resources = [
   { key: 'wand_clw', label: 'Wand of Cure Light Wounds', max: 50, reset: ['never'], group: 'consumable', recoverHint: 'No se recarga (750 po una nueva).' },
   { key: 'wand_pfe', label: 'Wand of Protection from Evil', max: 50, reset: ['never'], group: 'consumable', recoverHint: 'No se recarga (750 po).' },
   { key: 'wand_lesser_restoration', label: 'Wand of Lesser Restoration', max: 50, reset: ['never'], group: 'consumable', recoverHint: 'No se recarga (750 po).' },
-  { key: 'scroll_heal', label: 'Scroll of Heal', max: 1, reset: ['never'], group: 'consumable', recoverHint: 'Compra: 1.650 po.' },
-  { key: 'scroll_bol', label: 'Scroll of Breath of Life', max: 2, reset: ['never'], group: 'consumable', recoverHint: 'Compra: 1.125 po c/u.' },
   { key: 'scroll_restoration', label: 'Scroll of Restoration', max: 1, reset: ['never'], group: 'consumable', recoverHint: 'Compra: 800 po.' },
   { key: 'scroll_remove_curse', label: 'Scroll of Remove Curse', max: 1, reset: ['never'], group: 'consumable', recoverHint: 'Compra: 375 po.' },
   { key: 'scroll_neutralize_poison', label: 'Scroll of Neutralize Poison', max: 1, reset: ['never'], group: 'consumable', recoverHint: 'Compra: 700 po.' },
   { key: 'diamond_dust_100', label: 'Polvo de diamante (100 po)', max: 4, reset: ['never'], group: 'consumable', recoverHint: 'Restoration y Heroic Fortune.' },
   { key: 'diamond_dust_1000', label: 'Polvo de diamante (1.000 po)', max: 1, reset: ['never'], group: 'consumable', recoverHint: 'Restoration contra un nivel negativo permanente.' },
   { key: 'healers_kit', label: "Healer's kit", max: 10, reset: ['never'], group: 'consumable', recoverHint: '10 usos; 50 po.' },
-  { key: 'holy_water', label: 'Holy water', max: 2, reset: ['never'], group: 'consumable', recoverHint: '25 po c/u.' },
-  { key: 'antitoxin', label: 'Antitoxin', max: 2, reset: ['never'], group: 'consumable', recoverHint: '50 po c/u.' },
-  { key: 'antiplague', label: 'Antiplague', max: 2, reset: ['never'], group: 'consumable', recoverHint: '50 po c/u.' },
-  { key: 'alchemists_fire', label: "Alchemist's fire", max: 2, reset: ['never'], group: 'consumable', recoverHint: '20 po c/u.' },
   { key: 'smelling_salts', label: 'Smelling salts', max: 1, reset: ['never'], group: 'consumable', recoverHint: '25 po.' },
 ] as const satisfies readonly ResourceDef[];
 
@@ -68,8 +60,6 @@ export const actionCosts = {
   divine_interference: [{ key: 'immediate_action', n: 1 }],
   hero_point: [{ key: 'hero_points', n: 1 }, { key: 'hero_point_round', n: 1 }],
   cheat_death: [{ key: 'hero_points', n: 2 }],
-  rod_extend: [{ key: 'rod_extend', n: 1 }],
-  pearl_1st: [{ key: 'pearl_1st', n: 1 }],
   daylight_sla: [{ key: 'daylight_sla', n: 1 }],
 } as const satisfies Record<string, readonly { key: ResourceKey; n: number }[]>;
 

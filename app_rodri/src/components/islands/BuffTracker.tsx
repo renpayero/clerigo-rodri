@@ -7,6 +7,7 @@ import { Sheet } from './Sheet';
 import type { StateSnapshot } from '@/lib/snapshot';
 import { buffs as buffDefs, buffByKey } from '@/data/buffs';
 import { durationAt, formatMinutes } from '@/lib/rules/durations';
+import { canEndure, ENDURING_DURATION } from '@/lib/rules/buffs';
 import { Term } from '@/components/Term';
 
 function fmtRemaining(unit: string, remaining: number | null) {
@@ -74,14 +75,15 @@ export function BuffTracker({ snap }: { snap: StateSnapshot }) {
 function BuffPickSheet({ open, snap, onClose }: { open: boolean; snap: StateSnapshot; onClose: () => void }) {
   const busy = useStore($busy);
   const [key, setKey] = useState('');
-  const [extend, setExtend] = useState(false);
+  const [enduring, setEnduring] = useState(false);
   const [cl, setCl] = useState<11 | 13>(11);
   const [energy, setEnergy] = useState('fire');
   const [targets, setTargets] = useState<(number | 'self')[]>(['self']);
   const def = buffByKey[key];
   const options = buffDefs.filter((b) => b.duration.kind !== 'instant').sort((a, b) => a.name.localeCompare(b.name));
   const allies = snap.allies.filter((a) => a.active);
-  const dur = def ? durationAt(def.duration, cl, extend) : null;
+  const dur = def ? (enduring ? ENDURING_DURATION : durationAt(def.duration, cl)) : null;
+  const endureChk = def ? canEndure(def) : { ok: false as const, reason: '' };
   const durText = dur ? (dur.unit === 'rounds' ? `${dur.amount} asaltos` : dur.unit === 'minutes' ? formatMinutes(dur.amount) : dur.unit) : '';
   const toggleTarget = (t: number | 'self') => setTargets((ts) => (ts.includes(t) ? ts.filter((x) => x !== t) : [...ts, t]));
 
@@ -117,14 +119,14 @@ function BuffPickSheet({ open, snap, onClose }: { open: boolean; snap: StateSnap
                 <button type="button" role="radio" aria-checked={cl === 11} onClick={() => setCl(11)}>CL 11</button>
                 <button type="button" role="radio" aria-checked={cl === 13} onClick={() => setCl(13)}>CL 13 (Inspired)</button>
               </div>
-              {def.source.kind === 'spell' && (def.spellLevel ?? 99) <= 3 && def.duration.kind !== 'permanent' && (
-                <label class="check"><input type="checkbox" checked={extend} onChange={(e) => setExtend((e.target as HTMLInputElement).checked)} /><span>×2 Rod of Extend ({snap.resources.rod_extend?.current ?? 0} usos)</span></label>
+              {def.source.kind === 'spell' && endureChk.ok && (
+                <label class="check"><input type="checkbox" checked={enduring} disabled={targets.length > 1} onChange={(e) => setEnduring((e.target as HTMLInputElement).checked)} /><span>Enduring Blessing: 24 h sobre un solo objetivo{targets.length > 1 ? ' (elegí uno)' : ''}</span></label>
               )}
             </div>
             <p class="help">Duración: <b>{durText}</b>{def.communalBlockMinutes ? ` repartidos entre ${Math.max(1, targets.length)} objetivos` : ''}.</p>
             <button type="button" class="btn btn--primary" disabled={busy} onClick={async () => {
-              const r = await runAction(actions.buffs.activate, { buffKey: key, targets: def.targets === 'self' ? ['self'] : targets, extend, casterLevel: cl, energy: def.energyChoice ? energy : undefined });
-              if (r) { setKey(''); setExtend(false); onClose(); }
+              const r = await runAction(actions.buffs.activate, { buffKey: key, targets: def.targets === 'self' ? ['self'] : targets, enduring, casterLevel: cl, energy: def.energyChoice ? energy : undefined });
+              if (r) { setKey(''); setEnduring(false); onClose(); }
             }}>Activar</button>
           </>
         )}

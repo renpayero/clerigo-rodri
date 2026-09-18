@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { canCast, canConvert, canPrepare, canInspire, castPlan, cureOptionsFor, applyPreset, type SlotLike } from '../slots';
+import { canCast, canConvert, canPrepare, canInspire, castPlan, cureOptionsFor, applyPreset, domainSpellsAt, type SlotLike } from '../slots';
 import { spellById } from '@/data/spells/catalog';
 import { presetById } from '@/data/spells/presets';
 
@@ -30,6 +30,10 @@ describe('ranuras', () => {
     expect(canPrepare(slot({ level: 3, isDomain: true, idx: 0 }), spellById['heroism']!).ok).toBe(true);
     expect(canPrepare(slot({ level: 3 }), spellById['heal']!).ok).toBe(false);
     expect(canPrepare(slot({ level: 3 }), spellById['prayer']!).ok).toBe(true);
+    // La ranura de dominio solo admite conjuros de dominio del nivel: Prayer no; Cure Serious sí; Heroism sí.
+    expect(canPrepare(slot({ level: 3, isDomain: true, idx: 0 }), spellById['prayer']!).ok).toBe(false);
+    expect(canPrepare(slot({ level: 3, isDomain: true, idx: 0 }), spellById['cure-serious-wounds']!).ok).toBe(true);
+    expect(domainSpellsAt(6).map((d) => d.spellId).sort()).toEqual(['heal', 'heroism-greater']);
   });
 });
 

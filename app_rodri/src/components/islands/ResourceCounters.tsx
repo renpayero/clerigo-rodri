@@ -10,7 +10,7 @@ import { Term } from '@/components/Term';
 const MESA_GROUPS: { title: string; keys: ResourceKey[] }[] = [
   { title: 'Núcleo', keys: ['channel', 'mythic_power', 'hero_points', 'hero_point_temp'] },
   { title: 'Dominios', keys: ['rebuke_death', 'touch_of_glory', 'aura_rounds', 'mythic_domain_recharge'] },
-  { title: 'Objetos y raza', keys: ['rod_extend', 'pearl_1st', 'daylight_sla'] },
+  { title: 'Raza', keys: ['daylight_sla'] },
 ];
 
 function Counter({ def, snap, compact }: { def: ResourceDef; snap: StateSnapshot; compact?: boolean }) {

@@ -4,7 +4,7 @@ import { hpState, applyDamage, applyHealing, reactiveHealingApplies, belowPercen
 import { canUseHeroPoint, spendHeroPoints, heroPointCost } from '../heroPoints';
 import { fullRest, recuperation, mythicDomainRecharge, newSession, applyRest } from '../rest';
 import { roll, channelRoll, cureRoll, expectedValue, parseSpec, discordCommand, seededRng } from '../dice';
-import { tickRounds, tickMinutes, createBuff, canExtend } from '../buffs';
+import { tickRounds, tickMinutes, createBuff, canEndure, enduringConflicts } from '../buffs';
 import { buffByKey } from '@/data/buffs';
 
 const ctx = { recuperationRestoresDomain: true, mythicPowerReset: 'prayer' as const, mythicDomainRechargeMode: 'reset' as const };
@@ -15,7 +15,7 @@ function withUsed(): ResourceMap {
   s = spend(s, 'mythic_power', 4);
   s = spend(s, 'rebuke_death', 11);
   s = spend(s, 'aura_rounds', 15);
-  s = spend(s, 'rod_extend', 3);
+  s = spend(s, 'daylight_sla', 1);
   s = spend(s, 'wand_clw', 10);
   return s;
 }
@@ -39,7 +39,7 @@ describe('recursos', () => {
     const s = initialResources();
     expect(() => spend(s, 'channel', 8)).toThrow();
     expect(restore(s, 'channel', 5).channel!.current).toBe(7);
-    expect(canSpend(s, 'pearl_1st', 2).ok).toBe(false);
+    expect(canSpend(s, 'daylight_sla', 2).ok).toBe(false);
   });
   it('maxOverride manda sobre el máximo de datos', () => {
     const s = initialResources();
@@ -101,7 +101,7 @@ describe('descansos', () => {
     expect(out.resources.mythic_power!.current).toBe(9);
     expect(out.resources.rebuke_death!.current).toBe(11);
     expect(out.resources.aura_rounds!.current).toBe(15);
-    expect(out.resources.rod_extend!.current).toBe(3);
+    expect(out.resources.daylight_sla!.current).toBe(1);
     expect(out.resources.wand_clw!.current).toBe(40);
     expect(out.reprepareSlots).toBe(true);
     expect(out.expireBuffs).toContain('rounds');
@@ -179,7 +179,7 @@ describe('buffs', () => {
   const fervor = buffByKey['blessing-of-fervor']!;
   const vestment = buffByKey['magic-vestment']!;
   it('Blessing of Fervor a CL 11: 11 asaltos; expira tras 11 ticks', () => {
-    const b = createBuff(fervor, { cl: 11, extend: false, mythic: false, targets: ['self', 1, 2], round: 1 });
+    const b = createBuff(fervor, { cl: 11, enduring: false, mythic: false, targets: ['self', 1, 2], round: 1 });
     expect(b.unit).toBe('rounds');
     expect(b.remaining).toBe(11);
     const list = [{ ...b, id: 1, status: 'active' as const }];
@@ -189,17 +189,25 @@ describe('buffs', () => {
     const t11 = tickRounds(list, 11);
     expect(t11.expired).toHaveLength(1);
   });
-  it('Magic Vestment 11 h → 22 h con la Rod; Fervor (4.º) no se puede extender', () => {
-    const b = createBuff(vestment, { cl: 11, extend: true, mythic: false, targets: [1], round: null });
+  it('Enduring Blessing: Magic Vestment (1 h/nivel) pasa a 24 h; Fervor (asaltos) y Communal no; el anterior del mismo aliado termina', () => {
+    const b = createBuff(vestment, { cl: 11, enduring: true, mythic: false, targets: [1], round: null });
     expect(b.unit).toBe('minutes');
-    expect(b.remaining).toBe(1320);
-    expect(canExtend(vestment, 3).ok).toBe(true);
-    expect(canExtend(vestment, 0).ok).toBe(false);
-    expect(canExtend(fervor, 3).ok).toBe(false);
+    expect(b.remaining).toBe(1440);
+    expect(b.extended).toBe(true);
+    expect(canEndure(vestment).ok).toBe(true);
+    expect(canEndure(fervor).ok).toBe(false);
+    expect(canEndure(buffByKey['resist-energy-communal']!).ok).toBe(false);
+    const active = [
+      { id: 1, extended: true, status: 'active', targets: [{ allyId: 1 }] },
+      { id: 2, extended: true, status: 'active', targets: [{ allyId: 2 }] },
+      { id: 3, extended: false, status: 'active', targets: [{ allyId: 1 }] },
+    ];
+    expect(enduringConflicts(active, [1]).map((x) => x.id)).toEqual([1]);
+    expect(enduringConflicts(active, ['self'])).toHaveLength(0);
   });
   it('Communal reparte por objetivo y tickMinutes expira cuando todos llegan a 0', () => {
     const communal = buffByKey['resist-energy-communal']!;
-    const b = createBuff(communal, { cl: 11, extend: false, mythic: false, targets: [1, 2, 3], round: null, energy: 'fire' });
+    const b = createBuff(communal, { cl: 11, enduring: false, mythic: false, targets: [1, 2, 3], round: null, energy: 'fire' });
     expect(b.targets.map((t) => t.remaining)).toEqual([30, 30, 50]);
     const list = [{ ...b, id: 5, status: 'active' as const }];
     const t = tickMinutes(list, 35);

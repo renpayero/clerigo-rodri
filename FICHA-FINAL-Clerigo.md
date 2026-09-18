@@ -7,7 +7,7 @@
 
 ## 0. Resumen en diez líneas
 
-Clériga **aasimar** (rasgos de serie) **NG de Sarenrae**, sin arquetipo, dominios **Healing + Glory (Heroism)**, **Hierophant tier 3** con Inspired Spell. Se planta en la fila de atrás de los dos tanques, adyacente a 1-2 aliados, y desde ahí: **estándar** = Blessing of Fervor / Prayer / Heal (110-195); **movimiento** = Quick Channel (8d6 ≈ 32 a los 4 cuerpo a cuerpo, excluyendo 2 enemigos); **rápida** = Aura of Heroism (+2 moral al grupo); **inmediata** = Divine Interference / Reactive Healing / Surge; **gratuita** = Relentless Healing (cualquier cura resucita a quien murió este asalto). Todos los toques a 30 pies (Faith's Reach). Contra dragones: Communal Resist Energy / Protection from Energy; contra ajenos: Communal Protection from Evil, Holy Smite, Banishment. **Craft Wondrous Item** en lugar de Toughness: el +25 % de WBL compra el Belt de Con +4 (mismos pg que Toughness, +1 Fort) y sobran 8.500 po.
+Clériga **aasimar** (rasgos de serie) **NG de Sarenrae**, sin arquetipo, dominios **Healing + Glory (Heroism)**, **Hierophant tier 3** con Inspired Spell. Se planta en la fila de atrás, a hasta 30 pies de los cuatro cuerpo a cuerpo (no necesita a nadie adyacente), y desde ahí: **estándar** = Blessing of Fervor / Prayer / Heal (110-195); **movimiento** = Quick Channel (8d6 ≈ 32 a los 4 cuerpo a cuerpo, excluyendo 2 enemigos); **rápida** = Aura of Heroism (+2 moral al grupo); **inmediata** = Divine Interference / Reactive Healing / Surge; **gratuita** = Relentless Healing (cualquier cura resucita a quien murió este asalto). Todos los toques a 30 pies (Faith's Reach). Contra dragones: Communal Resist Energy / Protection from Energy; contra ajenos: Communal Protection from Evil, Holy Smite, Banishment. **Craft Wondrous Item** en lugar de Toughness: el +25 % de WBL compra el Belt de Con +4 (mismos pg que Toughness, +1 Fort) y sobran 8.500 po.
 
 ---
 
@@ -97,7 +97,7 @@ Los tres están en AoN → permitidos por tu GM. Sustitutos de hardcover si hici
 
 **Tier 1:** Hard to Kill (estable bajo 0; muerte a −2 × Con = **−36**) · Mythic Power (9/día a tier 3) · Surge +1d6 · **Divine Surge → Inspired Spell** (estándar + 1 uso: cualquier conjuro divino de tu lista o de dominio ≤ 6.º y ≤ 1 estándar, **sin prepararlo, CL 13**) · Path ability **Faith's Reach** (todo conjuro divino de toque → 30 pies) · Dote mítica **Mythic Spell Lore** (3 conjuros míticos) · +4 pg.
 **Tier 2:** Amazing Initiative (+3 iniciativa; acción gratuita + 1 uso → **una acción estándar extra que no sea lanzar un conjuro** = un channel más) · **+2 Wis** · Path ability **Relentless Healing** (si alguien murió hace ≤ 1 asalto, acción gratuita + 1 uso: cualquier cura tuya lo resucita si lo deja sobre el umbral) · +4 pg.
-**Tier 3:** Recuperation (1 uso + 1 hora: mitad de pg y **recuperás conjuros y channels**; no recarga poder mítico) · Path ability **Abundant Healing** (el exceso de una cura pasa a un aliado adyacente a vos, y sigue) · Dote mítica **Extra Path Ability → Mythic Domain** (poderes de dominio como nivel 15; 1/día, estándar + 1 uso: recargás todos los poderes de dominio) · +4 pg.
+**Tier 3:** Recuperation (1 uso + 1 hora: mitad de pg y **recuperás conjuros y channels**; no recarga poder mítico) · Path ability **Enduring Blessing** (un conjuro de duración ≥ 10 min/nivel sobre **un** objetivo dispuesto pasa a durar **24 h**; uno por criatura, el anterior termina: Freedom of Movement, Resist Energy, Heroism, Status, Air Walk; Magic Vestment si el DM acepta que el objetivo sea la armadura) · Dote mítica **Extra Path Ability → Mythic Domain** (poderes de dominio como nivel 15; 1/día, estándar + 1 uso: recargás todos los poderes de dominio) · +4 pg.
 
 **Conjuros míticos (Mythic Spell Lore):** **Heal** (15/nivel = **165**; augmented 2 usos: + Restoration) · **Blessing of Fervor** (cada aliado elige **dos** beneficios por asalto) · **Breath of Life** (5d12+11 ≈ 43,5; ventana de **2 asaltos**; repite la salvación contra un efecto de muerte).
 
@@ -105,13 +105,13 @@ Los tres están en AoN → permitidos por tu GM. Sustitutos de hardcover si hici
 
 ✅ **Mythic Domain, resuelto por el DM (16/09/2026):** la recarga (1/día, acción estándar + 1 poder mítico) devuelve **todo** como si hubieras dormido 8 horas: los dos dominios, **Aura of Heroism 15 + 15 asaltos**, Rebuke Death 11 + 11, Touch of Glory 11 + 11. Menor y sin urgencia: Relentless Healing contra efectos de muerte (el texto no lo prohíbe).
 
-**Tier 4 (próximo):** Surge 1d8, +2 Wis, poder mítico 11, path ability **Overflowing Grace**, conjuro mítico **Cure Critical Wounds** (87 con Healer's Blessing). **Tier 5:** Mythic Saving Throws, dote mítica **Mythic Selective Channeling** o Dual Path (Marshal → Rally), path ability Enduring Blessing.
+**Tier 4 (próximo):** Surge 1d8, +2 Wis, poder mítico 11, path ability **Overflowing Grace** (los que quedan a pg máximos tras una cura tuya ganan +1 sagrado a ataques, salvaciones y habilidades 1 min), conjuro mítico **Cure Critical Wounds** (87 con Healer's Blessing). **Tier 5:** Mythic Saving Throws, dote mítica **Mythic Selective Channeling** o Dual Path (Marshal → Rally), path ability Divine Potency (+4 ranuras de 1.º).
 
 ✅ **Aura of Heroism, resuelto por el DM (16/09/2026):** se activa **una sola vez** con la acción rápida, **no se apaga sola** y va gastando asaltos de la reserva mientras la dejás encendida (la pausás y reanudás cuando querés). Usar una inmediata fuera de tu turno (Divine Interference, Reactive Healing, Surge) bloquea la rápida hasta tu siguiente turno, pero **no afecta al aura** ya activa.
 
 ---
 
-## 7. Equipo — 101.728 po (WBL 82.000 + 25 % = 102.500)
+## 7. Equipo — 93.538 po (WBL 82.000 + 25 % = 102.500) · sobran 8.962 po
 
 **Ruling del DM (17/09/2026):** un arma, armadura o escudo mágico es *masterwork* de por sí y **no se cobra ese componente** (arma −300, armadura/escudo −150). Precios ya ajustados abajo.
 
@@ -135,21 +135,18 @@ Los tres están en AoN → permitidos por tu GM. Sustitutos de hardcover si hici
 | Objeto | Precio | Nota |
 |---|---|---|
 | **Handy Haversack** | 2.000 | Pergaminos y varitas como acción de movimiento sin AdO. Siempre pesa 5 lb |
-| **Rod of Metamagic, Extend (lesser)** | 3.000 | 3/día, ≤ 3.º: Magic Vestment ×2 a 22 h, Communal Resist Energy a 220 min |
 | **Ioun Stone, Dusty Rose Prism (cracked)** | 500 | +1 iniciativa (competencia) |
 | **Wand of Cure Light Wounds** (CL 1) `50/50` | 750 | Curación fuera de combate |
 | **Wand of Protection from Evil** (CL 1) `50/50` | 750 | Anti-control mental, 1 min por carga |
 | **Wand of Lesser Restoration** (CL 1, lista de paladín) `50/50` | 750 | Fatiga / 1d4 de daño de característica; **acción estándar** (confirmado) |
-| **Pearl of Power (1st)** | 1.000 | Un 1.º más por día |
-| **Scroll of Heal** (CL 11) | 1.650 | Cuarto/quinto Heal del día |
-| **Scrolls:** Breath of Life ×2 (CL 9), Restoration, Remove Curse, Neutralize Poison | 4.125 | Emergencias no preparadas |
+| **Scrolls:** Restoration (CL 7, 800), Remove Curse (375), Neutralize Poison (700) | 1.875 | Restoration sin gastar la ranura ni los 3 asaltos de preparación mental; los otros dos son baratos. Heal y Breath of Life los lanzás vos: sin pergaminos |
 | Polvo de diamante: 100 ×2, 1.000 ×1 (Restoration) + 100 ×2 (Heroic Fortune) | 1.400 | |
-| **Holy symbol (tattoo)** 100 + mundano 531 (healer's kit 50, spell component pouch 5, silver holy symbol 25, cleric's kit 16, everburning torch 110, silk rope 10, holy water ×2 50, antitoxin ×2 100, antiplague ×2 100, smelling salts 25, alchemist's fire ×2 40) | 631 | El tatuaje es foco divino: canalizás con escudo y arma en mano |
-| **Total** | **101.728** | sobran 772 po |
+| **Holy symbol (tattoo)** 100 + mundano 241 (healer's kit 50, spell component pouch 5, silver holy symbol 25, cleric's kit 16, everburning torch 110, silk rope 10, smelling salts 25) | 341 | El tatuaje es foco divino: canalizás con escudo y arma en mano |
+| **Total** | **93.538** | sobran **8.962 po** (v3.3: se quitaron vara de Extend 3.000, Pearl 1.000, Scroll of Heal 1.650, Breath of Life ×2 2.250, holy water, antitoxin, antiplague y alchemist's fire 290) |
 
-**Peso llevado** (Str 10: carga ligera ≤ 33 lb, **justo en el límite**): armadura 15 + escudo 5 + haversack 5 + cimitarra 4 + capa/cinturón/diadema/brazales ≈ 4 = **33 lb**. La pouch, la vara, las varitas y todo lo demás van **dentro del haversack** (siempre pesa 5 lb); la ropa no se cuenta por convención de mesa (AoN no lo dice explícitamente). Si algo más va encima: la cimitarra al haversack.
+**Peso llevado** (Str 10: carga ligera ≤ 33 lb, **justo en el límite**): armadura 15 + escudo 5 + haversack 5 + cimitarra 4 + capa/cinturón/diadema/brazales ≈ 4 = **33 lb**. La pouch, las varitas y todo lo demás van **dentro del haversack** (siempre pesa 5 lb); la ropa no se cuenta por convención de mesa (AoN no lo dice explícitamente). Si algo más va encima: la cimitarra al haversack.
 
-**Lista de deseos (Private Notes):** diamante 5.000 (Raise Dead) · Rod of Metamagic, Reach (lesser) 3.000 · Pearl of Power 2.º 4.000 / 3.º 9.000 · Lesser Talisman of Life's Breath 3.500 (para el tanque) · Boots of Speed 12.000 · Ioun Stone Pale Green Prism (cracked) 4.000 · Amulet NA +2 · Ring of Inner Fortitude (minor) 18.000 · Rod of Quicken (lesser) 35.000 (nivel 13+).
+**Lista de deseos (Private Notes):** **Rod of Metamagic, Quicken (lesser) 35.000** (objetivo de ahorro: faltan 26.038; un conjuro ≤ 3.º como acción rápida 3/día) · diamante 5.000 (Raise Dead) · Lesser Talisman of Life's Breath 3.500 (para el tanque) · Boots of Speed 12.000 · Ioun Stone Pale Green Prism (cracked) 4.000 · Amulet NA +2 · Ring of Inner Fortitude (minor) 18.000.
 
 ---
 
@@ -201,10 +198,10 @@ Statistic Block (contabilidad): `LV1-11: 2 + 0 Int = 2 aventura + 2 BG por nivel
 
 | Nivel | Preparados |
 |---|---|
-| **0 (4)** | Detect Magic · Guidance · Light · **Read Magic** (descifra pergaminos: sin él, Spellcraft DC 20 + nivel; el Scroll of Heal es DC 26). Stabilize sobra entre míticos (Hard to Kill) |
+| **0 (4)** | Detect Magic · Guidance · Light · **Read Magic** (descifra pergaminos: sin él, Spellcraft DC 20 + nivel; el Scroll of Restoration es DC 24). Stabilize sobra entre míticos (Hard to Kill) |
 | **1.º (7)** | `[D]` Shield of Faith (+3 desvío, 11 min) · Protection from Evil (una: corta un control mental; la de grupo es la Communal de 2.º) · **Liberating Command** (inmediata: el aliado hace Escape Artist con +20, tope del conjuro) · **Remove Fear ×2** (3 criaturas cada uno: dos cubren a los cinco aliados contra la presencia aterradora de un dragón, y suprimen el miedo ya activo) · 2 `[libre]` |
 | **2.º (7)** | `[D]` Cure Moderate Wounds (28,5) · **Protection from Evil, Communal** (ajenos) · **Resist Energy** (30 al tanque, 110 min) · Status (3 aliados, 11 h) · Remove Paralysis · Silence · Lesser Restoration — día de jefe: **Heroic Fortune** (100 po: un Hero Point temporal que **dura 11 asaltos y se gasta primero**; lanzarlo al empezar el combate, compite con la estándar de Blessing of Fervor) en lugar de Lesser Restoration |
-| **3.º (7)** | `[D]` Heroism (110 min al DPS que se aleja de la aura) · **Magic Vestment ×2** (armadura y escudo +2, 11 h → 22 h con la vara) · **Prayer** (+1 suerte / −1, 40 pies, 11 asaltos) · **Resist Energy, Communal** (resistencia **30 a cada tocado**; lo que se reparte es la duración: 110 min en bloques de 10, p. ej. 5 aliados × 20 min) · Dispel Magic · Remove Blindness/Deafness (o Invisibility Purge) |
+| **3.º (7)** | `[D]` Heroism (110 min al DPS que se aleja de la aura) · **Magic Vestment ×2** (armadura y escudo +2, 11 h; 24 h con Enduring Blessing si el DM lo acepta) · **Prayer** (+1 suerte / −1, 40 pies, 11 asaltos) · **Resist Energy, Communal** (resistencia **30 a cada tocado**; lo que se reparte es la duración: 110 min en bloques de 10, p. ej. 5 aliados × 20 min) · Dispel Magic · Remove Blindness/Deafness (o Invisibility Purge) |
 | **4.º (6)** | `[D]` Cure Critical Wounds (43,5) — o Holy Smite contra grupos de ajenos malvados · **Blessing of Fervor ×2** (11 aliados, 11 asaltos; mítico: dos beneficios) · **Freedom of Movement** (presas, agarres, tragar entero) · **Protection from Energy, Communal** (absorbe hasta **120 a cada tocado**; la duración de 110 min se reparte en bloques de 10) · Death Ward (drenajes de ajenos) — o **Dismissal** si el día es de extraplanares |
 | **5.º (4)** | `[D]` **Breath of Life** · **Cleanse** (personal: 4d8+11 y quita casi todas las condiciones) · Wall of Stone / Flame Strike (11d6, Ref 23) · 1 `[libre]` → Mass Cure Light (23 a 11 objetivos) o 2.º Breath of Life |
 | **6.º (3)** | `[D]` **Heal** · **Heal** · **Blade Barrier** (11d6, Ref 24, muro 220 pies) — o **Banishment** (Will 24, ajenos) cuando sepas que el combate es contra extraplanares |
@@ -216,13 +213,13 @@ Statistic Block (contabilidad): `LV1-11: 2 + 0 Int = 2 aventura + 2 BG por nivel
 
 ## 11. Rutina de combate (para Other Notes)
 
-**Posición:** fila inmediatamente detrás de los tanques, adyacente a 1-2 aliados (Abundant Healing), con los 4 cuerpo a cuerpo dentro de 30 pies. Contá los enemigos que **ves** a 30 pies: excluís 2.
+**Posición:** fila de atrás, con los 4 cuerpo a cuerpo dentro de 30 pies (Faith's Reach y channel); no hace falta estar adyacente a nadie. Contá los enemigos que **ves** a 30 pies: excluís 2.
 
 **Asalto 1:** rápida **Aura of Heroism** · estándar **Blessing of Fervor** (mítica en combates grandes; si hay *haste* arcano, **Prayer** o Communal Protection from Evil) · movimiento: posicionarte, o Quick Channel si ya sangran · inmediata en reserva: Divine Interference / Reactive Healing / Surge.
 
 **Regla de decisión (cada asalto):** la estándar cura solo si (a) alguien está bajo ~40 % y sigue en primera línea, (b) una condición anula a un DPS (Heal a 30 pies), o (c) alguien está a 0 o menos. Si no, la estándar es buff o control y **la curación va en el movimiento** (Quick Channel ≈ 32 a todos).
 - Aliado bajo 40 %: **Heal 110** + Quick Channel. Tanque bajo 40 % con jefe de 50+/asalto: **Mythic Heal 165**. Dos críticos a la vez: Hero Point **Extra Action** (segundo Heal) + Amazing Initiative (channel extra) + Quick Channel.
-- Sin 6.º: Inspired Spell (Heal 130) → CCW espontáneo (43,5) → Scroll of Heal → Rebuke Death.
+- Sin 6.º: Inspired Spell (Heal 130) → CCW espontáneo (43,5) → Rebuke Death.
 
 **Cuando no hay nada que curar:** Prayer → Communal Protection from Evil → Weapon of Awe al DPS → Freedom of Movement al DPS agarrado · control: **Silence** sobre el **punto** donde está el lanzador (así no hay salvación, pero el área no lo sigue), **Blade Barrier**, Wall of Stone, Greater Command (Will 23), Banishment (Will 24) · daño limpio: Holy Smite (ajenos malvados 10d6, Will 22), Flame Strike · Spiritual Ally para flanquear. **Nunca** entrar en cuerpo a cuerpo ni gastar la estándar en varitas.
 
@@ -249,6 +246,7 @@ Resurrection (7.º, nivel 13; contra efectos de muerte y cuerpos destruidos; PNJ
 - ✅ **Mythic Domain**: la recarga devuelve todo como si hubiera dormido 8 h (ambos dominios; aura 15 + 15 asaltos/día).
 - ✅ **Read Magic en vez de Stabilize** (17/09/2026): todos los PJ son míticos (Hard to Kill estabiliza solo); Read Magic hace falta para descifrar los pergaminos comprados (una vez cada uno).
 - ✅ **Sin Con ni Hard to Kill de los aliados** (17/09/2026): la mesa considera metajuego llevar la Constitución y el umbral de muerte de los compañeros. La app trackea solo sus pg; si Breath of Life / Relentless Healing reviven, lo decide el DM en la mesa.
+- ❓ **Enduring Blessing y Magic Vestment** (18/09/2026): la habilidad pide "un objetivo dispuesto" y Magic Vestment apunta a la armadura o el escudo. Si Tiago lo acepta, Magic Vestment ×2 dura 24 h sin vara.
 - ✅ **Masterwork en objetos mágicos** (17/09/2026): lo mágico es masterwork de por sí y no paga ese componente: +1 Scimitar 2.015, +1 Darkwood Heavy Wooden Shield 1.107, +1 Mithral Breastplate 5.050 (el mithral incluía el masterwork: −150). Equipo 101.728, sobran 772 po.
 
 **Pendiente:** nada. (Menor, sin urgencia: Relentless Healing contra efectos de muerte.)
@@ -256,6 +254,8 @@ Resurrection (7.º, nivel 13; contra efectos de muerte y cuerpos destruidos; PNJ
 ---
 
 **Revisión adversarial (16/09/2026):** un auditor independiente intentó refutar esta ficha contra AoN: 0 hallazgos críticos, 2 medios y 10 menores, todos corregidos en la v2 (Liberating Command +20, Protection/Resist Energy Communal por sujeto, Rebuke Death sin Faith's Reach, Heroic Fortune 11 asaltos, mundano 631, FAQ de crafteo, proyección de tier 5, rápida/inmediata, Silence sobre un punto, peso al límite).
+
+**v3.3 (18/09/2026):** tier 3: **Enduring Blessing** en lugar de Abundant Healing (exigía aliados adyacentes a Rodri; juega a 30 pies). Equipo: fuera la Rod of Extend, la Pearl of Power, los pergaminos de Heal y Breath of Life, holy water, antitoxin, antiplague y alchemist's fire; quedan 8.962 po de ahorro para la Rod of Quicken (lesser). App sin vara ni perla; Enduring Blessing en el lanzamiento.
 
 **v3.2 (18/09/2026):** preset de combate/jefe: una sola Protection from Evil en 1.º (la de grupo es la Communal de 2.º) y Remove Fear ×2 (cubre a los cinco aliados contra la presencia aterradora). Sin cicatriz en la cara (drawback Scarred pendiente de ubicar o cambiar por Provincial). Trasfondo en `TRASFONDO-Rodri.md` / `HISTORIA-Rodri.md`.
 

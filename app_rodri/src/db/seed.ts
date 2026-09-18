@@ -40,13 +40,20 @@ export async function seedIfEmpty(db: Db): Promise<{ created: boolean; details: 
       created = true;
     }
 
-    // Recursos: inserta los que falten (sincronización).
+    // Recursos: inserta los que falten y borra los que ya no existen en data/resources.ts (objetos vendidos).
     const existing = new Set((await tx.select({ key: resourceState.key }).from(resourceState)).map((r) => r.key));
+    const defined = new Set(resourceDefs.map((r) => r.key as string));
     for (const r of resourceDefs) {
       if (!existing.has(r.key)) {
         await tx.insert(resourceState).values({ key: r.key, current: r.initial ?? r.max });
         details.push(`resource:${r.key}`);
         created = true;
+      }
+    }
+    for (const key of existing) {
+      if (!defined.has(key)) {
+        await tx.delete(resourceState).where(eq(resourceState.key, key));
+        details.push(`resource-removed:${key}`);
       }
     }
 

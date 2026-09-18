@@ -1,5 +1,6 @@
 import { aon } from './sources';
-import { spells } from './spells/catalog';
+import { allSpells } from './spells/catalog';
+import { fullBuffExtras } from './spells/full';
 import type { BuffDef, DurationSpec } from './types';
 
 /**
@@ -45,10 +46,10 @@ const spellExtras: Record<string, Extra> = {
   'heroes-feast': { targets: 'many', effect: '1d8+5 pg temp, +1 moral ataque/Will, +4 moral vs veneno y miedo' },
 };
 
-const fromSpells: BuffDef[] = spells
+const fromSpells: BuffDef[] = allSpells
   .filter((sp) => sp.buff)
   .map((sp) => {
-    const x = spellExtras[sp.id] ?? {};
+    const x: Extra = spellExtras[sp.id] ?? fullBuffExtras[sp.id] ?? {};
     return {
       key: sp.id,
       name: sp.name,

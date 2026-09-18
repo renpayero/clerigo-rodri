@@ -83,20 +83,6 @@ export function roundPatterns() {
   ].map((p) => ({ ...p, single: round1(p.single), others: round1(p.others) }));
 }
 
-/** Abundant Healing: el exceso pasa a aliados adyacentes en orden. */
-export function abundantOverflow(heal: number, target: { hp: number; max: number }, adjacent: { id: number | string; hp: number; max: number }[]) {
-  let excess = Math.max(0, heal - Math.max(0, target.max - target.hp));
-  const applied: { id: number | string; amount: number }[] = [];
-  for (const a of adjacent) {
-    if (excess <= 0) break;
-    const room = Math.max(0, a.max - a.hp);
-    const amount = Math.min(room, excess);
-    if (amount > 0) applied.push({ id: a.id, amount });
-    excess -= amount;
-  }
-  return { applied, wasted: Math.max(0, excess) };
-}
-
 export function round1(x: number): number {
   return Math.round(x * 100) / 100;
 }

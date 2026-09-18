@@ -14,7 +14,7 @@ export function formatMinutes(min: number): string {
   return `${min} min`;
 }
 
-/** Duración concreta a un nivel de lanzador, opcionalmente extendida (Rod of Extend: ×2). */
+/** Duración concreta a un nivel de lanzador (extend = ×2, metamagia Extend Spell). */
 export function durationAt(spec: DurationSpec, cl = 11, extend = false): Duration {
   const x = extend ? 2 : 1;
   switch (spec.kind) {

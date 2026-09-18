@@ -1,6 +1,7 @@
 import type { Spell, Preset } from '@/data/types';
 import type { HealSpec } from '@/data/types';
 import { spellById } from '@/data/spells/catalog';
+import { domains } from '@/data/domains';
 import { slotLayout } from './spellsPerDay';
 import { healMath, healAmount } from './healing';
 import type { DiceSpec } from './dice';
@@ -103,13 +104,21 @@ export function applyPreset(preset: Preset, headbandNew24h = false): { level: nu
   });
 }
 
+/** Conjuros de dominio (Healing + Glory/Heroism) de un nivel: lo único que admite la ranura [D]. */
+export function domainSpellsAt(level: number): { spellId: string; name: string; domain: string }[] {
+  return domains.flatMap((d) => d.domainSpells.filter((sp) => sp.level === level).map((sp) => ({ spellId: sp.spellId, name: sp.name, domain: d.name })));
+}
+export const domainSpellIds = (level: number) => domainSpellsAt(level).map((d) => d.spellId);
+
 /** Chequeos para preparar un conjuro en una ranura. */
 export function canPrepare(slot: SlotLike, spell: Spell | null): RuleResult {
   if (slot.disabled) return { ok: false, reason: 'Ranura deshabilitada (diadema < 24 h).' };
   if (!spell) return { ok: true };
   if (spell.level !== slot.level) return { ok: false, reason: `${spell.name} es de nivel ${spell.level}; la ranura es de ${slot.level}.º.` };
   if (spell.domainOnly && !slot.isDomain) return { ok: false, reason: `${spell.name} solo se prepara en la ranura de dominio.` };
+  if (slot.isDomain && !domainSpellIds(slot.level).includes(spell.id)) return { ok: false, reason: `La ranura de dominio de ${slot.level}.º solo admite un conjuro de dominio: ${domainSpellsAt(slot.level).map((d) => d.name).join(' o ')}.` };
   if (spell.tags.includes('fuera-de-alcance')) return { ok: false, reason: `${spell.name} no está en la lista del clérigo.` };
+  if (spell.tags.includes('no-permitido')) return { ok: false, reason: `${spell.name}: ${spell.notes ?? 'no lo puede lanzar un clérigo NG de Sarenrae.'}` };
   return { ok: true };
 }
 
@@ -120,5 +129,6 @@ export function canInspire(spell: Spell, mythicPower: number): RuleResult {
   const long = ['full', '1_round', '3_rounds', '1_minute', 'special'];
   if (long.includes(spell.castingTime)) return { ok: false, reason: `${spell.name} tarda más de una acción estándar: no sirve con Inspired Spell.` };
   if (spell.tags.includes('fuera-de-alcance')) return { ok: false, reason: `${spell.name} no está en la lista del clérigo.` };
+  if (spell.tags.includes('no-permitido')) return { ok: false, reason: `${spell.name}: ${spell.notes ?? 'no lo puede lanzar un clérigo NG de Sarenrae.'}` };
   return { ok: true };
 }

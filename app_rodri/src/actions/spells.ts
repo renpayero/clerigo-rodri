@@ -5,7 +5,7 @@ import { spellById } from '@/data/spells/catalog';
 import { presetById } from '@/data/spells/presets';
 import { buffByKey } from '@/data/buffs';
 import { canCast, canConvert, canPrepare, canInspire, castPlan, applyPreset, CURES_BY_LEVEL, type SlotLike } from '@/lib/rules/slots';
-import { createBuff, canExtend } from '@/lib/rules/buffs';
+import { createBuff, canEndure, enduringConflicts } from '@/lib/rules/buffs';
 import { parseSpec } from '@/lib/rules/dice';
 
 const targetSchema = z.union([z.number().int(), z.literal('self')]);
@@ -14,7 +14,7 @@ const castOptions = {
   targets: z.array(targetSchema).default([]),
   mythic: z.boolean().default(false),
   augmented: z.boolean().default(false),
-  extend: z.boolean().default(false),
+  enduring: z.boolean().default(false),
   activateBuff: z.boolean().default(true),
   energy: z.string().max(20).optional(),
   note: z.string().max(120).optional(),
@@ -27,17 +27,17 @@ function slotOf(ctx: ActionCtx, id: number): SlotLike {
 }
 
 /** Lanza un conjuro: paga mítico/rod, tira curación, activa el buff. Devuelve la etiqueta. */
-async function resolveCast(ctx: ActionCtx, spellId: string, o: { targets: (number | 'self')[]; mythic: boolean; augmented: boolean; extend: boolean; activateBuff: boolean; energy?: string; cl: number; note?: string }) {
+async function resolveCast(ctx: ActionCtx, spellId: string, o: { targets: (number | 'self')[]; mythic: boolean; augmented: boolean; enduring: boolean; activateBuff: boolean; energy?: string; cl: number; note?: string }) {
   const spell = spellById[spellId];
   if (!spell) notFound(`Conjuro desconocido: ${spellId}`);
   if (o.mythic && !spell.mythic) conflict(`${spell.name} no tiene versión mítica.`);
   if (o.augmented && !spell.mythic?.augmented) conflict(`${spell.name} no tiene versión augmented.`);
   const def = spell.buff ? buffByKey[spell.buff.buffKey] : undefined;
-  if (o.extend) {
-    if (!def) conflict('La Rod of Extend solo sirve para conjuros con duración.');
-    const r = canExtend(def, ctx.snap.resources.rod_extend?.current ?? 0);
+  if (o.enduring) {
+    if (!def) conflict('Enduring Blessing solo sirve para conjuros con duración.');
+    const r = canEndure(def);
     if (!r.ok) conflict(r.reason);
-    await ctx.spend('rod_extend', 1);
+    if (o.targets.length > 1) conflict('Enduring Blessing: un solo objetivo.');
   }
   if (o.mythic) await ctx.spend('mythic_power', o.augmented ? spell.mythic!.augmented!.cost : spell.mythic!.cost);
   if (spellId === 'heroic-fortune') {
@@ -52,7 +52,11 @@ async function resolveCast(ctx: ActionCtx, spellId: string, o: { targets: (numbe
     healText = ` → ${r.total} pg`;
   }
   if (def && o.activateBuff) {
-    const nb = createBuff(def, { cl: o.cl, extend: o.extend, mythic: o.mythic, targets: o.targets, round: ctx.snap.character.combatActive ? ctx.snap.character.round : null, energy: o.energy });
+    if (o.enduring) {
+      // Una criatura solo puede tener un conjuro con Enduring Blessing: el anterior termina.
+      for (const b of enduringConflicts(ctx.snap.buffs, o.targets)) await ctx.rec.update('active_buffs', { id: b.id }, { status: 'expired', remaining: 0 });
+    }
+    const nb = createBuff(def, { cl: o.cl, enduring: o.enduring, mythic: o.mythic, targets: o.targets, round: ctx.snap.character.combatActive ? ctx.snap.character.round : null, energy: o.energy });
     await ctx.rec.insert('active_buffs', { ...nb, status: 'active' });
     const dur = nb.unit === 'rounds' ? `${nb.remaining} asaltos` : nb.unit === 'minutes' ? `${nb.remaining} min` : nb.unit;
     healText += ` · buff ${dur}`;
@@ -86,7 +90,7 @@ export const spells = {
         const cureId = CURES_BY_LEVEL[input.cureLevel]!;
         const lost = slot.spellId ? ` (perdés ${spellById[slot.spellId]?.name ?? slot.spellId})` : '';
         await ctx.rec.update('spell_slots', { id: slot.id }, { status: 'converted', spentOn: `cure:${cureId}`, spentAt: ctx.now });
-        const r = await resolveCast(ctx, cureId, { targets: [], mythic: false, augmented: false, extend: false, activateBuff: false, cl: 11, note: input.note });
+        const r = await resolveCast(ctx, cureId, { targets: [], mythic: false, augmented: false, enduring: false, activateBuff: false, cl: 11, note: input.note });
         return { label: `${slot.level}.º → ${r.label}${lost}` };
       }),
   }),
@@ -122,20 +126,15 @@ export const spells = {
       }),
   }),
 
-  /** Marca como recuperada una ranura gastada (Pearl, error de carga). */
+  /** Marca como recuperada una ranura gastada (error de carga). */
   restore: defineAction({
-    input: z.object({ slotId: z.number().int(), usePearl: z.boolean().default(false) }),
+    input: z.object({ slotId: z.number().int() }),
     handler: (input) =>
       runAction('spells.restore', input, async (ctx) => {
         const slot = slotOf(ctx, input.slotId);
         if (slot.status === 'prepared' || slot.status === 'free') conflict('La ranura no está gastada.');
-        if (input.usePearl) {
-          if (slot.level !== 1) conflict('La Pearl of Power (1st) solo recupera conjuros de 1.º.');
-          if (!slot.spellId) conflict('La perla recupera un conjuro que ya lanzaste (la ranura debe haber tenido conjuro).');
-          await ctx.spend('pearl_1st', 1);
-        }
         await ctx.rec.update('spell_slots', { id: slot.id }, { status: slot.spellId ? 'prepared' : 'free', spentOn: null, spentAt: null });
-        return { label: `${input.usePearl ? 'Pearl of Power: ' : ''}recuperada la ranura de ${slot.level}.º${slot.spellId ? ` (${spellById[slot.spellId]?.name ?? slot.spellId})` : ''}` };
+        return { label: `Recuperada la ranura de ${slot.level}.º${slot.spellId ? ` (${spellById[slot.spellId]?.name ?? slot.spellId})` : ''}` };
       }),
   }),
 

@@ -1,6 +1,6 @@
 import type { BuffDef } from '@/data/types';
 import type { BuffTarget } from '@/db/schema';
-import { durationAt, communalSplit } from './durations';
+import { durationAt, communalSplit, type Duration } from './durations';
 
 export type BuffLike = {
   id: number;
@@ -68,8 +68,9 @@ export type NewBuff = {
 };
 
 /** Crea el registro de un buff a partir de su definición, el CL y los objetivos. */
-export function createBuff(def: BuffDef, o: { cl: number; extend: boolean; mythic: boolean; targets: (number | 'self')[]; round: number | null; energy?: string; sourceLabel?: string }): NewBuff {
-  const d = durationAt(def.duration, o.cl, o.extend);
+export function createBuff(def: BuffDef, o: { cl: number; enduring: boolean; mythic: boolean; targets: (number | 'self')[]; round: number | null; energy?: string; sourceLabel?: string }): NewBuff {
+  // Enduring Blessing (Hierophant): un buff de ≥ 10 min/nivel sobre un objetivo dispuesto pasa a durar 24 h.
+  const d = o.enduring ? ENDURING_DURATION : durationAt(def.duration, o.cl);
   let unit: NewBuff['unit'] = 'until_rest';
   let remaining: number | null = null;
   if (d.unit === 'rounds') { unit = 'rounds'; remaining = d.amount; }
@@ -86,7 +87,7 @@ export function createBuff(def: BuffDef, o: { cl: number; extend: boolean; mythi
   if (def.absorbPerTarget) targets = targets.map((t) => ({ ...t, absorb: def.absorbPerTarget }));
   if (o.energy) targets = targets.map((t) => ({ ...t, energy: o.energy }));
 
-  const suffix = [o.mythic ? 'mítico' : '', o.extend ? '×2 Rod' : '', o.cl !== 11 ? `CL ${o.cl}` : ''].filter(Boolean).join(', ');
+  const suffix = [o.mythic ? 'mítico' : '', o.enduring ? '24 h Enduring' : '', o.cl !== 11 ? `CL ${o.cl}` : ''].filter(Boolean).join(', ');
   return {
     buffKey: def.key,
     label: suffix ? `${def.name} (${suffix})` : def.name,
@@ -95,18 +96,30 @@ export function createBuff(def: BuffDef, o: { cl: number; extend: boolean; mythi
     unit,
     remaining,
     targets,
-    extended: o.extend,
+    extended: o.enduring,
     mythic: o.mythic,
     data: o.energy ? { energy: o.energy } : {},
     startedRound: o.round,
   };
 }
 
-/** ¿Se puede extender con la Rod of Extend (lesser)? Conjuros de nivel ≤ 3 con duración no instantánea. */
-export function canExtend(def: BuffDef, rodUses: number): { ok: true } | { ok: false; reason: string } {
-  if (def.source.kind !== 'spell') return { ok: false, reason: 'La vara solo afecta a conjuros.' };
-  if ((def.spellLevel ?? 99) > 3) return { ok: false, reason: 'La Rod of Extend (lesser) solo extiende conjuros de nivel ≤ 3.' };
-  if (def.duration.kind === 'instant' || def.duration.kind === 'permanent' || def.duration.kind === 'concentration') return { ok: false, reason: 'Ese conjuro no tiene duración extensible.' };
-  if (rodUses < 1) return { ok: false, reason: 'No quedan usos de la Rod of Extend hoy.' };
+export const ENDURING_DURATION: Duration = { unit: 'minutes', amount: 24 * 60, label: '24 h' };
+
+/**
+ * Enduring Blessing (Mythic Adventures pg. 36): conjuro con duración de 10 min/nivel o más, sobre UN objetivo dispuesto → 24 h.
+ * Vale para self (Range personal) y para un objetivo; no para Communal, varios objetivos ni áreas. Sin costo.
+ */
+export function canEndure(def: BuffDef): { ok: true } | { ok: false; reason: string } {
+  if (def.source.kind !== 'spell') return { ok: false, reason: 'Enduring Blessing solo afecta a conjuros.' };
+  if (def.targets === 'many' || def.targets === 'area' || def.communalBlockMinutes) return { ok: false, reason: 'Enduring Blessing exige un único objetivo (no Communal, ni varios, ni áreas).' };
+  const k = def.duration.kind;
+  const long = k === 'ten_minutes_per_level' || k === 'hours_per_level' || (k === 'fixed' && def.duration.unit === 'hours' && def.duration.amount >= 2) || (k === 'fixed' && def.duration.unit === 'minutes' && def.duration.amount >= 110);
+  if (!long) return { ok: false, reason: 'Enduring Blessing pide una duración de 10 min/nivel o más.' };
   return { ok: true };
+}
+
+/** Enduring Blessing: cada criatura solo puede tener un conjuro así; al lanzar otro, el anterior termina. */
+export function enduringConflicts<T extends { extended: boolean; status: string; targets: BuffTarget[] }>(active: T[], targets: (number | 'self')[]): T[] {
+  const set = new Set<string>((targets.length ? targets : ['self']).map(String));
+  return active.filter((b) => b.status === 'active' && b.extended && b.targets.some((t) => set.has(String(t.allyId))));
 }

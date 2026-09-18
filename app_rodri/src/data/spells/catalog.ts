@@ -1,4 +1,5 @@
 import { aon } from '../sources';
+import { fullSpells } from './full';
 import type { Spell, DurationSpec, RangeSpec, ActionType, HealSpec, MythicSpec } from '../types';
 
 type In = {
@@ -28,7 +29,7 @@ export const spells: Spell[] = [
   s({ id: 'detect-magic', name: 'Detect Magic', level: 0, school: 'Divination', range: { feet: 60 }, duration: { kind: 'concentration' }, tags: ['utilidad'], tip: 'Orisón: cono de 60 pies, concentración. Detecta auras mágicas; no se gasta.', book: 'Core Rulebook pg. 267' }),
   s({ id: 'guidance', name: 'Guidance', level: 0, school: 'Divination', duration: { kind: 'special', label: '1 min o hasta usarlo' }, tags: ['buff'], tip: 'Orisón: +1 competencia a una tirada de ataque, salvación o habilidad. No se gasta.', book: 'Core Rulebook pg. 291' }),
   s({ id: 'light', name: 'Light', level: 0, school: 'Evocation', duration: R.tenMin, tags: ['utilidad'], tip: 'Orisón: luz normal en un objeto, 110 min. No se gasta.', book: 'Core Rulebook pg. 304' }),
-  s({ id: 'read-magic', name: 'Read Magic', level: 0, school: 'Divination', range: 'personal', duration: R.tenMin, tags: ['utilidad'], tip: 'Orisón: descifra pergaminos (obligatorio antes de usarlos: sin esto es Spellcraft DC 20 + nivel; el Scroll of Heal es DC 26). Se descifra una sola vez por pergamino. No se gasta.', book: 'Core Rulebook pg. 330' }),
+  s({ id: 'read-magic', name: 'Read Magic', level: 0, school: 'Divination', range: 'personal', duration: R.tenMin, tags: ['utilidad'], tip: 'Orisón: descifra pergaminos (obligatorio antes de usarlos: sin esto es Spellcraft DC 20 + nivel; el Scroll of Restoration es DC 24). Se descifra una sola vez por pergamino. No se gasta.', book: 'Core Rulebook pg. 330' }),
   s({ id: 'stabilize', name: 'Stabilize', level: 0, school: 'Conjuration (healing)', range: 'close', tags: ['curacion', 'emergencia'], tip: 'Orisón, 50 pies: estabiliza a un moribundo sin tirada. Entre míticos sobra (Hard to Kill): solo para PNJ, prisioneros o monturas. No corta el sangrado.', book: 'Core Rulebook pg. 348' }),
 
   // ---------------- Nivel 1 ----------------
@@ -61,7 +62,7 @@ export const spells: Spell[] = [
   // ---------------- Nivel 3 ----------------
   s({ id: 'heroism', name: 'Heroism', level: 3, school: 'Enchantment', duration: R.tenMin, buff: true, domainOnly: true, tags: ['buff'], tip: 'Solo vía subdominio: +2 moral a ataques, salvaciones y habilidades durante 110 min a un aliado (el DPS que se aleja del aura).', book: 'Core Rulebook pg. 295' }),
   s({ id: 'cure-serious-wounds', name: 'Cure Serious Wounds', level: 3, school: 'Conjuration (healing)', heal: cure(3, 15), tags: ['curacion'], tip: '3d8+11 ×1,5 +1 = 37,75 a 30 pies. Espontáneo desde cualquier ranura de 3.º.', book: 'Core Rulebook pg. 263' }),
-  s({ id: 'magic-vestment', name: 'Magic Vestment', level: 3, school: 'Transmutation', duration: R.hours, buff: true, tags: ['buff', 'defensa', 'mañana'], tip: '+2 mejora (1 por 4 CL) a armadura o escudo, 11 h → 22 h con la Rod of Extend. Dos por la mañana → CA 25.', mythic: { cost: 1, effect: 'Bono +1 adicional y la armadura/escudo cuenta como mítica.' }, book: 'Core Rulebook pg. 310' }),
+  s({ id: 'magic-vestment', name: 'Magic Vestment', level: 3, school: 'Transmutation', duration: R.hours, buff: true, tags: ['buff', 'defensa', 'mañana'], tip: '+2 mejora (1 por 4 CL) a armadura o escudo, 11 h (24 h con Enduring Blessing si el DM acepta que el objetivo es la armadura). Dos por la mañana → CA 25.', mythic: { cost: 1, effect: 'Bono +1 adicional y la armadura/escudo cuenta como mítica.' }, book: 'Core Rulebook pg. 310' }),
   s({ id: 'prayer', name: 'Prayer', level: 3, school: 'Enchantment', range: { feet: 40 }, duration: R.rounds, buff: true, tags: ['buff', 'control'], tip: 'Estallido de 40 pies alrededor tuyo, 11 asaltos, sin salvación: aliados +1 suerte a ataque/daño/salvaciones/habilidades, enemigos −1. Se acumula con Heroism.', mythic: { cost: 1, effect: 'Los bonos y penalizadores son ±2 y cada aliado se cura 2 × tier (6) al lanzarlo.' }, book: 'Core Rulebook pg. 324' }),
   s({ id: 'resist-energy-communal', name: 'Communal Resist Energy', level: 3, school: 'Abjuration', duration: R.tenMin, buff: true, tags: ['buff', 'dragones'], tip: 'Resistencia 30 a un tipo a CADA tocado; repartís los 110 min en bloques de 10 (p. ej. 5 aliados × 20 min). Contra alientos.', book: 'Ultimate Combat pg. 242' }),
   s({ id: 'dispel-magic', name: 'Dispel Magic', level: 3, school: 'Abjuration', range: 'medium', tags: ['control', 'condiciones'], tip: 'Prueba 1d20+11 contra 11 + CL del efecto. Buffs del jefe, dominaciones, trampas mágicas.', book: 'Core Rulebook pg. 272' }),
@@ -124,8 +125,13 @@ export const spells: Spell[] = [
   s({ id: 'holy-sword', name: 'Holy Sword', level: 7, school: 'Evocation [good]', domainOnly: true, tags: ['fuera-de-alcance'], tip: 'Dominio Glory 7.º: nivel 13.', book: 'Core Rulebook pg. 297' }),
 ];
 
-export const spellById = Object.fromEntries(spells.map((sp) => [sp.id, sp])) as Record<string, Spell>;
+/** Catálogo curado (83) + lista completa de clérigo 0-6 (full.json); ante el mismo id manda el curado. */
+const curatedIds = new Set(spells.map((sp) => sp.id));
+export const allSpells: Spell[] = [...spells, ...fullSpells.filter((sp) => !curatedIds.has(sp.id))];
+export const spellById = Object.fromEntries(allSpells.map((sp) => [sp.id, sp])) as Record<string, Spell>;
 export const spellsByLevel = (level: number) => spells.filter((sp) => sp.level === level && !sp.tags.includes('fuera-de-alcance'));
+/** Todo lo lanzable de un nivel (curado + completo), sin lo prohibido para Rodri. */
+export const allSpellsByLevel = (level: number) => allSpells.filter((sp) => sp.level === level && !sp.tags.includes('fuera-de-alcance') && !sp.tags.includes('no-permitido'));
 
 /** Conjuros que la gente cree que el clérigo tiene y NO están en su lista (dossier §6.10). */
 export const notOnClericList = ['Haste', 'Fly', 'Heroism (solo vía subdominio)', 'Barkskin', 'Enlarge Person', 'Mage Armor', 'Stoneskin', 'Teleport', 'Invisibility', 'See Invisibility'];

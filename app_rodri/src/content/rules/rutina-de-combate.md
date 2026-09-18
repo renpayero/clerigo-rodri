@@ -8,7 +8,7 @@ source: "ficha:## 11."
 ---
 ### Rutina de combate (para Other Notes)
 
-**Posición:** fila inmediatamente detrás de los tanques, adyacente a 1-2 aliados (Abundant Healing), con los 4 cuerpo a cuerpo dentro de 30 pies. Contá los enemigos que **ves** a 30 pies: excluís 2.
+**Posición:** fila de atrás, a hasta 30 pies de los cuatro cuerpo a cuerpo (Faith's Reach y channel llegan ahí); no hace falta estar adyacente a nadie. Contá los enemigos que **ves** a 30 pies: excluís 2.
 
 **Asalto 1:** rápida **Aura of Heroism** · estándar **Blessing of Fervor** (mítica en combates grandes; si hay *haste* arcano, **Prayer** o Communal Protection from Evil) · movimiento: posicionarte, o Quick Channel si ya sangran · inmediata en reserva: Divine Interference / Reactive Healing / Surge.
 

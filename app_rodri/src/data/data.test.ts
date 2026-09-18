@@ -13,10 +13,10 @@ describe('datos estáticos de la ficha', () => {
     for (const a of abilities) expect(a.mod).toBe(Math.floor((a.final - 10) / 2));
   });
 
-  it('equipo = 102.328 po y 33 lb encima', () => {
-    expect(equipmentTotal).toBe(101_728);
+  it('equipo = 93.538 po (v3.3: sin vara, perla, pergaminos de Heal/BoL ni alquímicos) y 33 lb encima', () => {
+    expect(equipmentTotal).toBe(93_538);
     expect(carriedWeight).toBe(33);
-    expect(character.wealthCap - equipmentTotal).toBe(772);
+    expect(character.wealthCap - equipmentTotal).toBe(8_962);
   });
 
   it('los presets caben en las ranuras y referencian conjuros existentes del nivel correcto', () => {

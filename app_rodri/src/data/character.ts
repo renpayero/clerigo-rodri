@@ -24,10 +24,10 @@ export const character = {
   hpMax: 125,
   hpRoll: '8 (nivel 1 máx.) + 50 (10d8: 7,6,6,5,5,5,4,2 + reroll de dos 1 → 8,2) + 44 (Con 18 × 11) + 11 (clase predilecta) + 12 (Hierophant +4/tier)',
   deathThreshold: -36,
-  gold: 772,
+  gold: 8_962,
   wealthCap: 102_500,
-  equipmentTotal: 101_728,
-  sheetVersion: 'FICHA-FINAL v3.2 (18/09/2026)',
+  equipmentTotal: 93_538,
+  sheetVersion: 'FICHA-FINAL v3.3 (18/09/2026)',
   aon: {
     cleric: aon('class', 'Cleric', 'Core Rulebook pg. 38'),
     aasimar: aon('race', 'Aasimar', 'Advanced Race Guide pg. 84'),

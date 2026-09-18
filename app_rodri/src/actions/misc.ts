@@ -4,7 +4,7 @@ import { eq } from 'drizzle-orm';
 import { db, schema } from '@/db';
 import { runAction, conflict, notFound } from './_helpers';
 import { buffByKey } from '@/data/buffs';
-import { createBuff, canExtend } from '@/lib/rules/buffs';
+import { createBuff, canEndure, enduringConflicts } from '@/lib/rules/buffs';
 import { loadSnapshot } from '@/db/repo/snapshot';
 import { resourceDefs } from '@/data/resources';
 
@@ -80,7 +80,7 @@ export const buffs = {
     input: z.object({
       buffKey: z.string(),
       targets: z.array(targetSchema).default([]),
-      extend: z.boolean().default(false),
+      enduring: z.boolean().default(false),
       mythic: z.boolean().default(false),
       casterLevel: z.union([z.literal(11), z.literal(13)]).default(11),
       energy: z.string().max(20).optional(),
@@ -90,10 +90,11 @@ export const buffs = {
       runAction('buffs.activate', input, async (ctx) => {
         const def = buffByKey[input.buffKey];
         if (!def) notFound(`Buff desconocido: ${input.buffKey}`);
-        if (input.extend) {
-          const r = canExtend(def, ctx.snap.resources.rod_extend?.current ?? 0);
+        if (input.enduring) {
+          const r = canEndure(def);
           if (!r.ok) conflict(r.reason);
-          await ctx.spend('rod_extend', 1);
+          if (input.targets.length > 1) conflict('Enduring Blessing: un solo objetivo.');
+          for (const b of enduringConflicts(ctx.snap.buffs, input.targets)) await ctx.rec.update('active_buffs', { id: b.id }, { status: 'expired', remaining: 0 });
         }
         if (input.spendSlotId !== undefined) {
           const slot = ctx.snap.slots.find((s) => s.id === input.spendSlotId);
@@ -103,7 +104,7 @@ export const buffs = {
         if (def.key === 'daylight-sla') await ctx.spend('daylight_sla', 1);
         if (def.key === 'heroic-fortune') await ctx.setResource('hero_point_temp', 1);
         if (input.mythic) await ctx.spend('mythic_power', 1);
-        const nb = createBuff(def, { cl: input.casterLevel, extend: input.extend, mythic: input.mythic, targets: input.targets, round: ctx.snap.character.combatActive ? ctx.snap.character.round : null, energy: input.energy });
+        const nb = createBuff(def, { cl: input.casterLevel, enduring: input.enduring, mythic: input.mythic, targets: input.targets, round: ctx.snap.character.combatActive ? ctx.snap.character.round : null, energy: input.energy });
         await ctx.rec.insert('active_buffs', { ...nb, status: 'active' });
         const dur = nb.unit === 'rounds' ? `${nb.remaining} asaltos` : nb.unit === 'minutes' ? `${nb.remaining} min` : nb.unit;
         return { label: `Activado: ${nb.label} (${dur})` };

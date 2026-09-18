@@ -145,7 +145,7 @@ export type BuffDef = {
   effect: string;
   /** Efectos numéricos que la app aplica al mostrar CA/salvaciones. */
   modifiers?: { ac?: { type: string; value: number }; saves?: { type: string; value: number }; attack?: { type: string; value: number } };
-  /** Nivel del conjuro (para Rod of Extend ≤ 3). */
+  /** Nivel del conjuro. */
   spellLevel?: number;
   tip: string;
   aon: AonRef;
