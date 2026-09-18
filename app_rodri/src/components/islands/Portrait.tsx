@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 
 const SRC = '/img/rodri.jpg';
+const THUMB = '/img/rodri-thumb.jpg';
 const FILE = 'Rodri.jpg';
 
 /**
@@ -27,12 +28,12 @@ export function Portrait({ variant = 'card' }: { variant?: 'avatar' | 'card' }) 
     <>
       {variant === 'avatar' ? (
         <button type="button" class="avatar" onClick={() => setOpen(true)} title="Ver el retrato de Rodri" aria-label="Ver el retrato de Rodri">
-          <img src={SRC} alt="" width={36} height={48} loading="lazy" decoding="async" />
+          <img src={THUMB} alt="" width={36} height={48} loading="lazy" decoding="async" />
         </button>
       ) : (
         <figure class="portrait">
           <button type="button" class="portrait-btn" onClick={() => setOpen(true)} aria-label="Ampliar el retrato">
-            <img src={SRC} alt="Retrato de Rodri" width={736} height={981} loading="lazy" decoding="async" />
+            <img src={THUMB} srcset={`${THUMB} 300w, ${SRC} 1200w`} sizes="200px" alt="Retrato de Rodri" width={300} height={400} loading="lazy" decoding="async" />
           </button>
           <figcaption class="btn-row">
             <button type="button" class="btn btn--sm" onClick={() => setOpen(true)}>⤢ Ampliar</button>
@@ -44,7 +45,7 @@ export function Portrait({ variant = 'card' }: { variant?: 'avatar' | 'card' }) 
       <dialog ref={ref} class="lightbox" onClose={() => setOpen(false)} onClick={(e) => { if (e.target === ref.current) setOpen(false); }}>
         {open && (
           <div class="lightbox-inner">
-            <img src={SRC} alt="Retrato de Rodri" width={736} height={981} />
+            <img src={SRC} alt="Retrato de Rodri" width={1200} height={1599} />
             <div class="lightbox-bar">
               <span class="help">Rodri · clérigo de Sarenrae</span>
               <span class="btn-row">
