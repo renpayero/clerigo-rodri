@@ -5,6 +5,7 @@ import { HeaderStatus } from '@/components/islands/HeaderStatus';
 import { Toast } from '@/components/islands/Toast';
 import { Portrait } from '@/components/islands/Portrait';
 import { CheatSheet } from '@/components/islands/CheatSheet';
+import { actions } from 'astro:actions';
 import { db } from '@/db';
 import { loadSnapshot } from '@/db/repo/snapshot';
 import type { StateSnapshot } from '@/lib/snapshot';
@@ -34,9 +35,10 @@ const guest = Astro.locals.session?.role === 'guest';
       </div>
     </header>
     {guest && (
-      <div class="guest-banner" role="status">
-        Modo invitado: ves todo, no cambiás nada. <a href="/ajustes#sesion">Salir</a>
-      </div>
+      <form class="guest-banner" role="status" method="POST" action={'/logout' + actions.auth.logout}>
+        <span>Modo invitado: ves todo, no cambiás nada.</span>
+        <button type="submit" class="btn btn--sm btn--ghost">Salir</button>
+      </form>
     )}
     <Nav current={Astro.url.pathname} />
     <main class="app-main">

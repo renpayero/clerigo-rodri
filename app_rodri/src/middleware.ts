@@ -41,7 +41,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   // Invitado: ve todo, no edita. Solo puede cerrar su sesión.
-  if (context.locals.session?.role === 'guest' && context.request.method !== 'GET' && context.request.method !== 'HEAD' && pathname !== '/_actions/auth.logout') {
+  if (context.locals.session?.role === 'guest' && context.request.method !== 'GET' && context.request.method !== 'HEAD' && pathname !== '/_actions/auth.logout' && pathname !== '/logout') {
     if (pathname.startsWith('/_actions/') || pathname.startsWith('/api/')) return actionError(403, 'FORBIDDEN', 'Modo invitado: podés mirar, pero no cambiar nada.');
     return new Response('Modo invitado: solo lectura', { status: 403 });
   }
