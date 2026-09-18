@@ -17,7 +17,7 @@ export async function runAction<I>(
   try {
     const { data, error } = await fn(input);
     if (error) {
-      const title = error.code === 'CONFLICT' ? 'No se puede' : error.code === 'UNAUTHORIZED' ? 'Sesión vencida' : 'Error';
+      const title = error.code === 'CONFLICT' ? 'No se puede' : error.code === 'UNAUTHORIZED' ? 'Sesión vencida' : error.code === 'FORBIDDEN' ? 'Modo invitado' : 'Error';
       toast('error', title, error.message);
       if (error.code === 'UNAUTHORIZED') window.location.href = '/login?next=' + encodeURIComponent(location.pathname);
       return null;

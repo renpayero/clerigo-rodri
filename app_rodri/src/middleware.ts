@@ -4,8 +4,13 @@ import { eq } from 'drizzle-orm';
 import { db, schema } from '@/db';
 import { SESSION_COOKIE, decodeCookie, encodeCookie, cookieOptions } from '@/lib/auth/session';
 
-const PUBLIC_EXACT = new Set(['/login', '/manifest.webmanifest', '/favicon.svg', '/api/health', '/_actions/auth.login']);
-const PUBLIC_PREFIXES = ['/_astro/', '/icons/', '/_actions/auth.login'];
+const PUBLIC_EXACT = new Set(['/login', '/manifest.webmanifest', '/favicon.svg', '/api/health', '/_actions/auth.login', '/_actions/auth.guest']);
+const PUBLIC_PREFIXES = ['/_astro/', '/icons/', '/_actions/auth.login', '/_actions/auth.guest'];
+
+/** Respuesta de error con la forma que entiende el cliente de astro:actions. */
+function actionError(status: number, code: string, message: string) {
+  return new Response(JSON.stringify({ type: 'AstroActionError', code, message }), { status, headers: { 'content-type': 'application/json' } });
+}
 
 function isPublic(pathname: string) {
   if (PUBLIC_EXACT.has(pathname)) return true;
@@ -24,7 +29,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const now = new Date();
     const [row] = await db().select().from(schema.sessions).where(eq(schema.sessions.id, id)).limit(1);
     if (row && row.expiresAt > now) {
-      context.locals.session = { id: row.id };
+      context.locals.session = { id: row.id, role: row.role === 'guest' ? 'guest' : 'owner' };
       if (now.getTime() - row.lastSeenAt.getTime() > TOUCH_INTERVAL_MS) {
         const expiresAt = new Date(now.getTime() + SESSION_DAYS * 86_400_000);
         await db().update(schema.sessions).set({ lastSeenAt: now, expiresAt }).where(eq(schema.sessions.id, id));
@@ -35,15 +40,18 @@ export const onRequest = defineMiddleware(async (context, next) => {
     }
   }
 
+  // Invitado: ve todo, no edita. Solo puede cerrar su sesión.
+  if (context.locals.session?.role === 'guest' && context.request.method !== 'GET' && context.request.method !== 'HEAD' && pathname !== '/_actions/auth.logout') {
+    if (pathname.startsWith('/_actions/') || pathname.startsWith('/api/')) return actionError(403, 'FORBIDDEN', 'Modo invitado: podés mirar, pero no cambiar nada.');
+    return new Response('Modo invitado: solo lectura', { status: 403 });
+  }
+
   if (context.locals.session || isPublic(pathname)) {
     return next();
   }
 
   if (pathname.startsWith('/_actions/') || pathname.startsWith('/api/')) {
-    return new Response(JSON.stringify({ error: 'UNAUTHORIZED', message: 'Sesión requerida' }), {
-      status: 401,
-      headers: { 'content-type': 'application/json' },
-    });
+    return actionError(401, 'UNAUTHORIZED', 'Sesión requerida');
   }
 
   const next_ = encodeURIComponent(pathname + context.url.search);

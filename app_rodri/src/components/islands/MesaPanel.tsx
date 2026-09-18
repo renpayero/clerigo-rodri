@@ -24,9 +24,9 @@ export function MesaPanel({ snapshot }: { snapshot: StateSnapshot }) {
         <DiceRoller snap={snap} />
       </div>
       <div class="mesa-col">
-        <ResourceCounters snap={snap} />
-        <BuffTracker snap={snap} />
         <AlliesBar snap={snap} />
+        <BuffTracker snap={snap} />
+        <ResourceCounters snap={snap} />
       </div>
     </div>
   );

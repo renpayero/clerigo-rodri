@@ -25,7 +25,7 @@ export function AlliesBar({ snap }: { snap: StateSnapshot }) {
   }
 
   return (
-    <section class="card" aria-labelledby="allies-title">
+    <section class="card mesa-allies" aria-labelledby="allies-title">
       <div class="row-between">
         <h2 id="allies-title" class="section-title">Aliados</h2>
         <a class="btn btn--sm btn--ghost" href="/ajustes#aliados">Editar</a>

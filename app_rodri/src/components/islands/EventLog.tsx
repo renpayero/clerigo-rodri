@@ -27,7 +27,7 @@ export function EventLog({ snap, full = false, limit = 30 }: { snap: StateSnapsh
   }, [full, live.version, limit]);
 
   return (
-    <section class="card" aria-labelledby="log-title">
+    <section class="card mesa-log" aria-labelledby="log-title">
       <div class="row-between">
         <h2 id="log-title" class="section-title">{full ? 'Historial' : 'Último'}</h2>
         <button type="button" class="btn btn--sm" disabled={busy || !last || last.undone} title="Revierte la última acción (pila estricta)" onClick={() => runAction(actions.log.undoLast, undefined as never)}>↶ Deshacer</button>

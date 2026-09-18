@@ -47,7 +47,7 @@ export function HpPanel({ snap }: { snap: StateSnapshot }) {
   }
 
   return (
-    <section class={`card hp ${st !== 'ok' || nl === 'unconscious' ? 'is-alert' : ''}`} aria-labelledby="hp-title">
+    <section class={`card hp mesa-hp ${st !== 'ok' || nl === 'unconscious' ? 'is-alert' : ''}`} aria-labelledby="hp-title">
       <div class="hp-head">
         <h2 id="hp-title" class="section-title">
           <Term k="hit-points" name="Puntos de golpe" tip={`Máximo ${MAX}. Muerte a ${DEATH} (Hard to Kill: −2 × Con). Bajo 0 quedás inconsciente pero estable automáticamente.`}>Puntos de golpe</Term>

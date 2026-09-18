@@ -45,7 +45,7 @@ export function DiceRoller({ snap: initial }: { snap: StateSnapshot }) {
   const applyPreset = (p: Preset) => { setSpec(p.spec); setReroll(!!p.rerollOnes); setEmpower(!!p.empower); setFlat(p.flatAfter ?? 0); };
 
   return (
-    <section class="card" aria-labelledby="dice-title">
+    <section class="card mesa-dice" aria-labelledby="dice-title">
       <h2 id="dice-title" class="section-title">Dados</h2>
       <div class="dice-presets">
         {PRESETS.map((p) => (

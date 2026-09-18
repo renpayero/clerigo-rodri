@@ -207,6 +207,8 @@ export const sessions = pgTable('sessions', {
   expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
   lastSeenAt: timestamp('last_seen_at', { withTimezone: true }).notNull().defaultNow(),
   userAgent: text('user_agent'),
+  /** 'owner' = Renzo (edita) · 'guest' = compañeros (solo lectura). */
+  role: text('role').notNull().default('owner'),
 });
 
 export type CharacterStateRow = typeof characterState.$inferSelect;

@@ -54,6 +54,27 @@ export const auth = {
     },
   }),
 
+  /** Sesión de invitado (compañeros de mesa): ve todo, no edita. Sin contraseña. */
+  guest: defineAction({
+    accept: 'form',
+    input: z.object({ next: z.string().optional() }),
+    handler: async (input, ctx) => {
+      const id = newSessionId();
+      const now = new Date();
+      await db().insert(schema.sessions).values({
+        id,
+        createdAt: now,
+        lastSeenAt: now,
+        expiresAt: new Date(now.getTime() + SESSION_DAYS * 86_400_000),
+        userAgent: ctx.request.headers.get('user-agent')?.slice(0, 200) ?? null,
+        role: 'guest',
+      });
+      ctx.cookies.set(SESSION_COOKIE, encodeCookie(id, SESSION_SECRET), cookieOptions(SECURE_COOKIES, SESSION_DAYS * 86_400));
+      const next = input.next && input.next.startsWith('/') && !input.next.startsWith('//') ? input.next : '/';
+      return { ok: true, next };
+    },
+  }),
+
   logout: defineAction({
     accept: 'form',
     handler: async (_input, ctx) => {

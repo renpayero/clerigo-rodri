@@ -41,7 +41,7 @@ export function ResourceCounters({ snap }: { snap: StateSnapshot }) {
   const c = snap.character;
   const round = (['amazing_initiative', 'swift_action', 'immediate_action', 'hero_point_round'] as ResourceKey[]).map((k) => ({ def: byKey[k]!, cur: snap.resources[k]?.current ?? 0 }));
   return (
-    <section class="card" aria-labelledby="res-title">
+    <section class="card mesa-res" aria-labelledby="res-title">
       <h2 id="res-title" class="section-title">Recursos</h2>
       {MESA_GROUPS.map((g) => (
         <div key={g.title} class="counter-group">

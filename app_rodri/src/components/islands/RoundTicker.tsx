@@ -15,7 +15,7 @@ export function RoundTicker({ snap }: { snap: StateSnapshot }) {
   const activeRoundBuffs = snap.buffs.filter((b) => b.status === 'active' && b.unit === 'rounds').length;
 
   return (
-    <section class={`card round ${c.combatActive ? 'card--tint' : ''}`} aria-labelledby="round-title">
+    <section class={`card round mesa-round ${c.combatActive ? 'card--tint' : ''}`} aria-labelledby="round-title">
       <div class="round-head">
         <h2 id="round-title" class="section-title">{c.combatActive ? 'Combate' : 'Tiempo'}</h2>
         {c.combatActive && <span class="round-num" aria-live="polite">Asalto <b>{c.round}</b></span>}

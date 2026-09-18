@@ -4,6 +4,7 @@ import Nav from '@/components/ui/Nav.astro';
 import { HeaderStatus } from '@/components/islands/HeaderStatus';
 import { Toast } from '@/components/islands/Toast';
 import { Portrait } from '@/components/islands/Portrait';
+import { CheatSheet } from '@/components/islands/CheatSheet';
 import { db } from '@/db';
 import { loadSnapshot } from '@/db/repo/snapshot';
 import type { StateSnapshot } from '@/lib/snapshot';
@@ -16,6 +17,7 @@ interface Props {
 }
 const { title, description } = Astro.props;
 const snapshot = Astro.props.snapshot ?? (await loadSnapshot(db()));
+const guest = Astro.locals.session?.role === 'guest';
 ---
 
 <Base title={title} description={description}>
@@ -28,8 +30,14 @@ const snapshot = Astro.props.snapshot ?? (await loadSnapshot(db()));
       </a>
       <div class="header-status" id="header-status">
         <HeaderStatus client:load snapshot={snapshot} />
+        <CheatSheet client:idle />
       </div>
     </header>
+    {guest && (
+      <div class="guest-banner" role="status">
+        Modo invitado: ves todo, no cambiás nada. <a href="/ajustes#sesion">Salir</a>
+      </div>
+    )}
     <Nav current={Astro.url.pathname} />
     <main class="app-main">
       <slot />

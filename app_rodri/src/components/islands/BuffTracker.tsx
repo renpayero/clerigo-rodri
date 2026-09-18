@@ -24,7 +24,7 @@ export function BuffTracker({ snap }: { snap: StateSnapshot }) {
   const allyName = (id: number | 'self') => (id === 'self' ? 'Rodri' : (snap.allies.find((a) => a.id === id)?.name ?? `#${id}`));
 
   return (
-    <section class="card" aria-labelledby="buff-title">
+    <section class="card mesa-buffs" aria-labelledby="buff-title">
       <div class="row-between">
         <h2 id="buff-title" class="section-title">Buffs activos</h2>
         <button type="button" class="btn btn--sm" disabled={busy} onClick={() => setPickOpen(true)}>+ Activar</button>

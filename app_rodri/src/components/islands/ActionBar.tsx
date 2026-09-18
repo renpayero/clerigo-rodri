@@ -43,7 +43,7 @@ export function ActionBar({ snap }: { snap: StateSnapshot }) {
   }
 
   return (
-    <section class="card" aria-labelledby="act-title">
+    <section class="card mesa-actions" aria-labelledby="act-title">
       <h2 id="act-title" class="section-title">Acciones</h2>
       <div class="action-grid">
         {buttons.map((b) => {

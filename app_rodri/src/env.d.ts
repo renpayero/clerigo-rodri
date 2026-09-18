@@ -2,6 +2,6 @@
 
 declare namespace App {
   interface Locals {
-    session: { id: string } | null;
+    session: { id: string; role: 'owner' | 'guest' } | null;
   }
 }

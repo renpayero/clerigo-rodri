@@ -1,0 +1,813 @@
+{
+  "id": "7bcc24fe-9aba-4f03-b4a4-81171260993d",
+  "prevId": "e111f96c-5ad5-4bbe-a45b-272089848eb5",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.active_buffs": {
+      "name": "active_buffs",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "buff_key": {
+          "name": "buff_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "label": {
+          "name": "label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "source": {
+          "name": "source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "caster_level": {
+          "name": "caster_level",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 11
+        },
+        "unit": {
+          "name": "unit",
+          "type": "buff_unit",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "remaining": {
+          "name": "remaining",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "targets": {
+          "name": "targets",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "extended": {
+          "name": "extended",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "mythic": {
+          "name": "mythic",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "data": {
+          "name": "data",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "status": {
+          "name": "status",
+          "type": "buff_status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'active'"
+        },
+        "started_round": {
+          "name": "started_round",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "started_at": {
+          "name": "started_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_event_id": {
+          "name": "created_event_id",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.allies": {
+      "name": "allies",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "max_hp": {
+          "name": "max_hp",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hp_current": {
+          "name": "hp_current",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "down_state": {
+          "name": "down_state",
+          "type": "ally_down_state",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'ok'"
+        },
+        "died_round": {
+          "name": "died_round",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "adjacent": {
+          "name": "adjacent",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "front_line": {
+          "name": "front_line",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "active": {
+          "name": "active",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "sort_order": {
+          "name": "sort_order",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "notes": {
+          "name": "notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.character_state": {
+      "name": "character_state",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "hp_current": {
+          "name": "hp_current",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hp_nonlethal": {
+          "name": "hp_nonlethal",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "hp_temp": {
+          "name": "hp_temp",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "conditions": {
+          "name": "conditions",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "combat_active": {
+          "name": "combat_active",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "round": {
+          "name": "round",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "aura_active": {
+          "name": "aura_active",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "divine_interference_used": {
+          "name": "divine_interference_used",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "gold": {
+          "name": "gold",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "session_number": {
+          "name": "session_number",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "last_full_rest_at": {
+          "name": "last_full_rest_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_recuperation_at": {
+          "name": "last_recuperation_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_mythic_reset_at": {
+          "name": "last_mythic_reset_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "character_state_single_row": {
+          "name": "character_state_single_row",
+          "value": "\"character_state\".\"id\" = 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.events": {
+      "name": "events",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "bigserial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "at": {
+          "name": "at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "kind": {
+          "name": "kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "label": {
+          "name": "label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "input": {
+          "name": "input",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "roll": {
+          "name": "roll",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "patches": {
+          "name": "patches",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "undone": {
+          "name": "undone",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "undone_at": {
+          "name": "undone_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "undo_of": {
+          "name": "undo_of",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "session_number": {
+          "name": "session_number",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "round": {
+          "name": "round",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.notes": {
+      "name": "notes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "kind": {
+          "name": "kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "body": {
+          "name": "body",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "notes_kind_unique": {
+          "name": "notes_kind_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "kind"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.resource_state": {
+      "name": "resource_state",
+      "schema": "",
+      "columns": {
+        "key": {
+          "name": "key",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "current": {
+          "name": "current",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "max_override": {
+          "name": "max_override",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.sessions": {
+      "name": "sessions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_seen_at": {
+          "name": "last_seen_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "user_agent": {
+          "name": "user_agent",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'owner'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.settings": {
+      "name": "settings",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "mythic_power_reset": {
+          "name": "mythic_power_reset",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'prayer'"
+        },
+        "recuperation_restores_domain": {
+          "name": "recuperation_restores_domain",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "blessed_touch_in_averages": {
+          "name": "blessed_touch_in_averages",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "mythic_domain_recharge_mode": {
+          "name": "mythic_domain_recharge_mode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'reset'"
+        },
+        "scroll_cl": {
+          "name": "scroll_cl",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{\"restoration\":7,\"removeCurse\":5,\"neutralizePoison\":7}'::jsonb"
+        },
+        "mythic_heal_augmented_diamond": {
+          "name": "mythic_heal_augmented_diamond",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'unknown'"
+        },
+        "relentless_vs_death_effects": {
+          "name": "relentless_vs_death_effects",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "amazing_initiative_allows": {
+          "name": "amazing_initiative_allows",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'channel'"
+        },
+        "headband_new_24h": {
+          "name": "headband_new_24h",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "out_of_combat_clock": {
+          "name": "out_of_combat_clock",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'manual'"
+        },
+        "discord_prefix": {
+          "name": "discord_prefix",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/roll dice:'"
+        },
+        "theme": {
+          "name": "theme",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'auto'"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "settings_single_row": {
+          "name": "settings_single_row",
+          "value": "\"settings\".\"id\" = 1"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.spell_slots": {
+      "name": "spell_slots",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "level": {
+          "name": "level",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "idx": {
+          "name": "idx",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_domain": {
+          "name": "is_domain",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "spell_id": {
+          "name": "spell_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "slot_status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'prepared'"
+        },
+        "spent_on": {
+          "name": "spent_on",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "spent_at": {
+          "name": "spent_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "disabled": {
+          "name": "disabled",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "spell_slots_level_idx": {
+          "name": "spell_slots_level_idx",
+          "nullsNotDistinct": false,
+          "columns": [
+            "level",
+            "idx"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.ally_down_state": {
+      "name": "ally_down_state",
+      "schema": "public",
+      "values": [
+        "ok",
+        "zero",
+        "dead",
+        "dead_death_effect"
+      ]
+    },
+    "public.buff_status": {
+      "name": "buff_status",
+      "schema": "public",
+      "values": [
+        "active",
+        "paused",
+        "expired"
+      ]
+    },
+    "public.buff_unit": {
+      "name": "buff_unit",
+      "schema": "public",
+      "values": [
+        "rounds",
+        "minutes",
+        "until_rest",
+        "permanent"
+      ]
+    },
+    "public.slot_status": {
+      "name": "slot_status",
+      "schema": "public",
+      "values": [
+        "prepared",
+        "spent",
+        "converted",
+        "free",
+        "sacrificed"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

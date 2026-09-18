@@ -8,6 +8,10 @@ const result = Astro.getActionResult(actions.auth.login);
 if (result && !result.error) {
   return Astro.redirect(result.data.next ?? '/');
 }
+const guestResult = Astro.getActionResult(actions.auth.guest);
+if (guestResult && !guestResult.error) {
+  return Astro.redirect(guestResult.data.next ?? '/');
+}
 const next = Astro.url.searchParams.get('next') ?? '/';
 let message: string | null = null;
 if (result?.error) {
@@ -30,10 +34,17 @@ if (result?.error) {
       {message && <p class="error" role="alert">{message}</p>}
       <button class="btn btn--primary" type="submit">Entrar</button>
     </form>
+    <form method="POST" action={actions.auth.guest} class="guest">
+      <input type="hidden" name="next" value={next} />
+      <button class="btn btn--ghost" type="submit">Entrar como invitado</button>
+      <p class="help">Para los compañeros de mesa: ven todo, no pueden cambiar nada.</p>
+    </form>
   </main>
 </Base>
 
 <style>
   .login { min-height: 100dvh; display: grid; place-items: center; padding: var(--s4); }
   form { width: min(380px, 100%); }
+  .login { align-content: center; }
+  .guest { text-align: center; display: grid; gap: var(--s2); justify-items: center; margin-top: var(--s3); }
 </style>
