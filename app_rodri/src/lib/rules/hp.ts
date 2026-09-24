@@ -50,3 +50,20 @@ export function nonlethalState(hp: number, nonlethal: number): 'ok' | 'staggered
   if (nonlethal === hp) return 'staggered';
   return 'ok';
 }
+
+/**
+ * Lo que el usuario escribe en los pg de un aliado (Mesa): un número fija el valor,
+ * con signo suma o resta. Acepta el menos tipográfico (−), espacios y coma decimal.
+ * Devuelve `none` si está vacío, no es un número o no cambia nada.
+ */
+export type HpEntry = { kind: 'none' } | { kind: 'set'; value: number } | { kind: 'delta'; value: number };
+
+export function parseHpEntry(raw: string, current: number | null): HpEntry {
+  const s = raw.trim().replace(/[−–—]/g, '-').replace(',', '.');
+  if (s === '' || s === '+' || s === '-') return { kind: 'none' };
+  if (!/^[+-]?\d+(\.\d+)?$/.test(s)) return { kind: 'none' };
+  const n = Math.trunc(Number(s));
+  if (!Number.isFinite(n)) return { kind: 'none' };
+  if (/^[+-]/.test(s)) return n === 0 ? { kind: 'none' } : { kind: 'delta', value: n };
+  return n === current ? { kind: 'none' } : { kind: 'set', value: n };
+}

@@ -7,6 +7,7 @@ import { Sheet } from './Sheet';
 import type { StateSnapshot } from '@/lib/snapshot';
 import type { AllyRow } from '@/db/schema';
 import { belowPercent } from '@/lib/rules/hp';
+import { AllyHpInput } from './AllyHpInput';
 
 const DOWN_LABEL: Record<AllyRow['downState'], string> = { ok: '', zero: '≤ 0', dead: 'MUERTO', dead_death_effect: 'EFECTO DE MUERTE' };
 
@@ -39,12 +40,12 @@ export function AlliesBar({ snap }: { snap: StateSnapshot }) {
             const pct = a.maxHp && a.hpCurrent !== null ? Math.max(0, Math.min(100, Math.round((a.hpCurrent / a.maxHp) * 100))) : null;
             return (
               <div key={a.id} class={`ally ${s.cls}`}>
-                <button type="button" class="ally-name" onClick={() => { setEdit(a); setAmount(''); }} title="Ajustar / marcar estado">
+                <button type="button" class="ally-name" onClick={() => { setEdit(a); setAmount(''); }} title="Marcar estado (≤ 0, muerto…)">
                   <b>{a.name}</b>{a.role && <small> {a.role}</small>}
                 </button>
                 <div class="ally-hp">
                   <button type="button" class="btn btn--icon btn--sm" aria-label={`${a.name}: −5 pg`} disabled={busy} onClick={() => runAction(actions.allies.adjustHp, { id: a.id, delta: -5 }, { silent: true })}>−5</button>
-                  <span class="value">{a.hpCurrent ?? '—'}<span class="max">{a.maxHp ? `/${a.maxHp}` : ''}</span></span>
+                  <AllyHpInput ally={a} />
                   <button type="button" class="btn btn--icon btn--sm" aria-label={`${a.name}: +5 pg`} disabled={busy} onClick={() => runAction(actions.allies.adjustHp, { id: a.id, delta: 5 }, { silent: true })}>+5</button>
                 </div>
                 {pct !== null && <span class="bar"><i style={`width:${pct}%`} /><i class="mark" /></span>}
@@ -57,7 +58,7 @@ export function AlliesBar({ snap }: { snap: StateSnapshot }) {
       <Sheet open={!!edit} title={edit?.name ?? ''} onClose={() => setEdit(null)}>
         {edit && (
           <div class="stack">
-            <label class="field"><span>Pg (fijar) o cambio (+/−)</span>
+            <label class="field"><span>Pg (fijar) o cambio (+/−) — también se editan en la tarjeta</span>
               <input class="input" type="number" inputMode="numeric" value={amount} onInput={(e) => setAmount((e.target as HTMLInputElement).value)} placeholder={`actual ${edit.hpCurrent ?? '?'}`} autoFocus />
             </label>
             <div class="btn-row">

@@ -132,6 +132,16 @@
 .ally-hp { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); }
 .ally-hp .value { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: var(--fs-4); font-weight: 600; }
 .ally-hp .max { color: var(--muted); font-weight: 400; font-size: var(--fs-2); }
+/* Pg editables en la tarjeta: parecen texto hasta que los tocás. */
+.ally-hp-edit { display: flex; align-items: baseline; gap: 2px; min-width: 0; flex: 1 1 auto; justify-content: center; }
+.ally-hp-field {
+  width: 4ch; min-height: 36px; padding: 0 2px; text-align: right;
+  font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: var(--fs-4); font-weight: 600;
+  background: transparent; border: 1px solid transparent; border-radius: var(--r1);
+}
+.ally-hp-field:hover { border-color: var(--border); }
+.ally-hp-field:focus { background: var(--bg); border-color: var(--fg); outline: none; }
+.ally.is-alert .ally-hp-field { color: var(--alert); }
 .ally-hp .btn { width: 40px; min-height: 36px; font-family: var(--font-mono); font-size: var(--fs-1); }
 .ally .bar { position: relative; height: 4px; background: var(--bg-3); border-radius: 2px; overflow: hidden; }
 .ally .bar > i { position: absolute; inset: 0 auto 0 0; background: var(--fg); }

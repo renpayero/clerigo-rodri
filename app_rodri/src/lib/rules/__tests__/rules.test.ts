@@ -3,6 +3,7 @@ import { spellsPerDay, bonusSpells, slotLayout } from '../spellsPerDay';
 import { maxHp, deathThreshold, armorClass, saves, initiative, concentration, defensiveCastChance, spellDc, channelDc, channelUses, cmd, carrying } from '../derived';
 import { healMath, healAmount, channelAverage, avgDieRerollOnes, breathOfLife, rebukeDeath, roundPatterns } from '../healing';
 import { durationAt, communalSplit, rangeAt } from '../durations';
+import { parseHpEntry } from '../hp';
 import { spellById } from '@/data/spells/catalog';
 
 describe('conjuros por día', () => {
@@ -107,5 +108,28 @@ describe('duraciones y alcances', () => {
     expect(rangeAt('close', 13).feet).toBe(55);
     expect(rangeAt('medium').feet).toBe(210);
     expect(rangeAt('touch').feet).toBe(30);
+  });
+});
+
+describe('pg de aliados escritos a mano (Mesa)', () => {
+  const p = (raw: string, cur: number | null = 100) => parseHpEntry(raw, cur);
+  it('un número fija, con signo suma o resta', () => {
+    expect(p('42')).toEqual({ kind: 'set', value: 42 });
+    expect(p(' 8 ')).toEqual({ kind: 'set', value: 8 });
+    expect(p('0')).toEqual({ kind: 'set', value: 0 });
+    expect(p('-12')).toEqual({ kind: 'delta', value: -12 });
+    expect(p('+7')).toEqual({ kind: 'delta', value: 7 });
+    expect(p('−12')).toEqual({ kind: 'delta', value: -12 }); // menos tipográfico del teclado
+    expect(p('120', 100)).toEqual({ kind: 'set', value: 120 }); // el tope lo aplica el servidor
+  });
+  it('ignora lo que no cambia nada o no es un número', () => {
+    for (const raw of ['', '   ', 'abc', '+', '-', '12a', '1e3', '+0', '-0']) expect(p(raw).kind).toBe('none');
+    expect(p('100', 100).kind).toBe('none');
+    expect(p('  100  ', 100).kind).toBe('none');
+    expect(p('100', null)).toEqual({ kind: 'set', value: 100 });
+  });
+  it('trunca decimales', () => {
+    expect(p('3,7')).toEqual({ kind: 'set', value: 3 });
+    expect(p('-2.9')).toEqual({ kind: 'delta', value: -2 });
   });
 });
